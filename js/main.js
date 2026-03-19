@@ -44,19 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
     items.forEach(el => el.classList.add('visible'));
   }
 
-  /* --- Contact form: basic validation + mailto fallback --- */
+  /* --- Contact form: show message --- */
   const form = document.querySelector('.contact-form');
   if (form) {
     form.addEventListener('submit', e => {
       e.preventDefault();
-      const name    = form.querySelector('[name="name"]')?.value.trim();
-      const email   = form.querySelector('[name="email"]')?.value.trim();
-      const message = form.querySelector('[name="message"]')?.value.trim();
-      if (!name || !email || !message) return;
-
-      // Simple mailto fallback (replace with backend/Formspree as needed)
-      const mailto = `mailto:kontakt@schmidt-sabugal.de?subject=Nachricht von ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}%0A%0A${encodeURIComponent(email)}`;
-      window.location.href = mailto;
+      alert('Vielen Dank für Ihre Nachricht! Sie wird in Kürze bearbeitet. (Demo-Modus: Formspree-Integration erforderlich)');
     });
   }
 
