@@ -67,9 +67,26 @@
     }
     .artikel-link::after { content: '→'; }
     .artikel-card:hover .artikel-link { color: var(--white); }
+    .artikel-card.hidden { display: none; }
+    .mehr-wrap {
+      margin: 0 60px 80px;
+      padding-top: 24px;
+    }
+    .btn-mehr {
+      background: transparent;
+      border: 2px solid var(--white);
+      color: var(--white);
+      font-family: var(--poppins);
+      font-size: 13px; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      padding: 16px 40px; cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-mehr:hover { background: var(--white); color: var(--vita-bg); }
     @media (max-width: 768px) {
       .medien-header { padding: 40px 24px 24px; }
       .artikel-grid { margin: 0 24px 60px; }
+      .mehr-wrap { margin: 0 24px 60px; }
     }
   </style>
 </head>
@@ -99,7 +116,7 @@
   <div class="medien-page">
     <div class="medien-header">
       <h1>In den Medien</h1>
-      <p>Presse, Interviews und Auftritte · <a href="medien/archiv.html">→ Archiv</a></p>
+      <p>Presse, Interviews und Auftritte · <a href="medien/neue-eintraege.html">→ Neue Einträge 2025/26</a> · <a href="medien/archiv.html">→ Archiv</a></p>
     </div>
     <div class="artikel-grid">
 
@@ -551,6 +568,10 @@
       </div>
 
     </div>
+
+    <div class="mehr-wrap" id="mehr-wrap">
+      <button class="btn-mehr" id="btn-mehr" onclick="zeigeAlle()">Alle Artikel anzeigen →</button>
+    </div>
   </div>
 
   <footer>
@@ -565,5 +586,20 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    // Erste 6 anzeigen, Rest ausblenden
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.artikel-card');
+      cards.forEach(function(card, i) {
+        if (i >= 6) card.classList.add('hidden');
+      });
+    });
+    function zeigeAlle() {
+      document.querySelectorAll('.artikel-card.hidden').forEach(function(c) {
+        c.classList.remove('hidden');
+      });
+      document.getElementById('mehr-wrap').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
