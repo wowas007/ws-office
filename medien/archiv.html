@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medien Archiv – Wolfgang Schmidt</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .medien-page { background: var(--vita-bg); min-height: 100vh; padding-top: var(--nav-h); }
+    .medien-header { padding: 60px 60px 40px; }
+    .medien-header h1 { font-family: var(--poppins); font-size: clamp(32px,5vw,70px); font-weight: 700; text-transform: uppercase; color: var(--white); }
+    .medien-header p { font-family: var(--poppins); font-size: 16px; color: rgba(255,255,255,0.7); margin-top: 8px; }
+    .medien-header a { color: rgba(255,255,255,0.5); font-size: 13px; text-decoration: underline; transition: color 0.2s; }
+    .medien-header a:hover { color: var(--white); }
+    .artikel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 2px; background: rgba(255,255,255,0.1); margin: 0 60px 80px; }
+    .artikel-card { background: var(--vita-bg); padding: 28px; display: flex; flex-direction: column; gap: 8px; transition: background 0.2s; }
+    .artikel-card:hover { background: var(--petrol); }
+    .artikel-date { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .artikel-source { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+    .artikel-title { font-family: var(--poppins); font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.8); line-height: 1.4; margin-top: 4px; }
+    .artikel-subtitle { font-size: 13px; color: rgba(255,255,255,0.5); font-style: italic; }
+    @media (max-width: 768px) { .medien-header { padding: 40px 24px 24px; } .artikel-grid { margin: 0 24px 60px; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="/ws-office/">
+      <img src="../img/logo.svg" alt="Wolfgang Schmidt" />
+    </a>
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <a href="/ws-office/" class="active">de</a>
+        <a href="/ws-office/en/">en</a>
+        <a href="/ws-office/es/">es</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/ws-office/#ueber">Über</a></li>
+        <li><a href="/ws-office/#vita">Vita</a></li>
+        <li><a href="/ws-office/medien.html">Medien</a></li>
+        <li><a href="/ws-office/#kontakt">Kontakt</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="medien-page">
+    <div class="medien-header">
+      <h1>Archiv</h1>
+      <p>Ältere oder nicht mehr relevante Einträge · <a href="../medien.html">← Zurück zu Medien</a></p>
+    </div>
+    <div class="artikel-grid">
+
+      <div class="artikel-card">
+        <div class="artikel-date">20.02.2025</div>
+        <div class="artikel-source">Instagram</div>
+        <div class="artikel-title">„Deutschland und Europa in stürmischen Zeiten" – mit Niels Annen, MdB</div>
+        <div class="artikel-subtitle">Livestream, Instagram-Reel</div>
+      </div>
+
+      <div class="artikel-card">
+        <div class="artikel-date">12.02.2025</div>
+        <div class="artikel-source">Eimsbütteler Nachrichten</div>
+        <div class="artikel-title">„Bei der Wahl geht es vor allem darum, wer die besseren Konzepte für die Zukunft hat"</div>
+        <div class="artikel-subtitle">Interview zur Bundestagskandidatur</div>
+      </div>
+
+      <div class="artikel-card">
+        <div class="artikel-date">20.01.2025</div>
+        <div class="artikel-source">–</div>
+        <div class="artikel-title">Bundestagswahl 2025: Jetzt Briefwahl beantragen!</div>
+        <div class="artikel-subtitle">Hinweise und Fristen zur Briefwahl Hamburg-Eimsbüttel</div>
+      </div>
+
+      <div class="artikel-card">
+        <div class="artikel-date">09.01.2025</div>
+        <div class="artikel-source">Hamburger Abendblatt</div>
+        <div class="artikel-title">„Wahltipp vom Kanzleramtsminister: SPD kommt auf 25 bis 27 Prozent"</div>
+        <div class="artikel-subtitle">Interview am Rande des Neujahrsempfangs 2025</div>
+      </div>
+
+      <div class="artikel-card">
+        <div class="artikel-date">01.01.2025</div>
+        <div class="artikel-source">–</div>
+        <div class="artikel-title">10 Jahre Mindestlohn in Deutschland</div>
+        <div class="artikel-subtitle">Statement zum Jubiläum des gesetzlichen Mindestlohns</div>
+      </div>
+
+      <div class="artikel-card">
+        <div class="artikel-date">11.12.2024</div>
+        <div class="artikel-source">SPD Hamburg</div>
+        <div class="artikel-title">Danke für die Wahl auf Platz 1 der Landesliste!</div>
+        <div class="artikel-subtitle">SPD Hamburg Landesvertreterversammlung in Wilhelmsburg</div>
+      </div>
+
+      <div class="artikel-card">
+        <div class="artikel-date">23.11.2024</div>
+        <div class="artikel-source">–</div>
+        <div class="artikel-title">Der Bundestagswahlkampf in Eimsbüttel kann beginnen</div>
+        <div class="artikel-subtitle">Persönliches Statement nach der Nominierung</div>
+      </div>
+
+      <div class="artikel-card">
+        <div class="artikel-date">19.11.2024</div>
+        <div class="artikel-source">–</div>
+        <div class="artikel-title">Für ganz Eimsbüttel</div>
+        <div class="artikel-subtitle">Eigener Text zu den Erwartungen an Politik in Eimsbüttel</div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <a class="footer-logo" href="/ws-office/">
+      <img src="../img/logo.svg" alt="Wolfgang Schmidt" />
+    </a>
+    <div class="footer-legal">
+      <a href="../impressum.html">Impressum</a>
+      <a href="../datenschutz.html">Datenschutz</a>
+    </div>
+    <p class="footer-copy">© 2025 Wolfgang Schmidt. Alle Rechte vorbehalten.</p>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
