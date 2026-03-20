@@ -14,7 +14,7 @@
 <body>
 
   <nav>
-    <a class="nav-logo" href="/">
+    <a class="nav-logo" href="/ws-office/">
       <img src="img/logo.svg" alt="Wolfgang Schmidt" />
     </a>
     <div class="nav-right">
@@ -24,9 +24,9 @@
         <a href="/ws-office/es/">es</a>
       </div>
       <ul class="nav-links">
-        <li><a href="#tags">Über</a></li>
+        <li><a href="#ueber">Über</a></li>
         <li><a href="#vita">Vita</a></li>
-        <li><a href="#medien">Medien</a></li>
+        <li><a href="medien.html">Medien</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
       <button class="menu-toggle" aria-label="Menü">
@@ -124,23 +124,20 @@
   <!-- MEDIEN -->
   <section id="medien">
     <h2 class="medien-heading">In den Medien</h2>
-    <div class="media-grid">
-      <div class="media-item">
-        <h3>Artikel 1</h3>
-        <p>Beschreibung des Artikels.</p>
-        <a href="img/photo1.jpg" download class="download-link">Download Photo 1</a>
-      </div>
-      <div class="media-item">
-        <h3>Artikel 2</h3>
-        <p>Beschreibung des Artikels.</p>
-        <a href="img/photo2.jpg" download class="download-link">Download Photo 2</a>
-      </div>
-      <div class="media-item">
-        <h3>Artikel 3</h3>
-        <p>Beschreibung des Artikels.</p>
-        <a href="img/photo3.jpg" download class="download-link">Download Photo 3</a>
-      </div>
-    </div>
+    <p style="font-family:var(--poppins);font-size:18px;color:rgba(255,255,255,0.75);margin-bottom:40px;max-width:600px;line-height:1.6;">
+      Presse, Interviews und Auftritte – von der FAZ über POLITICO bis zur NZZ.
+    </p>
+    <a href="medien.html" style="
+      display:inline-block;
+      font-family:var(--poppins);font-size:13px;font-weight:700;
+      letter-spacing:0.15em;text-transform:uppercase;
+      border:2px solid var(--white);color:var(--white);
+      padding:16px 40px;
+      transition:background 0.2s,color 0.2s;
+    " onmouseover="this.style.background='white';this.style.color='#576f84';"
+       onmouseout="this.style.background='transparent';this.style.color='white';">
+      Alle Artikel →
+    </a>
   </section>
 
   <!-- KONTAKT -->
@@ -166,7 +163,7 @@
   </section>
 
   <footer>
-    <a class="footer-logo" href="/">
+    <a class="footer-logo" href="/ws-office/">
       <img src="img/logo.svg" alt="Wolfgang Schmidt" />
     </a>
     <div class="footer-legal">
