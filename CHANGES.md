@@ -76,6 +76,7 @@ ws-office/
 | 20.03.2026 | Claude (Chat) | Über-Anker auf Tags-Sektion verschoben (id=ueber) |
 | 20.03.2026 | Claude (Chat) | CHANGES.md angelegt |
 | 20.03.2026 | Claude (Chat) | Nav scrolled-Stil in style.css ergänzt (petrolblauer Hintergrund bei Scroll) |
+| 20.03.2026 | Claude (Chat) | 13 neue Medieneinträge in medien.html eingefügt (YouTube, ZDF, ZEIT, Spiegel, Spotify) · Spotify-Episodentitel noch als Platzhalter |
 
 ---
 
