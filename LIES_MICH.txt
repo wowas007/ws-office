@@ -1,0 +1,66 @@
+# Aktuelles – Wolfgang Schmidt (Archiv)
+Erstellt: 20.3.2026
+Quelle: https://www.schmidt-hamburg.de/de/topic/10.aktuelles.html
+
+## Enthaltene Dateien:
+- aktuelles_archiv.json     : Alle 47 Artikel mit Texten, Links und Bild-URLs
+- aktuelles_uebersicht.html : Visuelle HTML-Uebersicht aller Artikel
+- download_bilder.py        : Python-Script zum Herunterladen der Thumbnail-Bilder
+- thumbnails/               : Ordner fuer die Bilder (nach download_bilder.py ausfuehren)
+
+## Zeitraum: 09.01.2024 – 21.02.2025
+## Artikel: 47
+
+## Verwendung:
+1. Entpacke das ZIP nach ~/ws-office/Medien/
+2. Oeffne aktuelles_uebersicht.html im Browser
+3. Fuehre aus: python3 download_bilder.py
+
+## Alle Artikel:
+ 1. [21.02.2025] Bundestagswahl 2025: Welche Rolle spielen die „Spin doctors“ der Kanzlerkandidaten?
+ 2. [21.02.2025] „Songs und Politik“– mit Kultursenator Carsten Brosda
+ 3. [21.02.2025] “Los ‘tecnooligarcas’ de EE UU tienen su programa. En Europa debemos unirnos”
+ 4. [20.02.2025] „Deutschland und Europa in stürmischen Zeiten“ – mit Niels Annen, MdB
+ 5. [19.02.2025] Mein Gespräch mit Wladimir Klitschko über die Ukraine
+ 6. [18.02.2025] „Warum dauert in Deutschland alles so lange, Wolfgang Schmidt?“
+ 7. [17.02.2025] Die rechte Hand von Olaf Scholz
+ 8. [16.02.2025] Podcast-Interview am Rande der Münchner Sicherheitskonferenz
+ 9. [16.02.2025] Wolfgang Schmidt trifft Marvin Neumann
+10. [12.02.2025] "Bei der Wahl geht es vor allem darum, wer die besseren Konzepte für die Zukunft hat"
+11. [11.02.2025] „Ich möchte mich ganz konkret für Eimsbüttel einsetzen“
+12. [07.02.2025] „Der Schattenmann“ – zu Gast im POLITICO Berlin Playbook Podcast
+13. [07.02.2025] Zu Gast bei Markus Lanz
+14. [06.02.2025] "Wenn der Minister an der Haustür klingelt"
+15. [05.02.2025] SPD vor der Wahl
+16. [04.02.2025] „Friedrich Merz hat sein Wort gebrochen.“
+17. [04.02.2025] Im Podcast „Gute Leude – Das Hamburg Gespräch“
+18. [29.01.2025] „Ich hoffe noch auf Einsicht, dass die CDU den Tabubruch nicht vollzieht.“
+19. [27.01.2025] Bundestagswahlkampf in Eimsbüttel
+20. [24.01.2025] Bei Maybrit Illner: „Trump macht Ernst – ist Deutschland diesmal vorbereitet?“
+21. [22.01.2025] „Schmidteinander"
+22. [20.01.2025] Bundestagswahl 2025: Jetzt Briefwahl beantragen!
+23. [17.01.2025] „Herr Schmidts Gespür für Macht"
+24. [14.01.2025] „Das Scholz-Update“ – mit Kanzleramtsminister Wolfgang Schmidt
+25. [12.01.2025] „Wir dürfen die Ausrüstung der Bundeswehr nicht gegen die Rente ausspielen“
+26. [09.01.2025] „Wahltipp vom Kanzleramtsminister: SPD kommt auf 25 bis 27 Prozent“
+27. [03.01.2025] „Kanzleramtschef kämpft in Hamburg um Stimmen – und gegen Schnee“
+28. [01.01.2025] 10 Jahre Mindestlohn in Deutschland
+29. [11.12.2024] Danke für die Wahl auf Platz 1 der Landesliste!
+30. [10.12.2024] „Hamburger SPD wählt Kanzleramtschef zum Spitzenkandidaten“
+31. [27.11.2024] Die Inflation sinkt, die Reallöhne steigen
+32. [25.11.2024] NDR-Bericht zu meiner Wahl als Bundestagskandidat der SPD in Eimsbüttel
+33. [25.11.2024] „Warum Scholz-Versteher Wolfgang Schmidt jetzt in Hamburg kandidiert“
+34. [23.11.2024] Der Bundestagswahlkampf in Eimsbüttel kann beginnen
+35. [19.11.2024] Für ganz Eimsbüttel
+36. [09.08.2024] „Kanzleramtsminister Schmidt tritt im Wahlkreis Eimsbüttel an“
+37. [01.08.2024] „Kanzleramtschef Wolfgang Schmidt will in den Bundestag“
+38. [07.06.2024] „Will der Kanzler noch das Klima retten?“
+39. [05.05.2024] „Der wichtigste Mitarbeiter des deutschen Kanzlers bleibt lieber im Hintergrund“
+40. [17.01.2024] „Dieses verschwiegene Trio hält die Ampel am Laufen“
+41. [16.01.2024] „Liegt die Krise der Regierung vielleicht auch an diesem Mann?“
+42. [15.01.2024] „Wolfgang Schmidt: Verteidiger des Kanzlers“
+43. [14.01.2024] „Deutschlands Oberkoordinator“
+44. [13.01.2024] „Der mächtige Mann hinter Scholz“
+45. [12.01.2024] „Der Mann an Scholz` Seite“
+46. [11.01.2024] „Wolfgang Schmidt: Sein Job ist es, den Kanzler glänzen zu lassen (was nicht immer gelingt)“
+47. [09.01.2024] „Ohne diese drei läuft nix in der Ampelkoalition“
