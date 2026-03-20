@@ -9,92 +9,35 @@
   <style>
     .medien-page { background: var(--tags-bg); min-height: 100vh; padding-top: var(--nav-h); }
     .medien-header { padding: 60px 60px 40px; }
-    .medien-header h1 {
-      font-family: var(--poppins); font-size: clamp(32px,5vw,70px);
-      font-weight: 700; text-transform: uppercase; color: var(--white);
-    }
-    .medien-header p {
-      font-family: var(--poppins); font-size: 16px;
-      color: rgba(255,255,255,0.7); margin-top: 8px;
-    }
-    .medien-header a {
-      color: rgba(255,255,255,0.5); font-size: 13px;
-      text-decoration: underline; transition: color 0.2s;
-    }
+    .medien-header h1 { font-family: var(--poppins); font-size: clamp(32px,5vw,70px); font-weight: 700; text-transform: uppercase; color: var(--white); }
+    .medien-header p { font-family: var(--poppins); font-size: 16px; color: rgba(255,255,255,0.7); margin-top: 8px; }
+    .medien-header a { color: rgba(255,255,255,0.5); font-size: 13px; text-decoration: underline; transition: color 0.2s; }
     .medien-header a:hover { color: var(--white); }
-    .artikel-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 2px;
-      background: rgba(255,255,255,0.15);
-      margin: 0 60px 80px;
-    }
-    .artikel-card {
-      background: var(--tags-bg);
-      padding: 28px;
-      display: flex; flex-direction: column; gap: 8px;
-      transition: background 0.2s;
-    }
+    .artikel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 2px; background: rgba(255,255,255,0.15); margin: 0 60px 0; }
+    .artikel-card { background: var(--tags-bg); padding: 28px; display: flex; flex-direction: column; gap: 8px; transition: background 0.2s; }
     .artikel-card:hover { background: var(--vita-bg); }
-    .artikel-date {
-      font-size: 11px; font-weight: 700;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
-    }
-    .artikel-source {
-      font-size: 11px; font-weight: 700;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: rgba(255,255,255,0.45);
-    }
-    .artikel-title {
-      font-family: var(--poppins); font-size: 16px; font-weight: 700;
-      color: var(--white); line-height: 1.4; margin-top: 4px;
-    }
-    .artikel-subtitle {
-      font-size: 13px; color: rgba(255,255,255,0.6);
-      font-style: italic; line-height: 1.4;
-    }
-    .artikel-teaser {
-      font-size: 14px; color: rgba(255,255,255,0.75);
-      line-height: 1.6; margin-top: 4px;
-    }
-    .artikel-link {
-      margin-top: 8px; font-size: 12px; font-weight: 700;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      display: inline-flex; align-items: center; gap: 6px;
-      transition: color 0.2s;
-    }
+    .artikel-date { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+    .artikel-source { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+    .artikel-title { font-family: var(--poppins); font-size: 16px; font-weight: 700; color: var(--white); line-height: 1.4; margin-top: 4px; }
+    .artikel-subtitle { font-size: 13px; color: rgba(255,255,255,0.6); font-style: italic; line-height: 1.4; }
+    .artikel-teaser { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.6; margin-top: 4px; }
+    .artikel-link { margin-top: 8px; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); display: inline-flex; align-items: center; gap: 6px; transition: color 0.2s; }
     .artikel-link::after { content: '→'; }
     .artikel-card:hover .artikel-link { color: var(--white); }
     .artikel-card.hidden { display: none; }
-    .mehr-wrap {
-      margin: 0 60px 80px;
-      padding-top: 24px;
-    }
-    .btn-mehr {
-      background: transparent;
-      border: 2px solid var(--white);
-      color: var(--white);
-      font-family: var(--poppins);
-      font-size: 13px; font-weight: 700;
-      letter-spacing: 0.15em; text-transform: uppercase;
-      padding: 16px 40px; cursor: pointer;
-      transition: background 0.2s, color 0.2s;
-    }
+    .mehr-wrap { margin: 0 60px 80px; padding-top: 24px; }
+    .btn-mehr { background: transparent; border: 2px solid var(--white); color: var(--white); font-family: var(--poppins); font-size: 13px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 16px 40px; cursor: pointer; transition: background 0.2s, color 0.2s; }
     .btn-mehr:hover { background: var(--white); color: var(--vita-bg); }
     @media (max-width: 768px) {
       .medien-header { padding: 40px 24px 24px; }
-      .artikel-grid { margin: 0 24px 60px; }
+      .artikel-grid { margin: 0 24px 0; }
       .mehr-wrap { margin: 0 24px 60px; }
     }
   </style>
 </head>
 <body>
   <nav>
-    <a class="nav-logo" href="/ws-office/">
-      <img src="img/logo.svg" alt="Wolfgang Schmidt" />
-    </a>
+    <a class="nav-logo" href="/ws-office/"><img src="img/logo.svg" alt="Wolfgang Schmidt" /></a>
     <div class="nav-right">
       <div class="lang-switcher">
         <a href="/ws-office/" class="active">de</a>
@@ -107,57 +50,28 @@
         <li><a href="/ws-office/medien.html">Medien</a></li>
         <li><a href="/ws-office/#kontakt">Kontakt</a></li>
       </ul>
-      <button class="menu-toggle" aria-label="Menü">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="menu-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
   <div class="medien-page">
     <div class="medien-header">
       <h1>In den Medien</h1>
-      <p>Presse, Interviews und Auftritte · <a href="medien/neue-eintraege.html">→ Neue Einträge 2025/26</a> · <a href="medien/archiv.html">→ Archiv</a></p>
+      <p>Presse, Interviews und Auftritte · <a href="medien/archiv.html">→ Archiv</a></p>
     </div>
     <div class="artikel-grid">
 
-      <!-- NEUE EINTRÄGE 2025/2026 -->
-
+      <!-- 1 -->
       <div class="artikel-card">
-        <div class="artikel-date">2026</div>
+        <div class="artikel-date">10.03.2026</div>
         <div class="artikel-source">YouTube · Bruno Kreisky Forum Wien</div>
         <div class="artikel-title">Wie kann man heute noch regieren, Herr Schmidt?</div>
-        <div class="artikel-subtitle">Vortrag und Gespräch im Bruno Kreisky Forum für internationalen Dialog, Wien</div>
-        <div class="artikel-teaser">Wolfgang Schmidt spricht über die Herausforderungen moderner Regierungsführung, die Erosion politischer Kompromissfähigkeit und was es braucht, um in turbulenten Zeiten handlungsfähig zu bleiben.</div>
+        <div class="artikel-subtitle">Aus dem Maschinenraum der Macht – Robert Misik im Gespräch mit Wolfgang Schmidt</div>
+        <div class="artikel-teaser">Regieren heute: Schwierigkeiten, Kompliziertheiten und Dilemmata. Wie hält man im Maschinenraum von Regierungen die Partner zusammen? Wie verfolgt man langfristige Pläne? Und wie ist progressives Regieren im 21. Jahrhundert möglich?</div>
         <a class="artikel-link" href="https://www.youtube.com/watch?v=feFdh_WTn0Q" target="_blank">Video ansehen</a>
       </div>
 
-      <div class="artikel-card">
-        <div class="artikel-date">2026</div>
-        <div class="artikel-source">YouTube · taz</div>
-        <div class="artikel-title">Die Kunst des Kompromisses – taz Talk mit Wolfgang Schmidt</div>
-        <div class="artikel-subtitle">taz Talk</div>
-        <div class="artikel-teaser">Im Gespräch mit der taz reflektiert Wolfgang Schmidt über die Kunst des politischen Kompromisses – was sie voraussetzt, wann sie gelingt und warum sie heute schwerer geworden ist.</div>
-        <a class="artikel-link" href="https://www.youtube.com/watch?v=wCtTadsEA1g" target="_blank">Video ansehen</a>
-      </div>
-
-      <div class="artikel-card">
-        <div class="artikel-date">19.01.2026</div>
-        <div class="artikel-source">ZEIT · Sozialdemokratie</div>
-        <div class="artikel-title">Was macht die SPD falsch?</div>
-        <div class="artikel-subtitle">Streitgespräch in der ZEIT vom 19. Januar 2026</div>
-        <div class="artikel-teaser">Die Sozialdemokraten müssen sich mehr um die Arbeiter kümmern, sagt der britische Labour-Politiker Maurice Glasman. Der ehemalige Kanzleramtschef Wolfgang Schmidt entgegnet: Das tun wir doch längst!</div>
-        <a class="artikel-link" href="https://www.zeit.de/2026/03/spd-maurice-glasman-wolfgang-schmidt-arbeit-einwanderung" target="_blank">Artikel lesen</a>
-      </div>
-
-      <div class="artikel-card">
-        <div class="artikel-date">22.01.2026</div>
-        <div class="artikel-source">ZDF · Markus Lanz</div>
-        <div class="artikel-title">Markus Lanz: Grönland-Konflikt, Trump und Russlands Interessen</div>
-        <div class="artikel-subtitle">Zu Gast in der Sendung vom 22. Januar 2026</div>
-        <div class="artikel-teaser">Über den Zustand der transatlantischen Beziehungen, den Wandel der europäischen Sicherheitsarchitektur, zu Donald Trump und über die diplomatische Arbeit hinter den Kulissen.</div>
-        <a class="artikel-link" href="https://www.zdf.de/video/talk/markus-lanz-114/markus-lanz-vom-22-januar-2026-102" target="_blank">Sendung ansehen</a>
-      </div>
-
+      <!-- 2 -->
       <div class="artikel-card">
         <div class="artikel-date">19.02.2026</div>
         <div class="artikel-source">ZDF · Markus Lanz</div>
@@ -167,87 +81,127 @@
         <a class="artikel-link" href="https://www.zdf.de/video/talk/markus-lanz-114/markus-lanz-vom-19-februar-2026-102" target="_blank">Sendung ansehen</a>
       </div>
 
+      <!-- 3 -->
       <div class="artikel-card">
-        <div class="artikel-date">2026</div>
-        <div class="artikel-source">YouTube</div>
-        <div class="artikel-title">Bricht Europa jetzt mit Trump?</div>
-        <div class="artikel-subtitle">Video-Gespräch mit Wolfgang Schmidt</div>
-        <div class="artikel-teaser">Wolfgang Schmidt analysiert, ob und wie Europa sich von der Trump-Administration emanzipieren kann – und was das für die transatlantischen Beziehungen und die deutsche Außenpolitik bedeutet.</div>
-        <a class="artikel-link" href="https://youtu.be/5pyO6tNNL6M" target="_blank">Video ansehen</a>
+        <div class="artikel-date">22.01.2026</div>
+        <div class="artikel-source">ZDF · Markus Lanz</div>
+        <div class="artikel-title">Markus Lanz: Grönland-Konflikt, Trump und Russlands Interessen</div>
+        <div class="artikel-subtitle">Zu Gast in der Sendung vom 22. Januar 2026</div>
+        <div class="artikel-teaser">Über den Zustand der transatlantischen Beziehungen, den Wandel der europäischen Sicherheitsarchitektur, zu Donald Trump und die diplomatische Arbeit hinter den Kulissen.</div>
+        <a class="artikel-link" href="https://www.zdf.de/video/talk/markus-lanz-114/markus-lanz-vom-22-januar-2026-102" target="_blank">Sendung ansehen</a>
       </div>
 
+      <!-- 4 -->
+      <div class="artikel-card">
+        <div class="artikel-date">19.01.2026</div>
+        <div class="artikel-source">Podcast RONZHEIMER</div>
+        <div class="artikel-title">Bricht Europa jetzt mit Trump?</div>
+        <div class="artikel-subtitle">Im Podcast von Paul Ronzheimer – veröffentlicht am 19. Januar 2026</div>
+        <div class="artikel-teaser">Donald Trump droht Europa offen mit Strafzöllen, politischem Druck und der Forderung nach Grönland. Paul Ronzheimer spricht mit Wolfgang Schmidt über Trumps Eskalationsstrategie, die europäische Antwort und die Frage, wie real die sicherheitspolitische Bedrohung wirklich ist.</div>
+        <a class="artikel-link" href="https://youtu.be/5pyO6tNNL6M" target="_blank">Podcast anhören</a>
+      </div>
+
+      <!-- 5 -->
+      <div class="artikel-card">
+        <div class="artikel-date">19.01.2026</div>
+        <div class="artikel-source">ZEIT · Sozialdemokratie</div>
+        <div class="artikel-title">Was macht die SPD falsch?</div>
+        <div class="artikel-subtitle">Streitgespräch in der ZEIT mit Lord Maurice Glasman</div>
+        <div class="artikel-teaser">Die Sozialdemokraten müssen sich mehr um die Arbeiter kümmern, sagt der britische Labour-Politiker Maurice Glasman. Wolfgang Schmidt entgegnet: Das tun wir doch längst!</div>
+        <a class="artikel-link" href="https://www.zeit.de/2026/03/spd-maurice-glasman-wolfgang-schmidt-arbeit-einwanderung" target="_blank">Artikel lesen</a>
+      </div>
+
+      <!-- 6 -->
       <div class="artikel-card">
         <div class="artikel-date">06.11.2025</div>
         <div class="artikel-source">Spiegel</div>
-        <div class="artikel-title">Ampel-Koalition: Ein Jahr nach dem Bruch – Koordinatoren ziehen Bilanz</div>
-        <div class="artikel-subtitle">Pressebericht im Spiegel vom 6. November 2025</div>
-        <div class="artikel-teaser">Sie mussten eine Koalition organisieren, die kaum zusammenpasste: Ein Jahr nach dem Ampel-Aus sprechen Wolfgang Schmidt, Anja Hajduk und Steffen Saebisch über eigene Fehler – und über Olaf Scholz.</div>
+        <div class="artikel-title">»Wir haben in den Abgrund geschaut – und der wurde jeden Tag größer«</div>
+        <div class="artikel-subtitle">Gemeinsames Interview im Spiegel vom 6. November 2025</div>
+        <div class="artikel-teaser">Ein Jahr nach dem Ampel-Aus sprechen Wolfgang Schmidt, Anja Hajduk und Steffen Saebisch über eigene Fehler – und über Olaf Scholz.</div>
         <a class="artikel-link" href="https://www.spiegel.de/politik/deutschland/ampel-koalition-ein-jahr-nach-dem-bruch-koordinatoren-ziehen-bilanz-a-7c4fe38d-2621-463f-b154-974ad6dea3af" target="_blank">Artikel lesen</a>
       </div>
 
+
+      <!-- 7 -->
+      <div class="artikel-card">
+        <div class="artikel-date">09.08.2025</div>
+        <div class="artikel-source">Podcast RONZHEIMER · Streit</div>
+        <div class="artikel-title">STREIT: Sozialstaat am Ende? Poschardt vs. Schmidt</div>
+        <div class="artikel-subtitle">RONZHEIMER. DER STREIT – mit Ulf Poschardt, moderiert von Paul Ronzheimer</div>
+        <div class="artikel-teaser">Kann sich Deutschland seinen Sozialstaat noch leisten? WELT-Herausgeber Ulf Poschardt und Ex-Kanzleramtschef Wolfgang Schmidt diskutieren über Bürgergeld, Steuern und die Zukunft des Sozialstaats.</div>
+        <a class="artikel-link" href="https://open.spotify.com/episode/5sk4kwxMVZYb1wuC039rgH" target="_blank">Podcast hören</a>
+      </div>
+
+      <!-- 8 -->
       <div class="artikel-card">
         <div class="artikel-date">20.07.2025</div>
         <div class="artikel-source">ZEIT</div>
         <div class="artikel-title">Hat Olaf Scholz die Ampel gesprengt?</div>
-        <div class="artikel-subtitle">Streitgespräch in der ZEIT vom 20. Juli 2025</div>
+        <div class="artikel-subtitle">Streitgespräch in der ZEIT mit Robin Alexander</div>
         <div class="artikel-teaser">Die Koalition aus SPD, Grünen und FDP ist gescheitert, weil der Kanzler es allen recht machen wollte, sagt Autor Robin Alexander. Wolfgang Schmidt entgegnet: Führung bedeute, den Laden zusammenzuhalten – das lerne Merz gerade.</div>
         <a class="artikel-link" href="https://www.zeit.de/2025/30/bruch-ampelkoalition-olaf-scholz-robin-alexander-wolfgang-schmidt" target="_blank">Artikel lesen</a>
       </div>
 
+      <!-- 9 -->
+      <div class="artikel-card">
+        <div class="artikel-date">10.05.2025</div>
+        <div class="artikel-source">Podcast RONZHEIMER</div>
+        <div class="artikel-title">Inside Kanzleramt: Welche Staats-Geheimnisse Merz jetzt erfährt</div>
+        <div class="artikel-subtitle">Im Podcast von Paul Ronzheimer – veröffentlicht am 10. Mai 2025</div>
+        <div class="artikel-teaser">Paul Ronzheimer spricht mit Wolfgang Schmidt, seit wenigen Tagen Ex-Kanzleramtsminister, über die Arbeit im Kanzleramt: In welche Geheimnisse wurde Merz eingeweiht? Wie viel Sorge muss man als Kanzleramtsminister vor russischen Spionen haben?</div>
+        <a class="artikel-link" href="https://open.spotify.com/episode/0jOEh3AFX3PMDtxpQOeGoC" target="_blank">Podcast hören</a>
+      </div>
+
+      <!-- 10 -->
+      <div class="artikel-card">
+        <div class="artikel-date">17.12.2025</div>
+        <div class="artikel-source">Podcast RONZHEIMER</div>
+        <div class="artikel-title">Schickt Deutschland Truppen in die Ukraine?</div>
+        <div class="artikel-subtitle">Im Podcast von Paul Ronzheimer – veröffentlicht am 17. Dezember 2025</div>
+        <div class="artikel-teaser">Paul Ronzheimer spricht mit Wolfgang Schmidt über die laufenden Ukraine-Friedensverhandlungen, die Rolle der USA um Steve Witkoff und Jared Kushner und die Frage, welche Sicherheitsgarantien realistisch wären, wenn die Ukraine nicht in die NATO kommt.</div>
+        <a class="artikel-link" href="https://open.spotify.com/episode/3LdwJP9HX9EYawGSkk391l" target="_blank">Podcast hören</a>
+      </div>
+
+      <!-- 11 -->
+      <div class="artikel-card">
+        <div class="artikel-date">15.09.2025</div>
+        <div class="artikel-source">YouTube · taz</div>
+        <div class="artikel-title">Die Kunst des Kompromisses – taz Talk mit Wolfgang Schmidt</div>
+        <div class="artikel-subtitle">taz Talk vom 15. September 2025</div>
+        <div class="artikel-teaser">Wolfgang Schmidt blickt auf die Arbeit der Ampelkoalition zurück und zieht Schlüsse: Was sollten progressive Kräfte tun, um in der Bundesrepublik künftig wieder mehrheitsfähig zu werden? Mit Anna Lehmann und Andreas Fanizadeh.</div>
+        <a class="artikel-link" href="https://www.youtube.com/watch?v=wCtTadsEA1g" target="_blank">Video ansehen</a>
+      </div>
+
+      <!-- 12 -->
       <div class="artikel-card">
         <div class="artikel-date">2025</div>
         <div class="artikel-source">YouTube · phoenix persönlich</div>
         <div class="artikel-title">phoenix persönlich: Wolfgang Schmidt bei Eva Lindenau</div>
-        <div class="artikel-subtitle">Porträt-Gespräch bei phoenix</div>
-        <div class="artikel-teaser">In der Reihe „phoenix persönlich" spricht Wolfgang Schmidt mit Eva Lindenau über seinen politischen Werdegang, die Jahre im Kanzleramt und seine Einschätzungen zur Zukunft der deutschen Politik.</div>
+        <div class="artikel-subtitle">Porträt-Gespräch in der Reihe phoenix persönlich</div>
+        <div class="artikel-teaser">Wolfgang Schmidt spricht mit Eva Lindenau über seinen politischen Werdegang, die Jahre im Kanzleramt und seine Einschätzungen zur Zukunft der deutschen Politik.</div>
         <a class="artikel-link" href="https://www.youtube.com/watch?v=_3VglGC1r1o" target="_blank">Video ansehen</a>
       </div>
 
+      <!-- 13 -->
       <div class="artikel-card">
-        <div class="artikel-date">2025</div>
+        <div class="artikel-date">20.02.2025</div>
         <div class="artikel-source">Spotify · Playlist</div>
-        <div class="artikel-title">Songs und Politik – Playlist von Wolfgang Schmidt</div>
-        <div class="artikel-subtitle">Eine persönliche Musikauswahl</div>
-        <div class="artikel-teaser">Musik, die Wolfgang Schmidt begleitet hat – politisch, persönlich, prägend. Eine Playlist, die Einblick gibt in seinen Soundtrack der Jahre im Kanzleramt und darüber hinaus.</div>
+        <div class="artikel-title">Songs und Politik – die Playlist zum Abend mit Carsten Brosda</div>
+        <div class="artikel-subtitle">Veranstaltung im Logensaal der Hamburger Kammerspiele – 20. Februar 2025</div>
+        <div class="artikel-teaser">Wolfgang Schmidt und Hamburgs Kultursenator Dr. Carsten Brosda haben sich durch eine Auswahl ihrer Lieblingssongs gehört und darüber gesprochen, was diese politisch bedeuten. Musik war und ist immer auch politisch – von Arbeiter- und Protestliedern bis hin zu aktuellen Songs.</div>
         <a class="artikel-link" href="https://open.spotify.com/playlist/58MB2uHmJI2LnNlrJ1Vhaq" target="_blank">Playlist öffnen</a>
       </div>
 
-      <div class="artikel-card">
-        <div class="artikel-date">2025</div>
-        <div class="artikel-source">Spotify · Podcast</div>
-        <div class="artikel-title">Podcast-Interview: Episode 1</div>
-        <div class="artikel-subtitle">Podcast-Gespräch mit Wolfgang Schmidt</div>
-        <div class="artikel-teaser">Wolfgang Schmidt im ausführlichen Podcast-Gespräch über Regierungsarbeit, politische Strategie und die Fragen, die ihn nach dem Ausscheiden aus dem Amt beschäftigen.</div>
-        <a class="artikel-link" href="https://open.spotify.com/episode/3LdwJP9HX9EYawGSkk391l" target="_blank">Podcast hören</a>
-      </div>
 
-      <div class="artikel-card">
-        <div class="artikel-date">2025</div>
-        <div class="artikel-source">Spotify · Podcast</div>
-        <div class="artikel-title">Podcast-Interview: Episode 2</div>
-        <div class="artikel-subtitle">Podcast-Gespräch mit Wolfgang Schmidt</div>
-        <div class="artikel-teaser">Im Gespräch über Transatlantik, Europa und die Frage, wie Deutschland seine Rolle in einer veränderten Weltordnung neu definieren muss.</div>
-        <a class="artikel-link" href="https://open.spotify.com/episode/0jOEh3AFX3PMDtxpQOeGoC" target="_blank">Podcast hören</a>
-      </div>
-
-      <div class="artikel-card">
-        <div class="artikel-date">2025</div>
-        <div class="artikel-source">Spotify · Podcast</div>
-        <div class="artikel-title">Podcast-Interview: Episode 3</div>
-        <div class="artikel-subtitle">Podcast-Gespräch mit Wolfgang Schmidt</div>
-        <div class="artikel-teaser">Wolfgang Schmidt über Demokratie, Entbürokratisierung und Digitalisierung – und warum der Staat schneller werden muss, wenn er relevant bleiben will.</div>
-        <a class="artikel-link" href="https://open.spotify.com/episode/5sk4kwxMVZYb1wuC039rgH" target="_blank">Podcast hören</a>
-      </div>
-
-      <!-- ÄLTERE EINTRÄGE (ab 2025) -->
+      <!-- ÄLTERE EINTRÄGE -->
 
       <div class="artikel-card">
         <div class="artikel-date">21.02.2025</div>
         <div class="artikel-source">Frankfurter Allgemeine Zeitung</div>
         <div class="artikel-title">Bundestagswahl 2025: Welche Rolle spielen die „Spin doctors" der Kanzlerkandidaten?</div>
         <div class="artikel-subtitle">Ein Artikel in der FAZ vom 21. Februar 2025</div>
-        <div class="artikel-teaser">Wenn man sich die letzten Auftritte der Spitzenkandidaten anschaute, konnte man einige überraschende Veränderungen feststellen: Olaf Scholz wirkte emotionaler, ohne dass ihm Ausrut…</div>
-        <a class="artikel-link" href="https://www.faz.net/aktuell/politik/inland/spd-vor-der-bundestagswahl-2025-das-system-scholz-loest-sich-auf-110275560.html" target="_blank">Artikel lesen</a>
+        <div class="artikel-teaser">Olaf Scholz wirkte emotionaler, Friedrich Merz schärfer, Robert Habeck ruhiger: Wolfgang Schmidt analysiert, welche Rolle die politischen Berater im Endspurt des Bundestagswahlkampfs spielten.</div>
+        <a class="artikel-link" href="https://www.faz.net/aktuell/feuilleton/bundestagswahl-2025-welche-rolle-spielen-die-spin-doctors-der-kanzlerkandidaten-110309143.html" target="_blank">Artikel lesen</a>
       </div>
 
       <div class="artikel-card">
@@ -255,16 +209,17 @@
         <div class="artikel-source">El País</div>
         <div class="artikel-title">"Los 'tecnooligarcas' de EE UU tienen su programa. En Europa debemos unirnos"</div>
         <div class="artikel-subtitle">Ein Porträt der spanischen Zeitung El País</div>
-        <div class="artikel-teaser">El jefe de la Cancillería, el colaborador más cercano de Scholz, rechaza las críticas de haber arrastrado los pies en la ayuda a Ucrania…</div>
+        <div class="artikel-teaser">Der Kanzleramtschef, engster Vertrauter von Scholz, weist die Kritik zurück, bei der Ukraine-Hilfe auf der Bremse gestanden zu haben.</div>
+        <a class="artikel-link" href="https://elpais.com/internacional/2025-02-21/el-ministro-aleman-wolfgang-schmidt-sobre-la-injerencia-electoral-de-ee-uu-no-necesitamos-sugerencias-de-nadie.html" target="_blank">Artículo leer</a>
       </div>
 
       <div class="artikel-card">
         <div class="artikel-date">19.02.2025</div>
         <div class="artikel-source">SAT.1</div>
-        <div class="artikel-title">Mein Gespräch mit Wladimir Klitschko über die Ukraine</div>
+        <div class="artikel-title">Gespräch mit Wladimir Klitschko über die Ukraine</div>
         <div class="artikel-subtitle">Ein Bericht von SAT.1 – vom 19. Februar 2025</div>
-        <div class="artikel-teaser">Gestern Abend ging es im ABATON-Kino in Hamburg um die Ukraine. Wladimir Klitschko war zu Gast.</div>
-        <a class="artikel-link" href="https://www.sat1regional.de/frieden-nicht-um-jeden-preis-wladimir-klitschko-spricht-mit-kanzleramtsminister-in-hamburg-uber-ukraine-krieg/" target="_blank">Artikel lesen</a>
+        <div class="artikel-teaser">Im ABATON-Kino in Hamburg war Wladimir Klitschko zu Gast. Wolfgang Schmidt sprach mit ihm über die Stimmung im Land und die Auswirkungen der Ankündigungen der neuen US-Regierung.</div>
+        <a class="artikel-link" href="https://www.sat1regional.de/frieden-nicht-um-jeden-preis-wladimir-klitschko-spricht-mit-kanzleramtsminister-in-hamburg-uber-ukraine-krieg/" target="_blank">Bericht ansehen</a>
       </div>
 
       <div class="artikel-card">
@@ -277,18 +232,19 @@
 
       <div class="artikel-card">
         <div class="artikel-date">17.02.2025</div>
-        <div class="artikel-source">taz.nord</div>
+        <div class="artikel-source">taz – die tageszeitung</div>
         <div class="artikel-title">Die rechte Hand von Olaf Scholz</div>
-        <div class="artikel-subtitle">Ein Porträt der taz.nord vom 17. Februar 2025</div>
-        <div class="artikel-teaser">Wolfgang Schmidt arbeitete viele Jahre in zentralen Schaltstellen der Macht. Jetzt bewirbt er sich erstmals um ein Parlamentsmandat.</div>
+        <div class="artikel-subtitle">Ein Porträt in der taz – die tageszeitung vom 17. Februar 2025</div>
+        <div class="artikel-teaser">Wolfgang Schmidt arbeitete viele Jahre in zentralen Schaltstellen der Macht – als Staatsrat, Staatssekretär, Kanzleramtsminister.</div>
+        <a class="artikel-link" href="https://taz.de/Kanzleramtsminister-Wolfgang-Schmidt/!6067820/" target="_blank">Artikel lesen</a>
       </div>
 
       <div class="artikel-card">
         <div class="artikel-date">16.02.2025</div>
         <div class="artikel-source">POLITICO</div>
         <div class="artikel-title">Podcast-Interview am Rande der Münchner Sicherheitskonferenz</div>
-        <div class="artikel-subtitle">Im Gespräch mit Gordon Repinski von POLITICO – veröffentlicht am 16. Februar</div>
-        <div class="artikel-teaser">Mit Gordon Repinski von POLITICO habe ich am Rande der Münchner Sicherheitskonferenz kurz darüber gesprochen, wie es mit der Unterstützung für die Ukraine weitergeht.</div>
+        <div class="artikel-subtitle">Im Gespräch mit Gordon Repinski von POLITICO – veröffentlicht am 16. Februar 2025</div>
+        <div class="artikel-teaser">Wolfgang Schmidt sprach am Rande der Münchner Sicherheitskonferenz mit Gordon Repinski über die Unterstützung für die Ukraine und die Herausforderungen der deutschen Sicherheitspolitik.</div>
       </div>
 
       <div class="artikel-card">
@@ -296,7 +252,7 @@
         <div class="artikel-source">MSC 2025</div>
         <div class="artikel-title">Wolfgang Schmidt trifft Marvin Neumann</div>
         <div class="artikel-subtitle">Im YouTube Studio der Münchner Sicherheitskonferenz 2025</div>
-        <div class="artikel-teaser">Mit Marvin Neumann habe ich über Deutschlands Verteidigungsfähigkeit und die Herausforderungen der Ampel-Koalition gesprochen.</div>
+        <div class="artikel-teaser">Wolfgang Schmidt sprach mit Marvin Neumann über Deutschlands Verteidigungsfähigkeit und die sicherheitspolitischen Herausforderungen.</div>
       </div>
 
       <div class="artikel-card">
@@ -304,7 +260,7 @@
         <div class="artikel-source">SAT.1</div>
         <div class="artikel-title">„Ich möchte mich ganz konkret für Eimsbüttel einsetzen"</div>
         <div class="artikel-subtitle">SAT.1-Beitrag vom 11. Februar 2025</div>
-        <div class="artikel-teaser">SAT.1 hat mich vergangene Woche in Eimsbüttel begleitet: Beim Wahlkampf im Eidelstedt Center, bei einer Tür-zu-Tür-Aktion und auch bei einem besonderen Termin.</div>
+        <div class="artikel-teaser">SAT.1 begleitete Wolfgang Schmidt in Eimsbüttel: beim Wahlkampf im Eidelstedt Center, bei einer Tür-zu-Tür-Aktion und bei einem Termin im Stadtteil.</div>
       </div>
 
       <div class="artikel-card">
@@ -312,23 +268,24 @@
         <div class="artikel-source">POLITICO Berlin Playbook</div>
         <div class="artikel-title">„Der Schattenmann" – zu Gast im POLITICO Berlin Playbook Podcast</div>
         <div class="artikel-subtitle">Im Interview mit Gordon Repinski – veröffentlicht am 7. Februar 2025</div>
-        <div class="artikel-teaser">Am Mittwoch hat mich Gordon Repinski in meinen Wahlkreis Hamburg-Eimsbüttel besucht.</div>
+        <div class="artikel-teaser">Gordon Repinski traf Wolfgang Schmidt in Hamburg und sprach mit ihm über die Arbeit in der Bundesregierung und seine Kandidatur für den Bundestag.</div>
         <a class="artikel-link" href="https://www.politico.eu/podcast/berlin-playbook-podcast/der-schattenmann-spaziergang-mit-wolfgang-schmidt/" target="_blank">Podcast hören</a>
       </div>
+
 
       <div class="artikel-card">
         <div class="artikel-date">07.02.2025</div>
         <div class="artikel-source">ZDF – Markus Lanz</div>
         <div class="artikel-title">Zu Gast bei Markus Lanz</div>
         <div class="artikel-subtitle">In der Sendung vom 6. Februar 2025 im ZDF</div>
-        <div class="artikel-teaser">Gestern Abend war ich zu Gast bei Markus Lanz im ZDF. Es ging um den Wahlkampf, eine erfolgreiche Migrations- und Wirtschaftspolitik sowie den Weg zu einer Regierungsbildung.</div>
+        <div class="artikel-teaser">Wolfgang Schmidt war zu Gast bei Markus Lanz im ZDF. Themen: Wahlkampf, Migrations- und Wirtschaftspolitik sowie der Weg zu einer Regierungsbildung nach der Bundestagswahl.</div>
       </div>
 
       <div class="artikel-card">
         <div class="artikel-date">06.02.2025</div>
         <div class="artikel-source">Augsburger Allgemeine</div>
         <div class="artikel-title">„Wenn der Minister an der Haustür klingelt"</div>
-        <div class="artikel-subtitle">Pressebericht der Augsburger Allgemeinen – veröffentlicht am 6. Februar</div>
+        <div class="artikel-subtitle">Pressebericht der Augsburger Allgemeinen vom 6. Februar 2025</div>
         <div class="artikel-teaser">Wolfgang Schmidt ist der Mann hinter Olaf Scholz: Kanzleramtschef, loyaler Spindoktor, ein Mechaniker der Macht.</div>
       </div>
 
@@ -343,10 +300,10 @@
 
       <div class="artikel-card">
         <div class="artikel-date">04.02.2025</div>
-        <div class="artikel-source">BILD-Podcast</div>
+        <div class="artikel-source">Podcast RONZHEIMER</div>
         <div class="artikel-title">„Friedrich Merz hat sein Wort gebrochen."</div>
-        <div class="artikel-subtitle">Im Podcast-Interview mit Paul Ronzheimer am 04. Februar 2025</div>
-        <div class="artikel-teaser">Im Interview ging es vor allem um die aktuelle Debatte um Flucht und Migration und den Tabubruch der CDU.</div>
+        <div class="artikel-subtitle">Im Podcast von Paul Ronzheimer – veröffentlicht am 4. Februar 2025</div>
+        <div class="artikel-teaser">Wolfgang Schmidt sprach über die Debatte um Flucht und Migration und den Tabubruch der CDU bei der Migrationabstimmung im Bundestag.</div>
         <a class="artikel-link" href="https://ronzheimer.podigee.io/233-kanzleramtsminister-wolfgang-schmidt" target="_blank">Podcast hören</a>
       </div>
 
@@ -354,8 +311,8 @@
         <div class="artikel-date">04.02.2025</div>
         <div class="artikel-source">Gute Leude – Das Hamburg Gespräch</div>
         <div class="artikel-title">Im Podcast „Gute Leude – Das Hamburg Gespräch"</div>
-        <div class="artikel-subtitle">Im Gespräch mit Lars Meier am 04. Februar 2025</div>
-        <div class="artikel-teaser">Im Podcast habe ich mit Lars Meier u.a. über meine enge Beziehung zu Hamburg und Eimsbüttel, meine langjährige Zusammenarbeit mit Olaf Scholz und meine Kandidatur gesprochen.</div>
+        <div class="artikel-subtitle">Im Gespräch mit Lars Meier – veröffentlicht am 4. Februar 2025</div>
+        <div class="artikel-teaser">Wolfgang Schmidt sprach mit Lars Meier über seine Verbundenheit mit Hamburg, die langjährige Zusammenarbeit mit Olaf Scholz und seine Kandidatur für den Bundestag.</div>
         <a class="artikel-link" href="https://guteleude.podigee.io/135-wolfgang-schmidt" target="_blank">Podcast hören</a>
       </div>
 
@@ -363,7 +320,7 @@
         <div class="artikel-date">29.01.2025</div>
         <div class="artikel-source">Round Table Podcast</div>
         <div class="artikel-title">„Ich hoffe noch auf Einsicht, dass die CDU den Tabubruch nicht vollzieht."</div>
-        <div class="artikel-subtitle">Im „Round Table"-Podcast am 29. Januar 2025</div>
+        <div class="artikel-subtitle">Im „Round Table"-Podcast – veröffentlicht am 29. Januar 2025</div>
         <a class="artikel-link" href="https://table.media/podcast/table-today/round-table-mit-wolfgang-schmidt/" target="_blank">Podcast hören</a>
       </div>
 
@@ -372,7 +329,7 @@
         <div class="artikel-source">NDR</div>
         <div class="artikel-title">Bundestagswahlkampf in Eimsbüttel</div>
         <div class="artikel-subtitle">NDR-Bericht vom 25. Januar 2025</div>
-        <div class="artikel-teaser">Für das Hamburg-Journal hat der NDR meine Mitbewerber und mich neulich in Eimsbüttel begleitet.</div>
+        <div class="artikel-teaser">Für das Hamburg-Journal begleitete der NDR die Bundestagskandidaten im Wahlkreis Eimsbüttel – darunter Wolfgang Schmidt.</div>
         <a class="artikel-link" href="http://www.ndr.de/fernsehen/sendungen/hamburg_journal/Bundestagswahl-in-Eimsbuettel-Die-Kandidaten-im-Ueberblick,hamj155406.html" target="_blank">Bericht ansehen</a>
       </div>
 
@@ -380,8 +337,8 @@
         <div class="artikel-date">24.01.2025</div>
         <div class="artikel-source">ZDF – Maybrit Illner</div>
         <div class="artikel-title">Bei Maybrit Illner: „Trump macht Ernst – ist Deutschland diesmal vorbereitet?"</div>
-        <div class="artikel-subtitle">Zu Gast in der ZDF-Talkshow am 23. Januar 2025</div>
-        <div class="artikel-teaser">Gestern war ich in der Sendung Maybrit Illner zu Gast. Mit Jens Spahn und weiteren Gästen über Trump und Deutschlands Vorbereitung.</div>
+        <div class="artikel-subtitle">Zu Gast in der ZDF-Talkshow vom 23. Januar 2025</div>
+        <div class="artikel-teaser">Wolfgang Schmidt diskutierte mit Jens Spahn und weiteren Gästen über Trumps Rückkehr und Deutschlands sicherheitspolitische Vorbereitung.</div>
       </div>
 
       <div class="artikel-card">
@@ -406,8 +363,8 @@
         <div class="artikel-date">14.01.2025</div>
         <div class="artikel-source">Hamburger Abendblatt</div>
         <div class="artikel-title">„Das Scholz-Update" – mit Kanzleramtsminister Wolfgang Schmidt</div>
-        <div class="artikel-subtitle">Im Abendblatt-Podcast bei Lars Haider – veröffentlicht am 14.01.2025</div>
-        <div class="artikel-teaser">Drei Jahre lang hat er vor allem hinter den Kulissen der großen Politik gearbeitet.</div>
+        <div class="artikel-subtitle">Im Abendblatt-Podcast bei Lars Haider – veröffentlicht am 14. Januar 2025</div>
+        <div class="artikel-teaser">Drei Jahre lang arbeitete Wolfgang Schmidt vor allem hinter den Kulissen der großen Politik – jetzt tritt er selbst als Direktkandidat an.</div>
         <a class="artikel-link" href="https://www.abendblatt.de/podcast/article408079217/wolfgang-schmidt-das-hat-olaf-scholz-geschadet.html" target="_blank">Podcast hören</a>
       </div>
 
@@ -415,16 +372,16 @@
         <div class="artikel-date">12.01.2025</div>
         <div class="artikel-source">ZDF – Berlin direkt</div>
         <div class="artikel-title">„Wir dürfen die Ausrüstung der Bundeswehr nicht gegen die Rente ausspielen"</div>
-        <div class="artikel-subtitle">Im Interview bei Berlin direkt im ZDF am 12.01.2025</div>
-        <div class="artikel-teaser">Im Interview ging es um die Zukunft und Finanzierung unserer Verteidigungsausgaben.</div>
+        <div class="artikel-subtitle">Im Interview bei Berlin direkt im ZDF – 12. Januar 2025</div>
+        <div class="artikel-teaser">Wolfgang Schmidt sprach über die Zukunft und Finanzierung der Verteidigungsausgaben und die Frage, ob Bundeswehr-Investitionen gegen Sozialleistungen ausgespielt werden dürfen.</div>
       </div>
 
       <div class="artikel-card">
         <div class="artikel-date">03.01.2025</div>
         <div class="artikel-source">Hamburger Abendblatt</div>
         <div class="artikel-title">„Kanzleramtschef kämpft in Hamburg um Stimmen – und gegen Schnee"</div>
-        <div class="artikel-subtitle">Pressebericht des Hamburger Abendblatts vom 03. Januar 2025</div>
-        <div class="artikel-teaser">Wolfgang Schmidt startet Wahlkampf vor Supermarkt in Hoheluft – bei widrigem Wetter.</div>
+        <div class="artikel-subtitle">Pressebericht des Hamburger Abendblatts vom 3. Januar 2025</div>
+        <div class="artikel-teaser">Wolfgang Schmidt startete den Wahlkampf vor einem Supermarkt in Hoheluft – bei widrigem Wetter.</div>
         <a class="artikel-link" href="https://www.abendblatt.de/hamburg/politik/article408006178/wolfgang-schmidt-kaempft-in-hamburg-um-stimmen-und-gegen-schnee.html" target="_blank">Artikel lesen</a>
       </div>
 
@@ -433,7 +390,7 @@
         <div class="artikel-source">Süddeutsche Zeitung</div>
         <div class="artikel-title">„Hamburger SPD wählt Kanzleramtschef zum Spitzenkandidaten"</div>
         <div class="artikel-subtitle">Pressebericht der SZ vom 10. Dezember 2024</div>
-        <div class="artikel-teaser">Kanzleramtschef Wolfgang Schmidt führt die Hamburger SPD als Spitzenkandidat in den Bundestagswahlkampf.</div>
+        <div class="artikel-teaser">Wolfgang Schmidt führt die Hamburger SPD als Spitzenkandidat in den Bundestagswahlkampf.</div>
         <a class="artikel-link" href="https://www.sueddeutsche.de/politik/wolfgang-schmidt-hamburger-spd-waehlt-kanzleramtschef-zum-spitzenkandidaten-dpa.urn-newsml-dpa-com-20090101-241210-930-313317" target="_blank">Artikel lesen</a>
       </div>
 
@@ -441,16 +398,16 @@
         <div class="artikel-date">27.11.2024</div>
         <div class="artikel-source">Bundestag</div>
         <div class="artikel-title">Die Inflation sinkt, die Reallöhne steigen</div>
-        <div class="artikel-subtitle">Statement bei der Befragung der Bundesregierung am 20.11.2024</div>
-        <div class="artikel-teaser">Vor einer Woche habe ich den Bundestagsabgeordneten in meiner Funktion als Bundesminister für besondere Aufgaben meine Bilanz der Regierungsarbeit dargelegt.</div>
+        <div class="artikel-subtitle">Statement bei der Befragung der Bundesregierung – 20. November 2024</div>
+        <div class="artikel-teaser">Wolfgang Schmidt legte den Bundestagsabgeordneten in seiner Funktion als Bundesminister für besondere Aufgaben eine Bilanz der Regierungsarbeit vor.</div>
       </div>
 
       <div class="artikel-card">
         <div class="artikel-date">25.11.2024</div>
         <div class="artikel-source">NDR</div>
-        <div class="artikel-title">NDR-Bericht zu meiner Wahl als Bundestagskandidat der SPD in Eimsbüttel</div>
-        <div class="artikel-subtitle">Ich freue mich sehr über die große Unterstützung</div>
-        <div class="artikel-teaser">Es war ein besonderer Abend für mich: Ich freue mich sehr über das Vertrauen und die große Unterstützung der SPD Eimsbüttel.</div>
+        <div class="artikel-title">NDR-Bericht zur Wahl als Bundestagskandidat der SPD in Eimsbüttel</div>
+        <div class="artikel-subtitle">NDR Hamburg – November 2024</div>
+        <div class="artikel-teaser">Wolfgang Schmidt wurde von der SPD Eimsbüttel als Direktkandidat für die Bundestagswahl nominiert.</div>
       </div>
 
       <div class="artikel-card">
@@ -458,7 +415,7 @@
         <div class="artikel-source">Hamburger Abendblatt</div>
         <div class="artikel-title">„Warum Scholz-Versteher Wolfgang Schmidt jetzt in Hamburg kandidiert"</div>
         <div class="artikel-subtitle">Pressebericht des Hamburger Abendblatts vom 25. November 2024</div>
-        <div class="artikel-teaser">Kanzleramtsminister will von Eimsbüttel aus neu durchstarten. Sozialdemokrat hofft auf Direktmandat gegen Till Steffen.</div>
+        <div class="artikel-teaser">Kanzleramtsminister Schmidt kandidiert in Eimsbüttel für den Bundestag.</div>
         <a class="artikel-link" href="https://www.abendblatt.de/hamburg/politik/article407739495/kanzleramtsminister-schmidt-will-von-hamburg-aus-neu-durchstarten.html" target="_blank">Artikel lesen</a>
       </div>
 
@@ -466,7 +423,7 @@
         <div class="artikel-date">09.08.2024</div>
         <div class="artikel-source">Hamburger Abendblatt</div>
         <div class="artikel-title">„Kanzleramtsminister Schmidt tritt im Wahlkreis Eimsbüttel an"</div>
-        <div class="artikel-subtitle">Pressebericht des Hamburger Abendblatts vom 08. August 2024</div>
+        <div class="artikel-subtitle">Pressebericht des Hamburger Abendblatts vom 8. August 2024</div>
         <div class="artikel-teaser">Scholz-Vertrauter will 2025 von Hamburg aus in den Bundestag.</div>
         <a class="artikel-link" href="https://www.abendblatt.de/hamburg/politik/article406922306/olaf-scholzE28098-vertrauter-wolfgang-schmidt-will-2025-in-den-bundestag.html" target="_blank">Artikel lesen</a>
       </div>
@@ -475,7 +432,7 @@
         <div class="artikel-date">01.08.2024</div>
         <div class="artikel-source">Frankfurter Allgemeine Zeitung</div>
         <div class="artikel-title">„Kanzleramtschef Wolfgang Schmidt will in den Bundestag"</div>
-        <div class="artikel-subtitle">Pressebericht der FAZ vom 01. August 2024</div>
+        <div class="artikel-subtitle">Pressebericht der FAZ vom 1. August 2024</div>
         <a class="artikel-link" href="https://www.faz.net/aktuell/politik/inland/kanzleramtschef-wolfgang-schmidt-will-in-den-bundestag-19893059.html" target="_blank">Artikel lesen</a>
       </div>
 
@@ -484,7 +441,7 @@
         <div class="artikel-source">taz</div>
         <div class="artikel-title">„Will der Kanzler noch das Klima retten?"</div>
         <div class="artikel-subtitle">Pressebericht der taz vom 7. Juni 2024</div>
-        <div class="artikel-teaser">Von allen Gedanken schätze ich doch am meisten die interessanten – Kanzleramtsminister Wolfgang Schmidt in der Berliner Urania.</div>
+        <div class="artikel-teaser">Kanzleramtsminister Wolfgang Schmidt sprach in der Berliner Urania über Klimapolitik und die Frage, welche Prioritäten eine Regierung setzen sollte.</div>
         <a class="artikel-link" href="https://taz.de/Will-der-Kanzler-noch-das-Klima-retten/!6013063/" target="_blank">Artikel lesen</a>
       </div>
 
@@ -519,7 +476,7 @@
         <div class="artikel-source">Frankfurter Allgemeine Zeitung</div>
         <div class="artikel-title">„Wolfgang Schmidt: Verteidiger des Kanzlers"</div>
         <div class="artikel-subtitle">Pressebericht der FAZ vom 27. August 2023</div>
-        <div class="artikel-teaser">Vor Fernsehkameras ist der Kanzleramtschef und enge Vertraute von Olaf Scholz kaum zu sehen. Er kämpft intern für den Erfolg des Regierungschefs.</div>
+        <div class="artikel-teaser">Vor Fernsehkameras ist der Kanzleramtschef kaum zu sehen. Er kämpft intern für den Erfolg des Regierungschefs.</div>
         <a class="artikel-link" href="https://www.faz.net/aktuell/politik/wolfgang-schmidt-verteidiger-des-kanzlers-19132021.html" target="_blank">Artikel lesen</a>
       </div>
 
@@ -528,7 +485,7 @@
         <div class="artikel-source">Frankfurter Allgemeine Zeitung</div>
         <div class="artikel-title">„Deutschlands Oberkoordinator"</div>
         <div class="artikel-subtitle">Pressebericht der FAZ vom 5. Mai 2023</div>
-        <div class="artikel-teaser">Wolfgang Schmidt muss eine Koalition aus drei Parteien beieinanderhalten. Fast noch schwieriger ist es, die Interessen von Bund und 16 Ländern unter einen Hut zu bringen.</div>
+        <div class="artikel-teaser">Wolfgang Schmidt muss eine Koalition aus drei Parteien beieinanderhalten – und die Interessen von Bund und 16 Ländern unter einen Hut bringen.</div>
         <a class="artikel-link" href="https://www.faz.net/aktuell/politik/herr-der-kompromisse-18881229.html" target="_blank">Artikel lesen</a>
       </div>
 
@@ -537,7 +494,7 @@
         <div class="artikel-source">ZEIT</div>
         <div class="artikel-title">„Der mächtige Mann hinter Scholz"</div>
         <div class="artikel-subtitle">Pressebericht der Zeit vom 11. April 2023</div>
-        <div class="artikel-teaser">Er ist der wichtigste Berater des Kanzlers. Doch in der Öffentlichkeit kennt kaum jemand seinen Namen. Wer ist Wolfgang Schmidt?</div>
+        <div class="artikel-teaser">Er ist der wichtigste Berater des Kanzlers. Doch in der Öffentlichkeit kennt kaum jemand seinen Namen.</div>
         <a class="artikel-link" href="https://www.zeit.de/2023/15/olaf-scholz-berater-bundeskanzler-wolfgang-schmidt/komplettansicht" target="_blank">Artikel lesen</a>
       </div>
 
@@ -546,7 +503,7 @@
         <div class="artikel-source">Tagesschau</div>
         <div class="artikel-title">„Der Mann an Scholz' Seite"</div>
         <div class="artikel-subtitle">Pressebericht auf tagesschau.de vom 8. Februar 2023</div>
-        <div class="artikel-teaser">Wie ein Heinzelmännchen im Maschinenraum: Wolfgang Schmidt ist keiner für das Rampenlicht. Der Kanzleramtsminister zieht lieber im Hintergrund die Fäden.</div>
+        <div class="artikel-teaser">Wolfgang Schmidt ist keiner für das Rampenlicht. Der Kanzleramtsminister zog lieber im Hintergrund die Fäden.</div>
         <a class="artikel-link" href="https://www.tagesschau.de/inland/innenpolitik/wolfgang-schmidt-kanzleramt-101.html" target="_blank">Artikel lesen</a>
       </div>
 
@@ -555,7 +512,7 @@
         <div class="artikel-source">Stern</div>
         <div class="artikel-title">„Wolfgang Schmidt: Sein Job ist es, den Kanzler glänzen zu lassen"</div>
         <div class="artikel-subtitle">Pressebericht im Stern vom 1. Januar 2023</div>
-        <div class="artikel-teaser">Das Jahr 2022 bei der Ampel, das ist auch ein Jahr Abstrampeln im Hintergrund.</div>
+        <div class="artikel-teaser">Das Jahr 2022 bei der Ampel war auch ein Jahr Abstrampeln im Hintergrund.</div>
         <a class="artikel-link" href="https://www.stern.de/politik/deutschland/kanzleramtschef-wolfgang-schmidt-will-olaf-scholz-glaenzen-lassen-32985790.html" target="_blank">Artikel lesen</a>
       </div>
 
@@ -575,9 +532,7 @@
   </div>
 
   <footer>
-    <a class="footer-logo" href="/ws-office/">
-      <img src="img/logo.svg" alt="Wolfgang Schmidt" />
-    </a>
+    <a class="footer-logo" href="/ws-office/"><img src="img/logo.svg" alt="Wolfgang Schmidt" /></a>
     <div class="footer-legal">
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
@@ -587,7 +542,6 @@
 
   <script src="js/main.js"></script>
   <script>
-    // Erste 6 anzeigen, Rest ausblenden
     document.addEventListener('DOMContentLoaded', function() {
       const cards = document.querySelectorAll('.artikel-card');
       cards.forEach(function(card, i) {
