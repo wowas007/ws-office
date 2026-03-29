@@ -192,7 +192,7 @@ nav.scrolled {
   padding: 0 60px 0;
 }
 #ueber-text {
-  padding: 0 60px 80px 0;
+  padding: 0 60px 80px 60px;
 }
 .about-grid {
   display: grid;
@@ -200,6 +200,9 @@ nav.scrolled {
   gap: 60px;
   align-items: start;
   max-width: 1200px;
+}
+.about-image {
+  margin-left: -60px;
 }
 .about-image img { width: 100%; height: auto; }
 .about-body {
@@ -217,7 +220,8 @@ nav.scrolled {
 
 @media (max-width: 768px) {
   #ueber { padding: 0 24px 0; }
-  #ueber-text { padding: 0 24px 60px 0; }
+  #ueber-text { padding: 0 24px 60px 24px; }
+  .about-image { margin-left: -24px; }
   .about-body { padding-top: 0; }
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
 }
