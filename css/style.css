@@ -191,6 +191,9 @@ nav.scrolled {
   background: var(--tags-bg);
   padding: 0 60px 80px;
 }
+#ueber-text {
+  padding-top: 80px;
+}
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -211,6 +214,7 @@ nav.scrolled {
 
 @media (max-width: 768px) {
   #ueber { padding: 0 24px 60px; }
+  #ueber-text { padding-top: 48px; }
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
 }
 
