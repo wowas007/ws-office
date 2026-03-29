@@ -76,6 +76,7 @@ ws-office/
   - Instagram: https://www.instagram.com/wowashamburg/
 
 ### Noch offen
+- biografie.html: Ausführliche Biografie-Seite erstellen (Verlinkung aus Über-Text bereits vorhanden)
 - Menüband-Scroll-Effekt: Nav soll bei hellen Sektionen dunklen Hintergrund bekommen
 - EN + ES Versionen noch nicht vollständig aktualisiert (Medien-Link fehlt dort)
 - Deployment auf echte Domains (schmidt-sabugal.de etc.) — später
@@ -102,6 +103,7 @@ ws-office/
 | 29.03.2026 | Claude (Cowork) | SSL-Zertifikate + HTTPS-Enforcement für beide Domains aktiviert |
 | 29.03.2026 | Claude (Cowork) | impressum.html: Posthinweis ergänzt, Social-Media-Icons (LinkedIn, X, Instagram) untereinander hinzugefügt |
 | 29.03.2026 | Claude (Cowork) | Mac DNS auf Google/Cloudflare umgestellt (8.8.8.8, 8.8.4.4, 1.1.1.1) |
+| 29.03.2026 | Claude (Cowork) | Über-Text komplett neu geschrieben: kürzerer, wirkungsvoller Text mit Link zu ausführlicher Biografie (biografie.html, noch zu erstellen) |
 | 29.03.2026 | Claude (Chat) | index.html: Über-Text neu gefasst (biografisch, 5 Absätze, inkl. ECFR/BBUG) |
 
 ---
