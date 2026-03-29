@@ -104,6 +104,7 @@ ws-office/
 | 29.03.2026 | Claude (Cowork) | impressum.html: Posthinweis ergänzt, Social-Media-Icons (LinkedIn, X, Instagram) untereinander hinzugefügt |
 | 29.03.2026 | Claude (Cowork) | Mac DNS auf Google/Cloudflare umgestellt (8.8.8.8, 8.8.4.4, 1.1.1.1) |
 | 29.03.2026 | Claude (Cowork) | Über-Text komplett neu geschrieben: kürzerer, wirkungsvoller Text mit Link zu ausführlicher Biografie (biografie.html, noch zu erstellen) |
+| 29.03.2026 | Claude (Cowork) | Über-Text: ECFR/BBUG-Absatz mit Heute-Absatz zusammengeführt, Fettungen angepasst (nur „weitreichendes Netzwerk" + Amtstitel), erste Aufzählung BM/StS/StR gekürzt |
 | 29.03.2026 | Claude (Chat) | index.html: Über-Text neu gefasst (biografisch, 5 Absätze, inkl. ECFR/BBUG) |
 
 ---
