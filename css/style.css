@@ -192,7 +192,7 @@ nav.scrolled {
   padding: 0 60px 0;
 }
 #ueber-text {
-  padding: 0 60px 80px;
+  padding: 0 60px 80px 0;
 }
 .about-grid {
   display: grid;
@@ -217,7 +217,7 @@ nav.scrolled {
 
 @media (max-width: 768px) {
   #ueber { padding: 0 24px 0; }
-  #ueber-text { padding: 0 24px 60px; }
+  #ueber-text { padding: 0 24px 60px 0; }
   .about-body { padding-top: 0; }
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
 }
