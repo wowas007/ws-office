@@ -192,7 +192,7 @@ nav.scrolled {
   padding: 0 60px 80px;
 }
 #ueber-text {
-  padding-top: 80px;
+  padding-top: 0;
 }
 .about-grid {
   display: grid;
@@ -202,6 +202,9 @@ nav.scrolled {
   max-width: 1200px;
 }
 .about-image img { width: 100%; height: auto; }
+.about-body {
+  padding-top: 40px;
+}
 .about-body p {
   font-family: var(--poppins);
   font-size: 20px;
@@ -214,7 +217,8 @@ nav.scrolled {
 
 @media (max-width: 768px) {
   #ueber { padding: 0 24px 60px; }
-  #ueber-text { padding-top: 48px; }
+  #ueber-text { padding-top: 40px; }
+  .about-body { padding-top: 0; }
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
 }
 
