@@ -102,6 +102,7 @@ ws-office/
 | 29.03.2026 | Claude (Cowork) | SSL-Zertifikate + HTTPS-Enforcement für beide Domains aktiviert |
 | 29.03.2026 | Claude (Cowork) | impressum.html: Posthinweis ergänzt, Social-Media-Icons (LinkedIn, X, Instagram) untereinander hinzugefügt |
 | 29.03.2026 | Claude (Cowork) | Mac DNS auf Google/Cloudflare umgestellt (8.8.8.8, 8.8.4.4, 1.1.1.1) |
+| 29.03.2026 | Claude (Chat) | index.html: Über-Text neu gefasst (biografisch, 5 Absätze, inkl. ECFR/BBUG) |
 
 ---
 
