@@ -201,6 +201,9 @@ nav.scrolled {
   align-items: start;
   max-width: 1200px;
 }
+.about-image {
+  margin-top: -80px;
+}
 .about-image img { width: 100%; height: auto; }
 .about-body {
   padding-top: 40px;
@@ -218,6 +221,7 @@ nav.scrolled {
 @media (max-width: 768px) {
   #ueber { padding: 0 24px 60px; }
   #ueber-text { padding-top: 40px; }
+  .about-image { margin-top: 0; }
   .about-body { padding-top: 0; }
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
 }
