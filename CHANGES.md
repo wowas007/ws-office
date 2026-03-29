@@ -6,7 +6,7 @@ bevor sie Änderungen vornehmen — um Konflikte zu vermeiden.
 
 ---
 
-## Aktueller Stand (20.03.2026)
+## Aktueller Stand (29.03.2026)
 
 ### Dateistruktur
 ```
@@ -14,6 +14,8 @@ ws-office/
 ├── index.html          ← Hauptseite DE
 ├── en/index.html       ← Englisch
 ├── es/index.html       ← Spanisch
+├── impressum.html      ← Impressum (mit Posthinweis + Social Icons)
+├── datenschutz.html    ← Datenschutz
 ├── medien.html         ← Medien-Übersicht (39 Artikel)
 ├── medien/archiv.html  ← Archivierte Artikel (8 Stück)
 ├── css/style.css       ← Gemeinsames Stylesheet
@@ -22,6 +24,12 @@ ws-office/
 │   ├── hero.webp       ← Hero-Hintergrundbild (petrolblau)
 │   ├── logo.svg        ← WS-Monogramm (weiß)
 │   └── foto.jpg        ← Porträtfoto (roter Hintergrund)
+├── wws-advisory-de/    ← Landing Page DE (→ wws-advisory.de)
+│   ├── index.html
+│   └── CNAME
+├── wws-advisory-com/   ← Landing Page EN (→ wwsadvisory.com)
+│   ├── index.html
+│   └── CNAME
 └── CHANGES.md          ← Diese Datei
 ```
 
@@ -56,9 +64,19 @@ ws-office/
 - `https://wowas007.github.io/ws-office/`
 - Alle absoluten Links verwenden `/ws-office/` als Basispfad
 
+### Landing Pages (WWS Advisory)
+- **wws-advisory.de** (deutsch): Fullscreen Hero, „Bundesminister a.D.", Social Icons (LinkedIn, X, Instagram) oben rechts
+- **wwsadvisory.com** (englisch): Fullscreen Hero, „Former Federal Minister", Social Icons oben rechts
+- Beide als separate GitHub-Repos: `wowas007/wws-advisory-de`, `wowas007/wws-advisory-com`
+- DNS bei Porkbun konfiguriert (A-Records → GitHub Pages IPs, CNAME www → wowas007.github.io)
+- SSL/HTTPS aktiviert für beide Domains
+- Social-Media-Links:
+  - LinkedIn: https://www.linkedin.com/in/wolfgang-schmidt-germany
+  - X: https://x.com/W_Schmidt_
+  - Instagram: https://www.instagram.com/wowashamburg/
+
 ### Noch offen
 - Menüband-Scroll-Effekt: Nav soll bei hellen Sektionen dunklen Hintergrund bekommen
-- Impressum + Datenschutz fehlen noch (Links vorhanden, Seiten nicht)
 - EN + ES Versionen noch nicht vollständig aktualisiert (Medien-Link fehlt dort)
 - Deployment auf echte Domains (schmidt-sabugal.de etc.) — später
 
@@ -77,6 +95,13 @@ ws-office/
 | 20.03.2026 | Claude (Chat) | CHANGES.md angelegt |
 | 20.03.2026 | Claude (Chat) | Nav scrolled-Stil in style.css ergänzt (petrolblauer Hintergrund bei Scroll) |
 | 20.03.2026 | Claude (Chat) | 13 neue Medieneinträge in medien.html eingefügt (YouTube, ZDF, ZEIT, Spiegel, Spotify) · Spotify-Episodentitel noch als Platzhalter |
+| 29.03.2026 | Claude (Cowork) | Landing Page wws-advisory.de (DE) erstellt — Fullscreen Hero + Social Icons |
+| 29.03.2026 | Claude (Cowork) | Landing Page wwsadvisory.com (EN) erstellt — Fullscreen Hero + Social Icons |
+| 29.03.2026 | Claude (Cowork) | GitHub-Repos wws-advisory-de + wws-advisory-com angelegt, Pages aktiviert |
+| 29.03.2026 | Claude (Cowork) | DNS bei Porkbun konfiguriert (A-Records, CNAME www) für beide Domains |
+| 29.03.2026 | Claude (Cowork) | SSL-Zertifikate + HTTPS-Enforcement für beide Domains aktiviert |
+| 29.03.2026 | Claude (Cowork) | impressum.html: Posthinweis ergänzt, Social-Media-Icons (LinkedIn, X, Instagram) untereinander hinzugefügt |
+| 29.03.2026 | Claude (Cowork) | Mac DNS auf Google/Cloudflare umgestellt (8.8.8.8, 8.8.4.4, 1.1.1.1) |
 
 ---
 
