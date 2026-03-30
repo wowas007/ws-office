@@ -5,11 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Impressum – Wolfgang Schmidt</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .impressum-page {
+      background: var(--white);
+      min-height: 100vh;
+      padding-top: var(--nav-h);
+    }
+    .impressum-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 72px 60px 100px;
+    }
+    .impressum-inner h1 {
+      font-family: var(--poppins);
+      font-size: clamp(32px, 5vw, 60px);
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--petrol);
+      margin-bottom: 56px;
+    }
+    .impressum-inner h2 {
+      font-family: var(--poppins);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--vita-bg);
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+    .impressum-inner p {
+      font-family: var(--poppins);
+      font-size: 16px;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 8px;
+    }
+    .impressum-inner a {
+      color: var(--petrol);
+      text-decoration: underline;
+    }
+    .impressum-inner a:hover { color: var(--petrol-dark); }
+    .impressum-note {
+      margin-top: 6px;
+      font-size: 14px;
+      color: var(--vita-bg);
+      font-style: italic;
+    }
+    .impressum-social {
+      margin-top: 28px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .impressum-social a {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--petrol);
+      font-size: 15px;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .impressum-social a:hover { color: var(--petrol-dark); }
+    .impressum-divider {
+      border: none;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      margin: 48px 0;
+    }
+    @media (max-width: 768px) {
+      .impressum-inner { padding: 48px 24px 80px; }
+    }
+  </style>
 </head>
 <body>
-
   <nav>
-    <a class="nav-logo" href="/">
+    <a class="nav-logo" href="/ws-office/">
       <img src="img/logo.svg" alt="Wolfgang Schmidt" />
     </a>
     <div class="nav-right">
@@ -18,74 +90,74 @@
         <a href="/ws-office/en/">en</a>
         <a href="/ws-office/es/">es</a>
       </div>
+      <ul class="nav-links">
+        <li><a href="/ws-office/#ueber">Über</a></li>
+        <li><a href="/ws-office/#vita">Vita</a></li>
+        <li><a href="/ws-office/medien.html">Medien</a></li>
+        <li><a href="/ws-office/#kontakt">Kontakt</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
-  <section id="impressum" class="section">
-    <h1>Impressum</h1>
+  <div class="impressum-page">
+    <div class="impressum-inner">
 
-    <h2>Angaben gemäß § 5 TMG</h2>
-    <p>Wolfgang Schmidt<br>
-    SPD Eimsbüttel<br>
-    Helene-Lange-Straße 12<br>
-    20144 Hamburg</p>
-    <p style="margin-top:12px;font-size:14px;color:#576f84;font-style:italic;">
-      Bitte keine Post an diese Adresse senden – nutzen Sie das <a href="index.html#kontakt" style="color:#2d4a5e;text-decoration:underline;">Kontaktformular</a> auf der Website.
-    </p>
+      <h1>Impressum</h1>
 
-    <h2>Kontakt</h2>
-    <p>Telefon: +49 40 42801-0<br>
-    E-Mail: info@spd-eimsbuettel.de</p>
+      <h2>Angaben gemäß § 5 DDG</h2>
+      <p>Wolfgang Schmidt<br>
+      c/o office-ws.de<br>
+      Berlin</p>
+      <p class="impressum-note">
+        Bitte keine Post an diese Adresse senden –
+        nutzen Sie das <a href="/ws-office/#kontakt">Kontaktformular</a> auf der Website.
+      </p>
 
-    <!-- Social Media Icons (untereinander) -->
-    <div class="impressum-social" style="margin-top:32px;margin-bottom:40px;display:flex;flex-direction:column;gap:14px;">
-      <a href="https://www.linkedin.com/in/wolfgang-schmidt-germany" target="_blank" rel="noopener"
-         style="display:inline-flex;align-items:center;gap:12px;color:#2d4a5e;font-size:15px;transition:color 0.2s;"
-         onmouseover="this.style.color='#1e3345'" onmouseout="this.style.color='#2d4a5e'">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-        </svg>
-        LinkedIn
-      </a>
-      <a href="https://x.com/W_Schmidt_" target="_blank" rel="noopener"
-         style="display:inline-flex;align-items:center;gap:12px;color:#2d4a5e;font-size:15px;transition:color 0.2s;"
-         onmouseover="this.style.color='#1e3345'" onmouseout="this.style.color='#2d4a5e'">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-        </svg>
-        X (Twitter)
-      </a>
-      <a href="https://www.instagram.com/wowashamburg/" target="_blank" rel="noopener"
-         style="display:inline-flex;align-items:center;gap:12px;color:#2d4a5e;font-size:15px;transition:color 0.2s;"
-         onmouseover="this.style.color='#1e3345'" onmouseout="this.style.color='#2d4a5e'">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-        </svg>
-        Instagram
-      </a>
+      <hr class="impressum-divider">
+
+      <h2>Soziale Medien</h2>
+      <div class="impressum-social">
+        <a href="https://www.linkedin.com/in/wolfgang-schmidt-germany" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://x.com/W_Schmidt_" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X (Twitter)
+        </a>
+        <a href="https://www.instagram.com/wowashamburg/" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Instagram
+        </a>
+      </div>
+
+
+      <hr class="impressum-divider">
+
+      <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+      <p>Wolfgang Schmidt<br>
+      Berlin</p>
+
+      <hr class="impressum-divider">
+
+      <h2>Urheberrecht</h2>
+      <p>Alle Texte, Fotos und sonstige Gestaltungselemente dieses Internetangebots sind für den Herausgeber urheberrechtlich geschützt, sofern nicht eine andere Urheberin oder ein anderer Urheberrechtsinhaber angegeben ist. Jede Nutzung dieser Inhalte darf nur mit schriftlicher Zustimmung des Herausgebers erfolgen.</p>
+
+      <h2>Haftung für Links</h2>
+      <p>Diese Website enthält Links zu externen Seiten Dritter, auf deren Inhalte kein Einfluss besteht. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich. Bei Bekanntwerden von Rechtsverletzungen werden derartige Links umgehend entfernt.</p>
+
+      <h2>Konzept und Gestaltung</h2>
+      <p>Wolfgang Schmidt · Berlin<br>
+      Stand: März 2026</p>
+
     </div>
-
-    <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-    <p>Wolfgang Schmidt<br>
-    SPD Eimsbüttel<br>
-    Helene-Lange-Straße 12<br>
-    20144 Hamburg</p>
-
-    <h2>Haftung für Inhalte</h2>
-    <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
-    <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
-
-    <h2>Haftung für Links</h2>
-    <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.</p>
-    <p>Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
-
-    <h2>Urheberrecht</h2>
-    <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
-    <p>Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
-  </section>
+  </div>
 
   <footer>
-    <a class="footer-logo" href="/">
+    <a class="footer-logo" href="/ws-office/">
       <img src="img/logo.svg" alt="Wolfgang Schmidt" />
     </a>
     <div class="footer-legal">
