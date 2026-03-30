@@ -224,7 +224,7 @@ nav.scrolled {
 /* === VITA === */
 #vita {
   background: var(--vita-bg);
-  padding: 80px 60px;
+  padding: 48px 60px 80px;
 }
 .vita-heading {
   font-family: var(--poppins);
@@ -285,12 +285,12 @@ nav.scrolled {
   color: rgba(255,255,255,0.65);
 }
 
-@media (max-width: 768px) { #vita { padding: 60px 24px; } }
+@media (max-width: 768px) { #vita { padding: 40px 24px; } }
 
 /* === MEDIEN === */
 #medien {
   background: var(--tags-bg);
-  padding: 80px 60px;
+  padding: 48px 60px 80px;
 }
 .medien-heading {
   font-family: var(--poppins);
@@ -338,13 +338,12 @@ nav.scrolled {
   color: rgba(255,255,255,0.45); font-style: italic; font-size: 16px;
 }
 
-@media (max-width: 768px) { #medien { padding: 60px 24px; } }
+@media (max-width: 768px) { #medien { padding: 40px 24px; } }
 
 /* === KONTAKT === */
 #kontakt, #contact, #contacto {
   background: var(--vita-bg);
-  padding: calc(var(--nav-h) + 24px) 60px 80px;
-  scroll-margin-top: 0;
+  padding: 48px 60px 80px;
 }
 .kontakt-heading {
   font-family: var(--poppins);
@@ -397,7 +396,7 @@ nav.scrolled {
 .btn-submit:hover { background: var(--white); color: var(--vita-bg); }
 
 @media (max-width: 768px) {
-  #kontakt, #contact, #contacto { padding: 60px 24px; }
+  #kontakt, #contact, #contacto { padding: 40px 24px; }
   .contact-form { grid-template-columns: 1fr; }
 }
 
