@@ -123,6 +123,11 @@ ws-office/
 | 30.03.2026 | Claude (Chat) | Impressum DE: neu gestaltet, E-Mail per JS (anti-scraping), vollst. Pflichtangaben |
 | 30.03.2026 | Claude (Chat) | Impressum EN (en/impressum.html) + ES (es/impressum.html) erstellt |
 | 30.03.2026 | Claude (Chat) | Footer-Links EN/ES auf jeweilige Impressum-Seiten aktualisiert |
+| 30.03.2026 | Claude (Chat) | Datenschutz: Layout wie Impressum, Inhalt bereinigt (GitHub Pages, E-Mail, kein Formspree mehr) |
+| 30.03.2026 | Claude (Chat) | Kontakt: Formular entfernt, E-Mail per JS (anti-scraping), Einleitungssatz + Postanschrift-Hinweis (DE/EN/ES) |
+| 30.03.2026 | Claude (Chat) | Medien: Untertitel → Artikel, Auftritte und Interviews (DE/EN/ES) |
+| 30.03.2026 | Claude (Chat) | Kontakt-Sektion: padding-top direkt unter Nav, Social Icons auf Höhe der Überschrift |
+| 30.03.2026 | Claude (Chat) | Sprachumschalter: Anker wird beim Sprachwechsel korrekt übersetzt (de↔en↔es) via main.js |
 
 ---
 

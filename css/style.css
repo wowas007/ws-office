@@ -5,7 +5,11 @@
             Vita bg #576f84, white text, black body text
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&family=Poppins:wght@400;700&display=swap');
+@font-face { font-family: 'Lato'; src: url('../fonts/lato-300.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Lato'; src: url('../fonts/lato-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Lato'; src: url('../fonts/lato-900.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Poppins'; src: url('../fonts/poppins-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Poppins'; src: url('../fonts/poppins-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
 
 :root {
   --petrol:      #2d4a5e;
@@ -344,7 +348,8 @@ nav.scrolled {
 /* === KONTAKT === */
 #kontakt {
   background: var(--vita-bg);
-  padding: 80px 60px;
+  padding: calc(var(--nav-h) + 24px) 60px 80px;
+  scroll-margin-top: 0;
 }
 .kontakt-heading {
   font-family: var(--poppins);

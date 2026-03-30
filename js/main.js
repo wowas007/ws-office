@@ -44,13 +44,49 @@ document.addEventListener('DOMContentLoaded', () => {
     items.forEach(el => el.classList.add('visible'));
   }
 
-  /* --- Contact form: show message --- */
-  const form = document.querySelector('.contact-form');
-  if (form) {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      alert('Vielen Dank für Ihre Nachricht! Sie wird in Kürze bearbeitet. (Demo-Modus: Formspree-Integration erforderlich)');
-    });
+  /* --- Language switcher: preserve current anchor --- */
+  const langLinks = document.querySelectorAll('.lang-switcher a');
+  const anchorMap = {
+    // DE anchors -> EN/ES equivalents
+    'ueber':   { en: 'about',   es: 'sobre'    },
+    'ueber-text': { en: 'about', es: 'sobre'   },
+    'vita':    { en: 'vita',    es: 'vita'     },
+    'medien':  { en: 'media',   es: 'medios'   },
+    'kontakt': { en: 'contact', es: 'contacto' },
+    // EN anchors -> DE/ES equivalents
+    'about':   { de: 'ueber',   es: 'sobre'    },
+    'media':   { de: 'medien',  es: 'medios'   },
+    'contact': { de: 'kontakt', es: 'contacto' },
+    // ES anchors -> DE/EN equivalents
+    'sobre':    { de: 'ueber',  en: 'about'    },
+    'medios':   { de: 'medien', en: 'media'    },
+    'contacto': { de: 'kontakt',en: 'contact'  },
+  };
+
+  function getCurrentLang() {
+    const path = window.location.pathname;
+    if (path.includes('/en/')) return 'en';
+    if (path.includes('/es/')) return 'es';
+    return 'de';
   }
 
+  langLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const hash = window.location.hash.replace('#', '');
+      if (!hash) return;
+      const targetLang = this.getAttribute('href').includes('/en/') ? 'en'
+                       : this.getAttribute('href').includes('/es/') ? 'es' : 'de';
+      const currentLang = getCurrentLang();
+      let targetAnchor = hash;
+      if (anchorMap[hash] && anchorMap[hash][targetLang]) {
+        targetAnchor = anchorMap[hash][targetLang];
+      }
+      if (targetAnchor) {
+        e.preventDefault();
+        window.location.href = this.getAttribute('href') + '#' + targetAnchor;
+      }
+    });
+  });
+
 });
+
