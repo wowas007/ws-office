@@ -449,8 +449,8 @@ footer {
   background: var(--petrol-dark);
   padding: 28px 60px;
   display: flex; align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap; gap: 32px;
+  justify-content: space-between;
+  flex-wrap: wrap; gap: 20px;
 }
 .footer-logo img { height: 28px; opacity: 0.55; transition: opacity 0.2s; }
 .footer-logo:hover img { opacity: 1; }
