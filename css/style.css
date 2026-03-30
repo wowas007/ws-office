@@ -141,7 +141,7 @@ nav.scrolled {
   font-weight: 300;
   text-transform: uppercase;
   color: var(--white);
-  line-height: 1;
+  line-height: 0.85;
   display: block;
   opacity: 0;
   animation: fadeInRight 0.8s 0.05s forwards;
@@ -152,7 +152,7 @@ nav.scrolled {
   font-weight: 900;
   text-transform: uppercase;
   color: var(--white);
-  line-height: 0.92;
+  line-height: 0.85;
   display: block;
   opacity: 0;
   animation: fadeInRight 0.8s 0.15s forwards;
