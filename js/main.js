@@ -76,6 +76,51 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(homeBtn);
   }
 
+  /* --- Medien-Grid: automatisch aus medien.html laden --- */
+  const mediaGrid = document.querySelector('#medien .media-grid');
+  if (mediaGrid) {
+    // Ermittle die richtige medien.html je nach Sprache
+    const path = window.location.pathname;
+    const medienUrl = path.includes('/en/') ? '/ws-office/en/medien.html'
+                    : path.includes('/es/') ? '/ws-office/es/medien.html'
+                    : '/ws-office/medien.html';
+
+    fetch(medienUrl)
+      .then(r => r.text())
+      .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const cards = Array.from(doc.querySelectorAll('.artikel-card')).slice(0, 6);
+
+        mediaGrid.innerHTML = '';
+        cards.forEach(card => {
+          const item = document.createElement('div');
+          item.className = 'media-item';
+
+          const source = card.querySelector('.artikel-source');
+          const title  = card.querySelector('.artikel-title');
+          const date   = card.querySelector('.artikel-date');
+          const teaser = card.querySelector('.artikel-teaser');
+          const link   = card.querySelector('.artikel-link');
+
+          if (source) { const d = document.createElement('div'); d.className = 'media-source'; d.textContent = source.textContent; item.appendChild(d); }
+          if (title)  { const d = document.createElement('div'); d.className = 'media-title';  d.textContent = title.textContent;  item.appendChild(d); }
+          if (date)   { const d = document.createElement('div'); d.className = 'media-date';   d.textContent = date.textContent;   item.appendChild(d); }
+          if (teaser) { const d = document.createElement('div'); d.className = 'media-teaser'; d.textContent = teaser.textContent; item.appendChild(d); }
+          if (link) {
+            const a = document.createElement('a');
+            a.className = 'media-link';
+            a.href = link.href;
+            a.target = '_blank';
+            a.textContent = link.textContent.replace('→','').trim();
+            item.appendChild(a);
+          }
+          mediaGrid.appendChild(item);
+        });
+      })
+      .catch(() => {}); // Fehler still ignorieren — statischer Fallback bleibt
+  }
+
   /* --- Timeline scroll reveal --- */
   const items = document.querySelectorAll('.timeline-item');
   if (items.length && 'IntersectionObserver' in window) {
