@@ -44,6 +44,20 @@ document.addEventListener('DOMContentLoaded', () => {
     items.forEach(el => el.classList.add('visible'));
   }
 
+  /* --- Nav anchor links: zuverlässiger Scroll mit Nav-Offset --- */
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const id = this.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 80;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - navH;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+      history.pushState(null, '', '#' + id);
+    });
+  });
+
   /* --- Language switcher: preserve current anchor --- */
   // All three language versions use identical section IDs, so anchor passes through unchanged.
   const langLinks = document.querySelectorAll('.lang-switcher a');
