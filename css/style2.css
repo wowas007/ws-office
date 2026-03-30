@@ -380,7 +380,7 @@ nav.scrolled {
 /* === KONTAKT === */
 #kontakt {
   background: var(--vita-bg);
-  padding: 40px 60px 80px;
+  padding: 40px 60px 40px;
   scroll-margin-top: var(--nav-h);
 }
 .kontakt-heading {
