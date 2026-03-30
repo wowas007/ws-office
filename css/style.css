@@ -293,6 +293,27 @@ nav.scrolled {
   color: rgba(255,255,255,0.65);
 }
 
+/* Vita zwei-Spalten Layout mit sticky Bild */
+.vita-layout {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 60px;
+  align-items: start;
+}
+.vita-image-col {
+  position: sticky;
+  top: calc(var(--nav-h) + 24px);
+}
+.vita-image-col img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top;
+}
+@media (max-width: 900px) {
+  .vita-layout { grid-template-columns: 1fr; }
+  .vita-image-col { display: none; }
+}
 @media (max-width: 768px) { #vita { padding: 40px 24px; } }
 
 /* === MEDIEN === */
