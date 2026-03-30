@@ -182,6 +182,7 @@ nav.scrolled {
 #ueber {
   background: var(--tags-bg);
   padding: 0 60px;
+  scroll-margin-top: 0;
 }
 .tags-text {
   font-family: var(--poppins);
@@ -231,7 +232,7 @@ nav.scrolled {
 #vita {
   background: var(--vita-bg);
   padding: 40px 60px 80px;
-  scroll-margin-top: 0;
+  scroll-margin-top: var(--nav-h);
 }
 .vita-heading {
   font-family: var(--poppins);
@@ -298,7 +299,7 @@ nav.scrolled {
 #medien {
   background: var(--tags-bg);
   padding: 40px 60px 80px;
-  scroll-margin-top: 0;
+  scroll-margin-top: var(--nav-h);
 }
 .medien-heading {
   font-family: var(--poppins);
@@ -352,7 +353,7 @@ nav.scrolled {
 #kontakt {
   background: var(--vita-bg);
   padding: 40px 60px 80px;
-  scroll-margin-top: 0;
+  scroll-margin-top: var(--nav-h);
 }
 .kontakt-heading {
   font-family: var(--poppins);
