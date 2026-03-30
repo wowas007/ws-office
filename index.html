@@ -235,7 +235,7 @@
     <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:44px;gap:24px;flex-wrap:wrap;">
       <div>
         <h2 class="kontakt-heading" style="margin-bottom:12px;">Kontakt / Pressefotos</h2>
-        <p class="kontakt-sub" style="margin-bottom:0;">Wenn Sie Kontakt mit mir aufnehmen wollen, nutzen Sie gerne dieses Kontaktformular.</p>
+        <p class="kontakt-sub" style="margin-bottom:0;">Ich freue mich über Ihre Nachricht. Senden Sie mir gerne eine E-Mail: <span id="kontakt-email"></span></p>
       </div>
       <div style="display:flex;gap:24px;align-items:center;padding-top:8px;">
         <a href="https://www.linkedin.com/in/wolfgang-schmidt-germany" target="_blank" rel="noopener" title="LinkedIn" style="color:rgba(255,255,255,0.65);transition:color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">
@@ -249,23 +249,6 @@
         </a>
       </div>
     </div>
-    <form class="contact-form" action="https://formspree.io/f/homepage@office-ws.de" method="POST" novalidate>
-      <div class="form-field">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required />
-      </div>
-      <div class="form-field">
-        <label for="email">E-Mail</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div class="form-field full">
-        <label for="message">Nachricht</label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-      <input type="text" name="_gotcha" style="display:none" />
-      <button type="submit" class="btn-submit">Senden</button>
-    </form>
-
     <!-- PRESSEFOTOS -->
     <div style="margin-top:64px;">
       <p style="font-family:var(--poppins);font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:20px;">Pressefotos</p>
@@ -304,5 +287,18 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    (function() {
+      var u = 'info', d = 'office-ws.de';
+      var el = document.getElementById('kontakt-email');
+      if (el) {
+        var a = document.createElement('a');
+        a.href = 'mailto:' + u + '@' + d;
+        a.textContent = u + '@' + d;
+        a.style.color = 'rgba(255,255,255,0.85)';
+        el.appendChild(a);
+      }
+    })();
+  </script>
 </body>
 </html>
