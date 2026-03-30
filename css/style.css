@@ -225,6 +225,7 @@ nav.scrolled {
 #vita {
   background: var(--vita-bg);
   padding: 40px 60px 80px;
+  scroll-margin-top: 0;
 }
 .vita-heading {
   font-family: var(--poppins);
@@ -291,6 +292,7 @@ nav.scrolled {
 #medien {
   background: var(--tags-bg);
   padding: 40px 60px 80px;
+  scroll-margin-top: 0;
 }
 .medien-heading {
   font-family: var(--poppins);
