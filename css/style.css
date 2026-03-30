@@ -192,6 +192,7 @@ nav.scrolled {
   padding: 0 60px 0;
 }
 #ueber-text {
+  background: var(--tags-bg);
   padding: 0;
 }
 .about-grid {
