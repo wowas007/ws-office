@@ -181,7 +181,7 @@ nav.scrolled {
 /* === ÜBER (Schlagworte-Sektion DE) === */
 #ueber {
   background: var(--tags-bg);
-  padding: 0 60px;
+  padding: 40px 60px 24px;
   scroll-margin-top: var(--nav-h);
 }
 .tags-text {
@@ -210,7 +210,7 @@ nav.scrolled {
 }
 .about-image img { width: 100%; height: auto; display: block; }
 .about-body {
-  padding: 40px 60px 80px 60px;
+  padding: 24px 60px 40px 60px;
 }
 .about-body p {
   font-family: var(--poppins);
