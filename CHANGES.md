@@ -128,6 +128,9 @@ ws-office/
 | 30.03.2026 | Claude (Chat) | Medien: Untertitel → Artikel, Auftritte und Interviews (DE/EN/ES) |
 | 30.03.2026 | Claude (Chat) | Kontakt-Sektion: padding-top direkt unter Nav, Social Icons auf Höhe der Überschrift |
 | 30.03.2026 | Claude (Chat) | Sprachumschalter: Anker wird beim Sprachwechsel korrekt übersetzt (de↔en↔es) via main.js |
+| 30.03.2026 | Claude (Chat) | Hero-Animation: fadeUp → fadeInRight (von rechts nach links, wie schmidt-sabugal.de) |
+| 30.03.2026 | Claude (Chat) | Hero-Titel: margin-top -4px (dichter an SCHMIDT) |
+| 30.03.2026 | Claude (Chat) | Vita/Medien/Kontakt: padding-top auf 40px reduziert |
 
 ---
 
