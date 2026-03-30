@@ -191,7 +191,7 @@ nav.scrolled {
 @media (max-width: 768px) { #ueber, #tags { padding: 40px 24px; } }
 
 /* === ÜBER TEXT / ABOUT / SOBRE (Biografie-Sektion) === */
-#ueber-text, #about, #sobre {
+#ueber-text {
   background: var(--tags-bg);
   padding: 0;
 }
@@ -216,7 +216,7 @@ nav.scrolled {
 .about-body p strong { font-weight: 700; }
 
 @media (max-width: 768px) {
-  #ueber-text, #about, #sobre { padding: 0; }
+  #ueber-text { padding: 0; }
   .about-body { padding: 24px 24px 60px 24px; }
   .about-grid { grid-template-columns: 1fr; gap: 0; }
 }
@@ -294,11 +294,6 @@ nav.scrolled {
   padding: 40px 60px 80px;
   scroll-margin-top: 0;
 }
-#media, #medios {
-  background: var(--tags-bg);
-  padding: 40px 60px 80px;
-  scroll-margin-top: 0;
-}
 .medien-heading {
   font-family: var(--poppins);
   font-size: clamp(32px, 5vw, 70px);
@@ -348,7 +343,7 @@ nav.scrolled {
 @media (max-width: 768px) { #medien { padding: 40px 24px; } }
 
 /* === KONTAKT === */
-#kontakt, #contact, #contacto {
+#kontakt {
   background: var(--vita-bg);
   padding: 40px 60px 80px;
   scroll-margin-top: 0;
@@ -404,7 +399,7 @@ nav.scrolled {
 .btn-submit:hover { background: var(--white); color: var(--vita-bg); }
 
 @media (max-width: 768px) {
-  #kontakt, #contact, #contacto { padding: 40px 24px; }
+  #kontakt { padding: 40px 24px; }
   .contact-form { grid-template-columns: 1fr; }
 }
 

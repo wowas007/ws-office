@@ -45,48 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --- Language switcher: preserve current anchor --- */
+  // All three language versions use identical section IDs, so anchor passes through unchanged.
   const langLinks = document.querySelectorAll('.lang-switcher a');
-  const anchorMap = {
-    // DE anchors -> EN/ES equivalents
-    'ueber':      { en: 'tags',    es: 'tags'     },
-    'ueber-text': { en: 'about',   es: 'sobre'    },
-    'vita':       { en: 'vita',    es: 'vita'     },
-    'medien':     { en: 'media',   es: 'medios'   },
-    'kontakt':    { en: 'contact', es: 'contacto' },
-    // EN anchors -> DE/ES equivalents
-    'tags':    { de: 'ueber',   es: 'tags'     },
-    'about':   { de: 'ueber-text', es: 'sobre'  },
-    'media':   { de: 'medien',  es: 'medios'   },
-    'contact': { de: 'kontakt', es: 'contacto' },
-    // ES anchors -> DE/EN equivalents
-    'sobre':    { de: 'ueber-text', en: 'about'  },
-    'medios':   { de: 'medien',     en: 'media'  },
-    'contacto': { de: 'kontakt',    en: 'contact'},
-  };
-
-  function getCurrentLang() {
-    const path = window.location.pathname;
-    if (path.includes('/en/')) return 'en';
-    if (path.includes('/es/')) return 'es';
-    return 'de';
-  }
 
   langLinks.forEach(link => {
     link.addEventListener('click', function(e) {
       const hash = window.location.hash.replace('#', '');
       if (!hash) return;
-      const targetLang = this.getAttribute('href').includes('/en/') ? 'en'
-                       : this.getAttribute('href').includes('/es/') ? 'es' : 'de';
-      let targetAnchor = hash;
-      if (anchorMap[hash] && anchorMap[hash][targetLang]) {
-        targetAnchor = anchorMap[hash][targetLang];
-      }
-      if (targetAnchor) {
-        e.preventDefault();
-        // Store anchor in sessionStorage so target page can scroll on load
-        try { sessionStorage.setItem('scrollToAnchor', targetAnchor); } catch(err) {}
-        window.location.href = this.getAttribute('href').split('#')[0] + '#' + targetAnchor;
-      }
+      e.preventDefault();
+      try { sessionStorage.setItem('scrollToAnchor', hash); } catch(err) {}
+      window.location.href = this.getAttribute('href').split('#')[0] + '#' + hash;
     });
   });
 

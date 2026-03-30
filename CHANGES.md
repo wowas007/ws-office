@@ -131,6 +131,10 @@ ws-office/
 | 30.03.2026 | Claude (Chat) | Hero-Animation: fadeUp → fadeInRight (von rechts nach links, wie schmidt-sabugal.de) |
 | 30.03.2026 | Claude (Chat) | Hero-Titel: margin-top -4px (dichter an SCHMIDT) |
 | 30.03.2026 | Claude (Chat) | Vita/Medien/Kontakt: padding-top auf 40px reduziert |
+| 30.03.2026 | Claude (Chat) | EN+ES komplett neu mit exakt DE-Struktur (IDs: #ueber, #ueber-text, #vita, #medien, #kontakt) |
+| 30.03.2026 | Claude (Chat) | Sprachumschalter vereinfacht: kein anchorMap mehr nötig, IDs identisch in allen 3 Sprachen |
+| 30.03.2026 | Claude (Chat) | CSS bereinigt: nur noch DE-IDs, keine EN/ES-Duplikate |
+| 30.03.2026 | Claude (Chat) | ES Kontakt: Fotografías de Prensa → Foto de Prensa |
 
 ---
 
