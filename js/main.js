@@ -45,6 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  // Idle-Timer sofort starten — Nav versteckt sich nach 2.5s wenn oben nicht gescrollt wird
+  idleTimer = setTimeout(hideNav, 2500);
+
   /* --- Mobile menu toggle --- */
   const toggle = document.querySelector('.menu-toggle');
   if (toggle) {
