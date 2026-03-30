@@ -346,7 +346,7 @@ nav.scrolled {
 @media (max-width: 768px) { #medien { padding: 60px 24px; } }
 
 /* === KONTAKT === */
-#kontakt {
+#kontakt, #contact, #contacto {
   background: var(--vita-bg);
   padding: calc(var(--nav-h) + 24px) 60px 80px;
   scroll-margin-top: 0;
@@ -402,7 +402,7 @@ nav.scrolled {
 .btn-submit:hover { background: var(--white); color: var(--vita-bg); }
 
 @media (max-width: 768px) {
-  #kontakt { padding: 60px 24px; }
+  #kontakt, #contact, #contacto { padding: 60px 24px; }
   .contact-form { grid-template-columns: 1fr; }
 }
 
