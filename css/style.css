@@ -231,7 +231,7 @@ nav.scrolled {
 /* === VITA === */
 #vita {
   background: var(--vita-bg);
-  padding: 40px 0 80px 60px;
+  padding: 0 0 0 60px;
   scroll-margin-top: var(--nav-h);
 }
 .vita-heading {
@@ -241,6 +241,7 @@ nav.scrolled {
   text-transform: uppercase;
   color: var(--white);
   margin-bottom: 12px;
+  padding-top: 40px;
 }
 .timeline {
   position: relative;
@@ -296,9 +297,13 @@ nav.scrolled {
 /* Vita zwei-Spalten Layout mit sticky Bild */
 .vita-layout {
   display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 60px;
+  grid-template-columns: 1fr 42%;
+  gap: 0;
   align-items: start;
+}
+.vita-timeline-col {
+  padding-right: 60px;
+  padding-bottom: 80px;
 }
 .vita-image-col {
   position: sticky;
@@ -316,7 +321,7 @@ nav.scrolled {
   .vita-layout { grid-template-columns: 1fr; }
   .vita-image-col { display: none; }
 }
-@media (max-width: 768px) { #vita { padding: 40px 24px; } }
+@media (max-width: 768px) { #vita { padding: 0 24px 60px 24px; } .vita-heading { padding-top: 40px; } }
 
 /* === MEDIEN === */
 #medien {
