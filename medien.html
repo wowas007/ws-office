@@ -351,7 +351,7 @@
 
 
       <div class="artikel-card">
-        <div class="artikel-date">07.02.2025</div>
+        <div class="artikel-date">06.02.2025</div>
         <div class="artikel-source">ZDF – Markus Lanz</div>
         <div class="artikel-title">Markus Lanz: Wahlkampf und der Weg zu einer Regierungsbildung</div>
         <div class="artikel-subtitle">In der Sendung vom 6. Februar 2025 im ZDF</div>
@@ -404,7 +404,7 @@
       </div>
 
       <div class="artikel-card">
-        <div class="artikel-date">27.01.2025</div>
+        <div class="artikel-date">25.01.2025</div>
         <div class="artikel-source">NDR</div>
         <div class="artikel-title">Bundestagswahlkampf in Eimsbüttel</div>
         <div class="artikel-subtitle">NDR-Bericht vom 25. Januar 2025</div>
@@ -413,7 +413,7 @@
       </div>
 
       <div class="artikel-card">
-        <div class="artikel-date">24.01.2025</div>
+        <div class="artikel-date">23.01.2025</div>
         <div class="artikel-source">ZDF – Maybrit Illner</div>
         <div class="artikel-title">Bei Maybrit Illner: „Trump macht Ernst – ist Deutschland diesmal vorbereitet?"</div>
         <div class="artikel-subtitle">Zu Gast in der ZDF-Talkshow vom 23. Januar 2025</div>
@@ -476,7 +476,7 @@
       </div>
 
       <div class="artikel-card">
-        <div class="artikel-date">27.11.2024</div>
+        <div class="artikel-date">20.11.2024</div>
         <div class="artikel-source">Bundestag</div>
         <div class="artikel-title">Die Inflation sinkt, die Reallöhne steigen</div>
         <div class="artikel-subtitle">Statement bei der Befragung der Bundesregierung – 20. November 2024</div>
@@ -503,7 +503,7 @@
       </div>
 
       <div class="artikel-card">
-        <div class="artikel-date">09.08.2024</div>
+        <div class="artikel-date">08.08.2024</div>
         <div class="artikel-source">Hamburger Abendblatt</div>
         <div class="artikel-title">„Kanzleramtsminister Schmidt tritt im Wahlkreis Eimsbüttel an"</div>
         <div class="artikel-subtitle">Pressebericht des Hamburger Abendblatts vom 8. August 2024</div>
@@ -538,7 +538,7 @@
       </div>
 
       <div class="artikel-card">
-        <div class="artikel-date">17.01.2024</div>
+        <div class="artikel-date">05.12.2023</div>
         <div class="artikel-source">Spiegel</div>
         <div class="artikel-title">„Dieses verschwiegene Trio hält die Ampel am Laufen"</div>
         <div class="artikel-subtitle">Pressebericht des Spiegel vom 5. Dezember 2023</div>
@@ -546,7 +546,7 @@
       </div>
 
       <div class="artikel-card">
-        <div class="artikel-date">16.01.2024</div>
+        <div class="artikel-date">30.08.2023</div>
         <div class="artikel-source">Stern</div>
         <div class="artikel-title">„Liegt die Krise der Regierung vielleicht auch an diesem Mann?"</div>
         <div class="artikel-subtitle">Pressebericht im Stern vom 30. August 2023</div>
@@ -555,7 +555,7 @@
       </div>
 
       <div class="artikel-card">
-        <div class="artikel-date">15.01.2024</div>
+        <div class="artikel-date">27.08.2023</div>
         <div class="artikel-source">Frankfurter Allgemeine Zeitung</div>
         <div class="artikel-title">„Wolfgang Schmidt: Verteidiger des Kanzlers"</div>
         <div class="artikel-subtitle">Pressebericht der FAZ vom 27. August 2023</div>
@@ -564,7 +564,7 @@
       </div>
 
       <div class="artikel-card">
-        <div class="artikel-date">14.01.2024</div>
+        <div class="artikel-date">05.05.2023</div>
         <div class="artikel-source">Frankfurter Allgemeine Zeitung</div>
         <div class="artikel-title">„Deutschlands Oberkoordinator"</div>
         <div class="artikel-subtitle">Pressebericht der FAZ vom 5. Mai 2023</div>
@@ -573,7 +573,7 @@
       </div>
 
       <div class="artikel-card">
-        <div class="artikel-date">13.01.2024</div>
+        <div class="artikel-date">11.04.2023</div>
         <div class="artikel-source">ZEIT</div>
         <div class="artikel-title">„Der mächtige Mann hinter Scholz"</div>
         <div class="artikel-subtitle">Pressebericht der Zeit vom 11. April 2023</div>
@@ -582,7 +582,7 @@
       </div>
 
       <div class="artikel-card">
-        <div class="artikel-date">12.01.2024</div>
+        <div class="artikel-date">08.02.2023</div>
         <div class="artikel-source">Tagesschau</div>
         <div class="artikel-title">„Der Mann an Scholz' Seite"</div>
         <div class="artikel-subtitle">Pressebericht auf tagesschau.de vom 8. Februar 2023</div>
@@ -591,7 +591,7 @@
       </div>
 
       <div class="artikel-card">
-        <div class="artikel-date">11.01.2024</div>
+        <div class="artikel-date">01.01.2023</div>
         <div class="artikel-source">Stern</div>
         <div class="artikel-title">„Wolfgang Schmidt: Sein Job ist es, den Kanzler glänzen zu lassen"</div>
         <div class="artikel-subtitle">Pressebericht im Stern vom 1. Januar 2023</div>
@@ -639,6 +639,15 @@
       const cards = document.querySelectorAll('.artikel-card');
       cards.forEach(function(card, i) {
         if (i >= 6) card.classList.add('hidden');
+        const link = card.querySelector('.artikel-link');
+        if (link) {
+          card.style.cursor = 'pointer';
+          card.addEventListener('click', function(e) {
+            if (e.target.tagName !== 'A') {
+              window.open(link.href, '_blank');
+            }
+          });
+        }
       });
     });
     function zeigeAlle() {
