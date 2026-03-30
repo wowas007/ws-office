@@ -77,17 +77,33 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!hash) return;
       const targetLang = this.getAttribute('href').includes('/en/') ? 'en'
                        : this.getAttribute('href').includes('/es/') ? 'es' : 'de';
-      const currentLang = getCurrentLang();
       let targetAnchor = hash;
       if (anchorMap[hash] && anchorMap[hash][targetLang]) {
         targetAnchor = anchorMap[hash][targetLang];
       }
       if (targetAnchor) {
         e.preventDefault();
-        window.location.href = this.getAttribute('href') + '#' + targetAnchor;
+        // Store anchor in sessionStorage so target page can scroll on load
+        try { sessionStorage.setItem('scrollToAnchor', targetAnchor); } catch(err) {}
+        window.location.href = this.getAttribute('href').split('#')[0] + '#' + targetAnchor;
       }
     });
   });
+
+  // On page load: scroll to anchor reliably (fixes Safari scroll-margin-top issues)
+  const storedAnchor = (() => { try { return sessionStorage.getItem('scrollToAnchor'); } catch(e) { return null; } })();
+  if (storedAnchor) {
+    try { sessionStorage.removeItem('scrollToAnchor'); } catch(e) {}
+    const target = document.getElementById(storedAnchor);
+    if (target) {
+      // Small delay ensures page is fully rendered before scrolling
+      setTimeout(() => {
+        const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 80;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - navH;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }, 100);
+    }
+  }
 
 });
 
