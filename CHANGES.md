@@ -6,7 +6,7 @@ bevor sie Änderungen vornehmen — um Konflikte zu vermeiden.
 
 ---
 
-## Aktueller Stand (29.03.2026)
+## Aktueller Stand (30.03.2026)
 
 ### Dateistruktur
 ```
@@ -16,7 +16,7 @@ ws-office/
 ├── es/index.html       ← Spanisch
 ├── impressum.html      ← Impressum (mit Posthinweis + Social Icons)
 ├── datenschutz.html    ← Datenschutz
-├── medien.html         ← Medien-Übersicht (39 Artikel)
+├── medien.html         ← Medien-Übersicht (50+ Artikel, neueste zuerst)
 ├── medien/archiv.html  ← Archivierte Artikel (8 Stück)
 ├── css/style.css       ← Gemeinsames Stylesheet
 ├── js/main.js          ← Navigation, Animationen, Formular
@@ -49,6 +49,10 @@ ws-office/
 - „Medien" → `medien.html` (separate Seite, kein Anchor)
 - „Kontakt" → `#kontakt`
 
+### Schlagworte (tags-text, alle 3 Sprachen)
+- **Hamburger in Berlin** · Vater · **Europäer** · Transatlantiker · **Politikstratege** · Sicherheitspolitiker
+- (früher: Kompromissefinder / Staatsmodernisierer)
+
 ### Sektionen (index.html)
 - `id="ueber"` → Tags-Sektion (Schlagworte: Hamburger in Berlin etc.)
 - `id="ueber-text"` → Über-Sektion (Foto + Biografie-Text)
@@ -77,9 +81,9 @@ ws-office/
 
 ### Noch offen
 - biografie.html: Ausführliche Biografie-Seite erstellen (Verlinkung aus Über-Text bereits vorhanden)
-- Menüband-Scroll-Effekt: Nav soll bei hellen Sektionen dunklen Hintergrund bekommen
-- EN + ES Versionen noch nicht vollständig aktualisiert (Medien-Link fehlt dort)
+- EN + ES Versionen: Medien-Link in Navigation noch nicht aktualisiert
 - Deployment auf echte Domains (schmidt-sabugal.de etc.) — später
+- Neue Bilder in img/ noch nicht eingebunden: IMG_3752.jpeg, IMG_4369.JPG, Portrait 1–4
 
 ---
 
@@ -109,6 +113,13 @@ ws-office/
 | 29.03.2026 | Claude (Cowork) | Über-Text: ECFR/BBUG-Absatz mit Heute-Absatz zusammengeführt, Fettungen angepasst (nur „weitreichendes Netzwerk" + Amtstitel), erste Aufzählung BM/StS/StR gekürzt |
 | 29.03.2026 | Claude (Cowork) | Vita-Timeline komplett überarbeitet: 20 Stationen von 1970 bis heute, inkl. AdR, EMK-Vorsitz, IUSY, Studium, Referendariat, Zivildienst |
 | 29.03.2026 | Claude (Chat) | index.html: Über-Text neu gefasst (biografisch, 5 Absätze, inkl. ECFR/BBUG) |
+| 30.03.2026 | Claude (Chat) | Medien: 50+ Einträge, alle Links ergänzt, Texte überarbeitet (kein „Ich"), Reihenfolge chronologisch |
+| 30.03.2026 | Claude (Chat) | Medien: Neue Einträge 2026 (Agenda Pública, IP Quarterly, El Circo del Poder/UC3M) |
+| 30.03.2026 | Claude (Chat) | Medien: „Weitere Medien anzeigen"-Button, erste 6 sichtbar |
+| 30.03.2026 | Claude (Chat) | Fix: Schlagworte DE auf GitHub korrekt angekommen (Europäer, Politikstratege) |
+| 30.03.2026 | Claude (Chat) | Fix: Über-Text Hintergrundfarbe grau (#ueber-text background: var(--tags-bg)) |
+| 30.03.2026 | Claude (Chat) | Über-Text EN + ES muttersprachlich verfasst, Zeitenwende/Kanzleramt erklärt |
+| 30.03.2026 | Claude (Chat) | CHANGES.md + CLAUDE_CONTEXT.md aktualisiert auf Stand 30.03.2026 |
 
 ---
 
