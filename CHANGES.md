@@ -120,6 +120,9 @@ ws-office/
 | 30.03.2026 | Claude (Chat) | Fix: Über-Text Hintergrundfarbe grau (#ueber-text background: var(--tags-bg)) |
 | 30.03.2026 | Claude (Chat) | Über-Text EN + ES muttersprachlich verfasst, Zeitenwende/Kanzleramt erklärt |
 | 30.03.2026 | Claude (Chat) | CHANGES.md + CLAUDE_CONTEXT.md aktualisiert auf Stand 30.03.2026 |
+| 30.03.2026 | Claude (Chat) | Impressum DE: neu gestaltet, E-Mail per JS (anti-scraping), vollst. Pflichtangaben |
+| 30.03.2026 | Claude (Chat) | Impressum EN (en/impressum.html) + ES (es/impressum.html) erstellt |
+| 30.03.2026 | Claude (Chat) | Footer-Links EN/ES auf jeweilige Impressum-Seiten aktualisiert |
 
 ---
 

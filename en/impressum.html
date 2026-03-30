@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legal Notice – Wolfgang Schmidt</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .impressum-page { background: var(--white); min-height: 100vh; padding-top: var(--nav-h); }
+    .impressum-inner { max-width: 760px; margin: 0 auto; padding: 72px 60px 100px; }
+    .impressum-inner h1 { font-family: var(--poppins); font-size: clamp(32px,5vw,60px); font-weight: 700; text-transform: uppercase; color: var(--petrol); margin-bottom: 56px; }
+    .impressum-inner h2 { font-family: var(--poppins); font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--vita-bg); margin-top: 40px; margin-bottom: 10px; }
+    .impressum-inner p { font-family: var(--poppins); font-size: 16px; line-height: 1.7; color: #333; margin-bottom: 8px; }
+    .impressum-inner a { color: var(--petrol); text-decoration: underline; }
+    .impressum-inner a:hover { color: var(--petrol-dark); }
+    .impressum-note { margin-top: 6px; font-size: 14px; color: var(--vita-bg); font-style: italic; }
+    .impressum-divider { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 48px 0; }
+    @media (max-width: 768px) { .impressum-inner { padding: 48px 24px 80px; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="/ws-office/en/">
+      <img src="../img/logo.svg" alt="Wolfgang Schmidt" />
+    </a>
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <a href="/ws-office/">de</a>
+        <a href="/ws-office/en/" class="active">en</a>
+        <a href="/ws-office/es/">es</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/ws-office/en/#about">About</a></li>
+        <li><a href="/ws-office/en/#vita">Vita</a></li>
+        <li><a href="/ws-office/en/medien.html">Media</a></li>
+        <li><a href="/ws-office/en/#contact">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="impressum-page">
+    <div class="impressum-inner">
+
+      <h1>Legal Notice</h1>
+
+      <h2>Information pursuant to § 5 DDG (German Digital Services Act)</h2>
+      <p>Wolfgang Schmidt<br>
+      c/o SPD Eimsbüttel<br>
+      Helene-Lange-Straße 1<br>
+      20144 Hamburg, Germany</p>
+      <p style="margin-top:10px;">Email: <span id="impressum-email"></span></p>
+      <p class="impressum-note">
+        Please do not send post to this address –
+        use the <a href="/ws-office/en/#contact">contact form</a> on this website instead.
+      </p>
+
+      <hr class="impressum-divider">
+
+      <h2>Responsible for content pursuant to § 18 (2) MStV (German Interstate Media Treaty)</h2>
+      <p>Wolfgang Schmidt<br>
+      c/o SPD Eimsbüttel<br>
+      Helene-Lange-Straße 1<br>
+      20144 Hamburg, Germany</p>
+
+      <hr class="impressum-divider">
+
+      <h2>Copyright</h2>
+      <p>All texts, photographs and other design elements on this website are protected by copyright. Any use requires the written consent of the publisher.</p>
+
+      <h2>Liability for Links</h2>
+      <p>This website contains links to external third-party websites over whose content we have no control. The respective provider or operator of the linked pages is always responsible for their content. Links found to be in violation of applicable law will be removed promptly.</p>
+
+      <h2>Privacy</h2>
+      <p>Information on how personal data is handled can be found in the <a href="../datenschutz.html">Privacy Policy</a>.</p>
+
+      <hr class="impressum-divider">
+
+      <h2>Concept and Design</h2>
+      <p>Wolfgang Schmidt · Berlin<br>
+      As of: March 2026</p>
+
+    </div>
+  </div>
+
+  <footer>
+    <a class="footer-logo" href="/ws-office/en/"><img src="../img/logo.svg" alt="Wolfgang Schmidt" /></a>
+    <div class="footer-legal">
+      <a href="impressum.html">Legal Notice</a>
+      <a href="../datenschutz.html">Privacy Policy</a>
+    </div>
+    <p class="footer-copy">© 2026 Wolfgang Schmidt. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    (function() {
+      var u = 'info', d = 'office-ws.de';
+      var el = document.getElementById('impressum-email');
+      if (el) {
+        var a = document.createElement('a');
+        a.href = 'mailto:' + u + '@' + d;
+        a.textContent = u + '@' + d;
+        a.style.color = 'var(--petrol)';
+        el.appendChild(a);
+      }
+    })();
+  </script>
+</body>
+</html>
