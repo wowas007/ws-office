@@ -162,7 +162,7 @@ nav.scrolled {
   font-size: clamp(20px, 3vw, 45px);
   font-weight: 300;
   color: var(--white);
-  margin-top: -16px;
+  margin-top: -10px;
   display: block;
   opacity: 0;
   animation: fadeInRight 0.8s 0.25s forwards;
