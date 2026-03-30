@@ -4,10 +4,22 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* --- Nav: scroll state --- */
+  /* --- Nav: scroll state + Back-to-top button --- */
   const nav = document.querySelector('nav');
+
+  // Back-to-top Button erstellen
+  const btt = document.createElement('button');
+  btt.id = 'back-to-top';
+  btt.setAttribute('aria-label', 'Nach oben');
+  btt.innerHTML = '↑';
+  btt.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  document.body.appendChild(btt);
+
   const onScroll = () => {
     nav.classList.toggle('scrolled', window.scrollY > 40);
+    btt.classList.toggle('visible', window.scrollY > 300);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();

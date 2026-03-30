@@ -437,6 +437,39 @@ footer {
   to   { opacity: 1; transform: none; }
 }
 
+/* === NACH OBEN BUTTON === */
+#back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(45, 74, 94, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: var(--white);
+  font-size: 18px;
+  line-height: 44px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, background 0.2s;
+}
+#back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+#back-to-top:hover {
+  background: rgba(45, 74, 94, 0.85);
+}
+@media (max-width: 768px) {
+  #back-to-top { bottom: 20px; right: 20px; }
+}
+
 /* === MEDIEN-GRID ERWEITERUNG === */
 .media-item.hidden { display: none; }
 .media-mehr-wrap {
