@@ -96,6 +96,7 @@ ws-office/
 | 20.03.2026 | Claude (Chat) | CHANGES.md angelegt |
 | 20.03.2026 | Claude (Chat) | Nav scrolled-Stil in style.css ergänzt (petrolblauer Hintergrund bei Scroll) |
 | 20.03.2026 | Claude (Chat) | 13 neue Medieneinträge in medien.html eingefügt (YouTube, ZDF, ZEIT, Spiegel, Spotify) · Spotify-Episodentitel noch als Platzhalter |
+| 30.03.2026 | Claude (Chat) | Schlagworte in Hero-Sektion angepasst: Kompromissefinder→Europäer, Staatsmodernisierer→Politikstratege (alle 3 Sprachen) |
 | 29.03.2026 | Claude (Cowork) | Landing Page wws-advisory.de (DE) erstellt — Fullscreen Hero + Social Icons |
 | 29.03.2026 | Claude (Cowork) | Landing Page wwsadvisory.com (EN) erstellt — Fullscreen Hero + Social Icons |
 | 29.03.2026 | Claude (Cowork) | GitHub-Repos wws-advisory-de + wws-advisory-com angelegt, Pages aktiviert |
