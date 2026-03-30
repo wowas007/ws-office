@@ -100,10 +100,10 @@ nav {
 
 /* Nav scrolled state */
 nav.scrolled {
-  background: rgba(30, 51, 69, 0.97);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(30, 51, 69, 0.45);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 /* === HERO === */
