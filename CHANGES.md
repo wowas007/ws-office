@@ -84,7 +84,16 @@ Letzte Aktualisierung: 30. März 2026
 
 ---
 
+## Letzte Korrekturen (30.03.2026 abends)
+- en/medien.html: Nav-Anker #about/#contact → #ueber/#kontakt
+- es/medien.html Footer: ../datenschutz.html → absoluter Pfad
+- en/index.html + es/index.html Footer: ../datenschutz.html → absoluter Pfad
+- style2.css mit aktuellem style.css überschrieben (Browser-Cache-Workaround)
+- Hero-Titel: einheitlich margin-top -10px, font-weight 300, kein inline-style
+
+---
+
 ## Offene Aufgaben
 - [ ] biografie.html erstellen (Link im Über-Abschnitt vorhanden)
 - [ ] Deployment auf echte Domains (Basispfad von /ws-office/ auf /)
-- [ ] style2.css aus Repository entfernen (veraltete Datei)
+- [ ] style2.css aus Repository entfernen (sobald Browser-Cache abgelaufen)
