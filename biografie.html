@@ -9,74 +9,57 @@
   <link rel="canonical" href="https://wowas007.github.io/ws-office/biografie.html" />
   <link rel="stylesheet" href="css/style.css?v=20260402a" />
   <style>
-    .bio-page {
-      background: var(--white);
-      min-height: 100vh;
-      padding-top: var(--nav-h);
-    }
-    .bio-inner {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 72px 60px 100px;
-    }
+    .bio-page { background: var(--white); min-height: 100vh; padding-top: var(--nav-h); }
+    .bio-inner { max-width: 720px; margin: 0 auto; padding: 72px 60px 100px; }
     .bio-inner h1 {
-      font-family: var(--poppins);
-      font-size: clamp(28px, 4vw, 48px);
-      font-weight: 700;
-      color: var(--petrol);
-      margin: 0 0 6px;
-      line-height: 1.1;
+      font-family: var(--poppins); font-size: clamp(28px, 4vw, 46px);
+      font-weight: 700; color: var(--petrol); margin: 0 0 6px; line-height: 1.1;
     }
-    .bio-inner .bio-subtitle {
-      font-family: var(--poppins);
-      font-size: 18px;
-      color: var(--vita-bg);
-      margin: 0 0 52px;
-      font-weight: 400;
-    }
-    .bio-inner h2 {
-      font-family: var(--poppins);
-      font-size: 15px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--petrol);
-      margin: 48px 0 14px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid rgba(45,74,94,0.15);
+    .bio-subtitle {
+      font-family: var(--poppins); font-size: 17px; color: #7a8fa0;
+      margin: 0 0 52px; font-weight: 400;
     }
     .bio-inner p {
-      font-family: var(--poppins);
-      font-size: 15.5px;
-      line-height: 1.75;
-      color: #2a2a2a;
-      margin: 0 0 18px;
+      font-family: var(--poppins); font-size: 15.5px; line-height: 1.82;
+      color: #252525; margin: 0 0 22px;
     }
-    .bio-inner p strong {
-      color: var(--petrol);
-      font-weight: 600;
+    .bio-inner p strong { color: var(--petrol); font-weight: 600; }
+    .bio-img {
+      width: 100%; margin: 36px 0;
+      overflow: hidden;
     }
+    .bio-img img {
+      width: 100%; display: block;
+      object-fit: cover;
+    }
+    .bio-img.portrait { max-width: 340px; }
+    .bio-img.portrait.right {
+      float: right; margin: 4px 0 28px 40px; width: 42%;
+    }
+    .bio-img.portrait.left {
+      float: left; margin: 4px 40px 28px 0; width: 42%;
+    }
+    .bio-img figcaption {
+      font-family: var(--poppins); font-size: 11px;
+      color: #aaa; margin-top: 6px; font-style: italic;
+    }
+    .clearfix::after { content: ''; display: table; clear: both; }
     .bio-back {
-      display: inline-block;
-      font-family: var(--poppins);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--petrol);
-      text-decoration: none;
-      margin-bottom: 48px;
-      opacity: 0.6;
-      transition: opacity 0.2s;
+      display: inline-block; font-family: var(--poppins); font-size: 11px;
+      font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--petrol); text-decoration: none; margin-bottom: 48px;
+      opacity: 0.5; transition: opacity 0.2s;
     }
     .bio-back:hover { opacity: 1; }
     @media (max-width: 600px) {
       .bio-inner { padding: 48px 24px 80px; }
+      .bio-img.portrait.right, .bio-img.portrait.left {
+        float: none; width: 100%; margin: 24px 0;
+      }
     }
   </style>
 </head>
 <body>
-
   <nav>
     <a class="nav-logo" href="/ws-office/">
       <img src="img/logo.svg" alt="Wolfgang Schmidt" />
@@ -103,52 +86,57 @@
     <div class="bio-inner">
 
       <a class="bio-back" href="/ws-office/">← Zurück</a>
-
       <h1>Wolfgang Schmidt</h1>
       <p class="bio-subtitle">Biografie</p>
 
-      <h2>Profil</h2>
-      <p>Wolfgang Schmidt wurde 1970 in Hamburg geboren und lebt in Berlin. Er arbeitet als <strong>Berater und Redner</strong> zu europäischen und transatlantischen Fragen, zur Wirtschafts-, Finanz- und Sicherheitspolitik sowie zu Strategie- und Entscheidungsprozessen in Politik und Verwaltung.</p>
-      <p>Er bringt Erfahrung aus mehr als <strong>zwei Jahrzehnten politischer Arbeit auf Bundes- und Länderebene</strong>, in Europa und international mit. Dabei arbeitet er eng mit Regierungen, Parlamenten, internationalen Organisationen, Unternehmen und der Wissenschaft zusammen. Die Vereinigten Staaten von Amerika kennt er aus der Zusammenarbeit mit vier US-Administrationen; europäische Institutionen begleitet er seit seiner Zeit als Mitglied im Büro der Jugendorganisation der Sozialdemokratischen Partei Europas (SPE).</p>
-      <p>Ein Schwerpunkt seiner Arbeit liegt auf den <strong>strategischen Herausforderungen</strong> für Europa im Verhältnis zu den Vereinigten Staaten, China und anderen globalen Akteuren sowie auf der Frage, wie wirtschaftliche Kraft, technologische Souveränität und sicherheitspolitische Handlungsfähigkeit zusammenwirken.</p>
 
-      <h2>Regierungsverantwortung im Bundeskanzleramt</h2>
-      <p>Von Dezember 2021 bis zum 6. Mai 2025 war Wolfgang Schmidt <strong>Bundesminister für besondere Aufgaben</strong>, Chef des Bundeskanzleramts und Beauftragter für die Nachrichtendienste des Bundes im Kabinett von Bundeskanzler Olaf Scholz.</p>
-      <p>In dieser Funktion koordinierte er die Arbeit der Bundesregierung, hielt den Kontakt zum Deutschen Bundestag sowie zu den 16 Ländern und war an zentralen politischen Entscheidungen in Deutschland, der Europäischen Union und im internationalen Kontext beteiligt. Als <strong>wichtiger Koordinator</strong> der Dreier-Koalition aus SPD, Grünen und FDP hielt er die Partner in regelmäßigen Abstimmungen zusammen, bereitete die wöchentlichen Kabinettssitzungen vor und beriet Bundeskanzler Scholz in strategisch bedeutsamen Fragen.</p>
-      <p>In seine Amtszeit fielen die Unterstützung der von Russland völkerrechtswidrig angegriffenen Ukraine sowie grundlegende politische Entscheidungen im Zusammenhang mit der <strong>„Zeitenwende"</strong> – insbesondere in der Sicherheits- und Verteidigungspolitik, bei der besseren Ausstattung der Bundeswehr, in der Energiepolitik sowie in der Wirtschafts- und Industriepolitik.</p>
-      <p>Als <strong>Beauftragter für die Nachrichtendienste</strong> des Bundes befasste er sich intensiv mit Fragen der nationalen und internationalen Sicherheit, der strategischen Vorausschau und der Zusammenarbeit mit Partnern in Europa, im transatlantischen Raum und im Nahen und Mittleren Osten. Er leitete die wöchentliche ND-Lage („Nachrichtendienstliche Lage"), in der die Spitzen der Sicherheitsorgane des Bundes und die Staatssekretärinnen bzw. Staatssekretäre der Sicherheitsressorts jeden Dienstag im Bundeskanzleramt zusammenkommen.</p>
+      <p>Wolfgang Schmidt wurde 1970 in Hamburg geboren und lebt in Berlin. Er arbeitet als <strong>Berater und Redner</strong> zu europäischen und transatlantischen Fragen, zur Wirtschafts-, Finanz- und Sicherheitspolitik sowie zu Strategie- und Entscheidungsprozessen in Politik und Verwaltung. Er bringt Erfahrung aus mehr als <strong>zwei Jahrzehnten politischer Arbeit auf Bundes- und Länderebene</strong>, in Europa und international mit. Dabei arbeitet er eng mit Regierungen, Parlamenten, internationalen Organisationen, Unternehmen und der Wissenschaft zusammen.</p>
 
-      <h2>Internationale Finanz- und Wirtschaftspolitik</h2>
-      <p>Von 2018 bis 2021 war Wolfgang Schmidt <strong>Staatssekretär im Bundesministerium der Finanzen</strong> in der letzten Bundesregierung von Bundeskanzlerin Angela Merkel. Dort war er unter anderem für Grundsatzfragen der Wirtschafts- und Finanzpolitik sowie für die Koordinierung der SPD-geführten Bundesministerien und die enge Abstimmung mit dem Bundeskanzleramt zuständig.</p>
-      <p>In diese Zeit fielen die wirtschaftspolitischen Antworten auf die <strong>Covid-19-Pandemie</strong> ebenso wie die umfangreichen Maßnahmen zur Bewältigung der Pandemie. Als Koordinator der SPD-geführten Ressorts war Wolfgang Schmidt eng in die Abstimmung mit den 16 Ländern bei den Verabredungen zu Schutzmaßnahmen eingebunden. Das Finanzministerium entwickelte wirtschaftliche Hilfsprogramme für besonders betroffene Branchen – darunter die Kultur und die Gastronomie. International wirkte er an der Debt Service Suspension Initiative (DSSI) und dem Common Framework des G20 mit, die Entwicklungsländern in der Pandemie Schuldenerleichterungen ermöglichten.</p>
-      <p>Er vertrat Deutschland als <strong>G7- und G20-Deputy</strong> sowie als Alternate Governor bei der Weltbank und der Asian Infrastructure Investment Bank (AIIB). In dieser Funktion arbeitete er eng mit internationalen Partnern zusammen.</p>
-      <p>Zudem gehörte er den <strong>Aufsichtsräten</strong> der Deutschen Gesellschaft für Internationale Zusammenarbeit (GIZ) und der Deutschen Investitions- und Entwicklungsgesellschaft (DEG) an.</p>
+      <p>Die Vereinigten Staaten von Amerika kennt er aus der Zusammenarbeit mit vier US-Administrationen; europäische Institutionen begleitet er seit seiner Zeit als Mitglied im Büro der Jugendorganisation der Sozialdemokratischen Partei Europas (SPE). Ein Schwerpunkt seiner Arbeit liegt auf den <strong>strategischen Herausforderungen für Europa</strong> im Verhältnis zu den Vereinigten Staaten, China und anderen globalen Akteuren sowie auf der Frage, wie wirtschaftliche Kraft, technologische Souveränität und sicherheitspolitische Handlungsfähigkeit zusammenwirken.</p>
 
-      <h2>Europa- und Bundespolitik</h2>
-      <p>Von 2011 bis 2018 war Wolfgang Schmidt <strong>Staatsrat und Bevollmächtigter der Freien und Hansestadt Hamburg</strong> beim Bund, bei der Europäischen Union und für auswärtige Angelegenheiten. In dieser Funktion war er Mitglied der Europaministerkonferenz sowie Mitglied im Ausschuss der Regionen der Europäischen Union (AdR).</p>
-      <p>Er koordinierte die <strong>Bundesratsarbeit</strong> Hamburgs, vertrat die Hamburger Interessen gegenüber den Bundesministerien und war für die Hamburgische Landesvertretung in Berlin und das Hanse-Office in Brüssel zuständig. In der Landesvertretung führte er kulturelle und politische Veranstaltungen durch, das Hanse-Office begleitete die <strong>europäische Gesetzgebung</strong> eng. Als informeller „Außenminister" seiner Heimatstadt lockte er hochkarätige internationale Gäste nach Hamburg. Zudem koordinierte er europäische Fördermittel für die Stadt und baute die nordische Zusammenarbeit im Rahmen der STRING-Region aus.</p>
-      <p>In die Zeit seiner Hamburger Tätigkeit fiel 2014/15 der Vorsitz der Europaministerkonferenz der Länder (EMK) und die deutsche G20-Präsidentschaft 2017 mit dem G20-Gipfel in Hamburg.</p>
+      <figure class="bio-img">
+        <img src="img/bio/bio-podium.jpg" alt="Wolfgang Schmidt am Podium" />
+      </figure>
 
-      <h2>Enge Zusammenarbeit mit Bundeskanzler a.D. Olaf Scholz</h2>
-      <p>Der berufliche Werdegang von Wolfgang Schmidt in der Politik ist eng mit der Person Olaf Scholz verbunden. Als dieser im Herbst 2002 Generalsekretär der SPD unter dem Parteivorsitzenden und Bundeskanzler Gerhard Schröder wurde, holte er Wolfgang Schmidt nach Berlin. Sie haben <strong>über 20 Jahre lang eng zusammengearbeitet</strong>: In der SPD-Parteizentrale, der SPD-Bundestagsfraktion, dem Bundesministerium für Arbeit und Soziales, in der Freien und Hansestadt Hamburg, im Bundesministerium der Finanzen und schließlich im Bundeskanzleramt. Wolfgang Schmidt hat während dieser Zeit unzählige politische Strategien und <strong>Wahlkämpfe</strong> entwickelt und federführend begleitet.</p>
+      <p>Von Dezember 2021 bis zum 6. Mai 2025 war Wolfgang Schmidt <strong>Bundesminister für besondere Aufgaben</strong>, Chef des Bundeskanzleramts und Beauftragter für die Nachrichtendienste des Bundes im Kabinett von Bundeskanzler Olaf Scholz. In dieser Funktion koordinierte er die Arbeit der Bundesregierung, hielt den Kontakt zum Deutschen Bundestag sowie zu den 16 Ländern und war an zentralen politischen Entscheidungen in Deutschland, der Europäischen Union und im internationalen Kontext beteiligt. Als wichtiger Koordinator der Dreier-Koalition aus SPD, Grünen und FDP hielt er die Partner in regelmäßigen Abstimmungen zusammen, bereitete die wöchentlichen Kabinettssitzungen vor und beriet Bundeskanzler Scholz in strategisch bedeutsamen Fragen.</p>
 
-      <h2>Ausbildung und Berufstätigkeit</h2>
-      <p>Wolfgang Schmidt ist Volljurist. Er studierte Rechtswissenschaften in Hamburg und an der Universidad de Deusto in Bilbao/Spanien.</p>
-      <p>Seine berufliche Laufbahn begann Wolfgang Schmidt nach seinem ersten Staatsexamen als <strong>wissenschaftlicher Mitarbeiter</strong> am Fachbereich Rechtswissenschaften II der Universität Hamburg am Lehrstuhl von Prof. Dr. Peter Behrens. Er arbeitete dort zum Europarecht, Internationalen Wirtschafts- und Privatrecht sowie Wettbewerbsrecht.</p>
-      <p>Nach dem zweiten Staatsexamen im November 2002 übernahm er leitende Funktionen in der SPD-Parteizentrale und der SPD-Bundestagsfraktion sowie im Bundesministerium für Arbeit und Soziales. Zudem war er als Direktor für die Internationale Arbeitsorganisation (ILO) in Berlin tätig sowie von 2004 bis 2008 als ehrenamtlicher Geschäftsführer der Norwegisch-Deutschen Willy-Brandt-Stiftung.</p>
+      <p>In seine Amtszeit fielen die Unterstützung der von Russland völkerrechtswidrig angegriffenen Ukraine sowie grundlegende politische Entscheidungen im Zusammenhang mit der <strong>„Zeitenwende"</strong> – insbesondere in der Sicherheits- und Verteidigungspolitik, bei der besseren Ausstattung der Bundeswehr, in der Energiepolitik sowie in der Wirtschafts- und Industriepolitik. Als <strong>Beauftragter für die Nachrichtendienste</strong> des Bundes befasste er sich intensiv mit Fragen der nationalen und internationalen Sicherheit, der strategischen Vorausschau und der Zusammenarbeit mit Partnern in Europa, im transatlantischen Raum und im Nahen und Mittleren Osten. Er leitete die wöchentliche ND-Lage, in der die Spitzen der Sicherheitsorgane des Bundes und die Staatssekretärinnen bzw. Staatssekretäre der Sicherheitsressorts jeden Dienstag im Bundeskanzleramt zusammenkommen.</p>
 
-      <h2>Sicherheitspolitik und internationale Netzwerke</h2>
-      <p>Wolfgang Schmidt verfügt über langjährige Erfahrung in außen-, sicherheits- und verteidigungspolitischen Debatten. Er absolvierte 2010 das halbjährige Seminar für Sicherheitspolitik an der <strong>Bundesakademie für Sicherheitspolitik</strong> und ist seit der Gründung im Jahre 2003 Mitglied der Globalen Atlantiker, einer überparteilichen Gruppe von Politikerinnen und Politikern, Beraterinnen und Beratern, Wissenschaftlerinnen und Wissenschaftlern aus Deutschland und den USA, die von der Friedrich-Ebert-Stiftung organisiert wird.</p>
-      <p>Er nimmt regelmäßig an <strong>internationalen Konferenzen</strong> teil und spricht auf Veranstaltungen zu den Themen europäische Sicherheitspolitik, transatlantische Beziehungen, deutsche Außenpolitik sowie Wirtschafts- und Finanzpolitik.</p>
-      <p>Bis September 2025 war er Mitglied im Stiftungsrat der Münchner Sicherheitskonferenz (MSC) und Vorsitzender des Board of Trustees. Bis Ende 2025 war er stellvertretender Präsident des Stiftungsrats der Stiftung Wissenschaft und Politik (SWP). Er ist Mitglied des Willy-Brandt-Kreises e.V. sowie des Council des European Council on Foreign Relations (ECFR) und des Kuratoriums der Baden-Badener Unternehmer Gespräche (BBUG).</p>
-      <p>Durch seine langjährige Tätigkeit in Regierungen, internationalen Organisationen und der öffentlichen Verwaltung verfügt er über ein <strong>weitreichendes Netzwerk</strong> in Politik, Wirtschaft, Wissenschaft und Medien in Deutschland, Europa und international.</p>
 
-      <h2>Politische Anfänge</h2>
-      <p>Wolfgang Schmidt engagierte sich früh politisch – zunächst in der Schülervertretung (Schulsprecher, Landesschülervertretung) und in der Jugendmedienarbeit (Schülerzeitung, Demokratische Jugendpresse Hamburg). Seit 1989 ist er <strong>Mitglied der SPD</strong>. Er war Mitglied im Bundesvorstand der Jusos, Vizepräsident der International Union of Socialist Youth (IUSY), der Jugendorganisation der Sozialistischen Internationale (SI) unter dem damaligen Vorsitz von Antonio Guterres. Er war außerdem Mitglied im Büro der ECOSY, Jugendorganisation der SPD (heute: YES). Diese internationale Zusammenarbeit prägte früh sein Interesse an europäischer Integration und transatlantischen Beziehungen.</p>
+      <div class="clearfix">
+        <figure class="bio-img portrait right">
+          <img src="img/bio/bio-kanzleramt.jpg" alt="Wolfgang Schmidt" />
+        </figure>
 
-      <h2>Persönliches</h2>
-      <p>Wolfgang Schmidt lebt in Berlin und ist Vater zweier erwachsener Töchter. Neben Deutsch spricht er fließend Englisch und Spanisch.</p>
-      <p>Er ist gebürtiger Hamburger und Anhänger des Fußballclubs <strong>FC St. Pauli</strong>, wo er eine Dauerkarte hat. So oft es geht, ist er bei den Spielen seines Vereins dabei. Er läuft mehr oder weniger regelmäßig, spielt unregelmäßig Fußball in einer Hobbymannschaft und segelt. Er geht gerne in Konzerte und hört Musik.</p>
+        <p>Von 2018 bis 2021 war Wolfgang Schmidt <strong>Staatssekretär im Bundesministerium der Finanzen</strong> in der letzten Bundesregierung von Bundeskanzlerin Angela Merkel. Dort war er unter anderem für Grundsatzfragen der Wirtschafts- und Finanzpolitik sowie für die Koordinierung der SPD-geführten Bundesministerien und die enge Abstimmung mit dem Bundeskanzleramt zuständig. In diese Zeit fielen die wirtschaftspolitischen Antworten auf die <strong>Covid-19-Pandemie</strong>: Schmidt koordinierte die Abstimmung mit den Ländern bei den Schutzmaßnahmen und wirtschaftlichen Hilfsprogrammen – darunter für Kultur und Gastronomie. International wirkte er an der Debt Service Suspension Initiative (DSSI) und dem Common Framework des G20 mit.</p>
+
+        <p>Er vertrat Deutschland als <strong>G7- und G20-Deputy</strong> sowie als Alternate Governor bei der Weltbank und der Asian Infrastructure Investment Bank (AIIB) und gehörte den Aufsichtsräten der GIZ und der DEG an.</p>
+      </div>
+
+      <p>Von 2011 bis 2018 war Wolfgang Schmidt <strong>Staatsrat und Bevollmächtigter der Freien und Hansestadt Hamburg</strong> beim Bund, bei der Europäischen Union und für auswärtige Angelegenheiten. Er koordinierte die Bundesratsarbeit Hamburgs, vertrat die Hamburger Interessen gegenüber den Bundesministerien und war für die Hamburgische Landesvertretung in Berlin und das Hanse-Office in Brüssel zuständig. Als informeller „Außenminister" seiner Heimatstadt lockte er hochkarätige internationale Gäste nach Hamburg, koordinierte europäische Fördermittel und baute die nordische Zusammenarbeit im Rahmen der STRING-Region aus. In die Zeit seiner Hamburger Tätigkeit fiel 2014/15 der Vorsitz der Europaministerkonferenz der Länder (EMK) und die deutsche G20-Präsidentschaft 2017 mit dem G20-Gipfel in Hamburg.</p>
+
+      <figure class="bio-img">
+        <img src="img/bio/bio-panel.jpg" alt="Wolfgang Schmidt im Gespräch" />
+      </figure>
+
+
+      <p>Der berufliche Werdegang von Wolfgang Schmidt in der Politik ist eng mit der Person Olaf Scholz verbunden. Als dieser im Herbst 2002 Generalsekretär der SPD wurde, holte er Wolfgang Schmidt nach Berlin. Sie haben <strong>über 20 Jahre lang eng zusammengearbeitet</strong>: In der SPD-Parteizentrale, der SPD-Bundestagsfraktion, dem Bundesministerium für Arbeit und Soziales, in Hamburg, im Bundesministerium der Finanzen und schließlich im Bundeskanzleramt. Wolfgang Schmidt hat während dieser Zeit unzählige politische Strategien und Wahlkämpfe entwickelt und federführend begleitet.</p>
+
+      <p>Wolfgang Schmidt ist Volljurist. Er studierte Rechtswissenschaften in Hamburg und an der Universidad de Deusto in Bilbao/Spanien. Nach seinem ersten Staatsexamen arbeitete er als <strong>wissenschaftlicher Mitarbeiter</strong> am Lehrstuhl von Prof. Dr. Peter Behrens an der Universität Hamburg. Nach dem zweiten Staatsexamen im November 2002 übernahm er leitende Funktionen in der SPD-Parteizentrale und der SPD-Bundestagsfraktion sowie im Bundesministerium für Arbeit und Soziales. Zudem war er als Direktor für die Internationale Arbeitsorganisation (ILO) in Berlin tätig sowie von 2004 bis 2008 als ehrenamtlicher Geschäftsführer der Norwegisch-Deutschen Willy-Brandt-Stiftung.</p>
+
+      <div class="clearfix">
+        <figure class="bio-img portrait left">
+          <img src="img/bio/bio-persoenlich.jpg" alt="Wolfgang Schmidt" />
+        </figure>
+
+        <p>Wolfgang Schmidt verfügt über langjährige Erfahrung in außen-, sicherheits- und verteidigungspolitischen Debatten. Er absolvierte 2010 das halbjährige Seminar für Sicherheitspolitik an der <strong>Bundesakademie für Sicherheitspolitik</strong> und ist seit der Gründung im Jahre 2003 Mitglied der Globalen Atlantiker, einer überparteilichen Gruppe von Politikerinnen und Politikern aus Deutschland und den USA, die von der Friedrich-Ebert-Stiftung organisiert wird. Er nimmt regelmäßig an internationalen Konferenzen teil und spricht auf Veranstaltungen zu den Themen europäische Sicherheitspolitik, transatlantische Beziehungen, deutsche Außenpolitik sowie Wirtschafts- und Finanzpolitik.</p>
+
+        <p>Bis September 2025 war er Mitglied im Stiftungsrat der Münchner Sicherheitskonferenz (MSC) und Vorsitzender des Board of Trustees. Bis Ende 2025 war er stellvertretender Präsident des Stiftungsrats der Stiftung Wissenschaft und Politik (SWP). Er ist Mitglied des <strong>Willy-Brandt-Kreises e.V.</strong> sowie des Council des European Council on Foreign Relations (ECFR) und des Kuratoriums der Baden-Badener Unternehmer Gespräche (BBUG). Durch seine langjährige Tätigkeit in Regierungen, internationalen Organisationen und der öffentlichen Verwaltung verfügt er über ein weitreichendes Netzwerk in Politik, Wirtschaft, Wissenschaft und Medien in Deutschland, Europa und international.</p>
+      </div>
+
+      <p>Wolfgang Schmidt engagierte sich früh politisch – zunächst in der Schülervertretung (Schulsprecher, Landesschülervertretung) und in der Jugendmedienarbeit (Schülerzeitung, Demokratische Jugendpresse Hamburg). Seit 1989 ist er <strong>Mitglied der SPD</strong>. Er war Mitglied im Bundesvorstand der Jusos, Vizepräsident der International Union of Socialist Youth (IUSY) unter dem damaligen Vorsitz von Antonio Guterres sowie Mitglied im Büro der ECOSY (heute Young European Socialists). Diese internationale Zusammenarbeit prägte früh sein Interesse an europäischer Integration und transatlantischen Beziehungen.</p>
+
+      <p>Wolfgang Schmidt lebt in Berlin und ist Vater zweier erwachsener Töchter. Neben Deutsch spricht er fließend Englisch und Spanisch. Er ist gebürtiger Hamburger und Anhänger des Fußballclubs <strong>FC St. Pauli</strong>, wo er eine Dauerkarte hat. So oft es geht, ist er bei den Spielen seines Vereins dabei. Er läuft mehr oder weniger regelmäßig, spielt unregelmäßig Fußball in einer Hobbymannschaft und segelt. Er geht gerne in Konzerte und hört Musik.</p>
 
     </div>
   </div>
