@@ -10,15 +10,18 @@
   <link rel="stylesheet" href="../css/style.css?v=20260402a" />
   <style>
     .bio-page { background: var(--white); min-height: 100vh; padding-top: var(--nav-h); }
-    .bio-inner { max-width: 860px; margin: 0 auto; padding: 72px 60px 100px; }
+    .bio-inner { max-width: 960px; margin: 0 auto; padding: 72px 60px 100px; }
     .bio-inner h1 { font-family: var(--poppins); font-size: clamp(28px, 4vw, 46px); font-weight: 700; color: var(--petrol); margin: 0 0 6px; line-height: 1.1; }
     .bio-subtitle { font-family: var(--poppins); font-size: 17px; color: #7a8fa0; margin: 0 0 52px; }
     .bio-inner p { font-family: var(--poppins); font-size: 15.5px; line-height: 1.82; color: #252525; margin: 0 0 22px; }
     .bio-inner p strong { color: var(--petrol); font-weight: 600; }
-    .bio-img { width: 100%; margin: 36px 0; overflow: hidden; }
+    .bio-img { width: 100%; margin: 28px 0; overflow: hidden; }
     .bio-img img { width: 100%; display: block; object-fit: cover; }
-    .bio-img.portrait.right { float: right; margin: 4px 0 28px 44px; width: 40%; }
-    .bio-img.portrait.left { float: left; margin: 4px 44px 28px 0; width: 40%; }
+    .bio-img.half { width: 50%; margin: 28px auto; }
+    .bio-img.portrait.right { float: right; margin: 2px 0 16px 44px; width: 55%; }
+    .bio-img.portrait.left { float: left; margin: 2px 44px 16px 0; width: 55%; }
+    .bio-img-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 28px 0; }
+    .bio-img-duo img { width: 100%; display: block; object-fit: cover; aspect-ratio: 4/3; }
     .clearfix::after { content: ''; display: table; clear: both; }
     .bio-back { display: inline-block; font-family: var(--poppins); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--petrol); text-decoration: none; margin-bottom: 48px; opacity: 0.5; transition: opacity 0.2s; }
     .bio-back:hover { opacity: 1; }
@@ -47,8 +50,8 @@
   <div class="bio-page">
     <div class="bio-inner">
       <a class="bio-back" href="/ws-office/es/">← Volver</a>
-      <h1>Wolfgang Schmidt</h1>
-      <p class="bio-subtitle">Biografía</p>
+      <h1>Sobre Wolfgang Schmidt</h1>
+
 
       <p>Wolfgang Schmidt nació en Hamburgo en 1970 y reside en Berlín. Trabaja como <strong>asesor y conferenciante</strong> en asuntos europeos y transatlánticos, política económica, financiera y de seguridad, así como en procesos de toma de decisiones estratégicas en el ámbito político y de la administración pública. Aporta más de <strong>dos décadas de experiencia política a nivel federal y regional</strong> en Alemania, en Europa y en el ámbito internacional, trabajando estrechamente con gobiernos, parlamentos, organizaciones internacionales, empresas e instituciones académicas.</p>
 
@@ -62,6 +65,10 @@
 
       <p>Su mandato estuvo marcado por el apoyo alemán a Ucrania tras la invasión rusa, y por los cambios de fondo del <strong><em>Zeitenwende</em></strong> —el punto de inflexión histórico en la política exterior y de seguridad alemana proclamado por el canciller Scholz en febrero de 2022—, que incluyó un aumento sustancial del gasto en defensa, una salida acelerada de la dependencia energética de Rusia y una reorientación de la política industrial. Como <strong>Coordinador de los Servicios de Inteligencia</strong>, supervisó la seguridad nacional e internacional, la prospectiva estratégica y la cooperación con socios en Europa, el espacio transatlántico y Oriente Próximo.</p>
 
+
+      <figure class="bio-img half">
+        <img src="../img/bio/bio-kanzleramt2.jpg" alt="Vista desde la Cancillería Federal" />
+      </figure>
 
       <div class="clearfix">
         <figure class="bio-img portrait right">
@@ -96,9 +103,10 @@
       <p>Wolfgang Schmidt se implicó en política desde muy joven —como delegado estudiantil y en el periodismo juvenil (periódico escolar, Prensa Juvenil Democrática de Hamburgo)—. Desde 1989 es <strong>miembro del SPD</strong>. Fue vicepresidente de la IUSY, entonces presidida por Antonio Guterres, y miembro del bureau de la ECOSY (hoy Young European Socialists). Este activismo internacional forjó su compromiso de por vida con la integración europea y la cooperación transatlántica.</p>
 
 
-      <figure class="bio-img">
-        <img src="../img/bio/bio-wahlkampf.jpg" alt="Wolfgang Schmidt en la campaña electoral de 2025" />
-      </figure>
+      <div class="bio-img-duo">
+        <img src="../img/bio/bio-wahlkampf2.jpg" alt="Wolfgang Schmidt en campaña electoral 2025" />
+        <img src="../img/bio/bio-wahlplakat.jpg" alt="Cartel electoral Wolfgang Schmidt 2025" />
+      </div>
 
       <p>En las <strong>elecciones federales del 23 de febrero de 2025</strong>, Wolfgang Schmidt se presentó como candidato directo del SPD en la circunscripción de Hamburgo-Eimsbüttel y como cabeza de lista de su partido en Hamburgo. En un momento en que hay mucho en juego, quiso volcarse con todas sus fuerzas en defender las políticas correctas y conquistar un escaño propio. Con casi 43.000 votos de candidatura, quedó segundo en la circunscripción — y también estuvo muy cerca de entrar en el Bundestag por los votos de partido.</p>
 

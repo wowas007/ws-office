@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/style.css?v=20260402a" />
   <style>
     .bio-page { background: var(--white); min-height: 100vh; padding-top: var(--nav-h); }
-    .bio-inner { max-width: 860px; margin: 0 auto; padding: 72px 60px 100px; }
+    .bio-inner { max-width: 960px; margin: 0 auto; padding: 72px 60px 100px; }
     .bio-inner h1 {
       font-family: var(--poppins); font-size: clamp(28px, 4vw, 46px);
       font-weight: 700; color: var(--petrol); margin: 0 0 6px; line-height: 1.1;
@@ -21,10 +21,13 @@
       color: #252525; margin: 0 0 22px;
     }
     .bio-inner p strong { color: var(--petrol); font-weight: 600; }
-    .bio-img { width: 100%; margin: 36px 0; overflow: hidden; }
+    .bio-img { width: 100%; margin: 28px 0; overflow: hidden; }
     .bio-img img { width: 100%; display: block; object-fit: cover; }
-    .bio-img.portrait.right { float: right; margin: 4px 0 28px 44px; width: 40%; }
-    .bio-img.portrait.left { float: left; margin: 4px 44px 28px 0; width: 40%; }
+    .bio-img.half { width: 50%; margin: 28px auto; }
+    .bio-img.portrait.right { float: right; margin: 2px 0 16px 44px; width: 55%; }
+    .bio-img.portrait.left { float: left; margin: 2px 44px 16px 0; width: 55%; }
+    .bio-img-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 28px 0; }
+    .bio-img-duo img { width: 100%; display: block; object-fit: cover; aspect-ratio: 4/3; }
     .clearfix::after { content: ''; display: table; clear: both; }
     .bio-back {
       display: inline-block; font-family: var(--poppins); font-size: 11px;
@@ -63,8 +66,8 @@
   <div class="bio-page">
     <div class="bio-inner">
       <a class="bio-back" href="/ws-office/">← Zurück</a>
-      <h1>Wolfgang Schmidt</h1>
-      <p class="bio-subtitle">Biografie</p>
+      <h1>Über Wolfgang Schmidt</h1>
+
 
       <p>Wolfgang Schmidt wurde 1970 in Hamburg geboren und lebt in Berlin. Er arbeitet als <strong>Berater und Redner</strong> zu europäischen und transatlantischen Fragen, zur Wirtschafts-, Finanz- und Sicherheitspolitik sowie zu Strategie- und Entscheidungsprozessen in Politik und Verwaltung. Er bringt Erfahrung aus mehr als <strong>zwei Jahrzehnten politischer Arbeit auf Bundes- und Länderebene</strong>, in Europa und international mit. Dabei arbeitet er eng mit Regierungen, Parlamenten, internationalen Organisationen, Unternehmen und der Wissenschaft zusammen.</p>
 
@@ -77,6 +80,10 @@
       <p>Von Dezember 2021 bis zum 6. Mai 2025 war Wolfgang Schmidt <strong>Bundesminister für besondere Aufgaben</strong>, Chef des Bundeskanzleramts und Beauftragter für die Nachrichtendienste des Bundes im Kabinett von Bundeskanzler Olaf Scholz. In dieser Funktion koordinierte er die Arbeit der Bundesregierung, hielt den Kontakt zum Deutschen Bundestag sowie zu den 16 Ländern und war an zentralen politischen Entscheidungen in Deutschland, der Europäischen Union und im internationalen Kontext beteiligt. Als wichtiger Koordinator der Dreier-Koalition aus SPD, Grünen und FDP hielt er die Partner in regelmäßigen Abstimmungen zusammen, bereitete die wöchentlichen Kabinettssitzungen vor und beriet Bundeskanzler Scholz in strategisch bedeutsamen Fragen.</p>
 
       <p>In seine Amtszeit fielen die Unterstützung der von Russland völkerrechtswidrig angegriffenen Ukraine sowie grundlegende politische Entscheidungen im Zusammenhang mit der <strong>„Zeitenwende"</strong> – insbesondere in der Sicherheits- und Verteidigungspolitik, bei der besseren Ausstattung der Bundeswehr, in der Energiepolitik sowie in der Wirtschafts- und Industriepolitik. Als <strong>Beauftragter für die Nachrichtendienste</strong> des Bundes befasste er sich intensiv mit Fragen der nationalen und internationalen Sicherheit, der strategischen Vorausschau und der Zusammenarbeit mit Partnern in Europa, im transatlantischen Raum und im Nahen und Mittleren Osten.</p>
+
+      <figure class="bio-img half">
+        <img src="img/bio/bio-kanzleramt2.jpg" alt="Blick vom Bundeskanzleramt" />
+      </figure>
 
 
       <div class="clearfix">
@@ -112,9 +119,10 @@
       <p>Wolfgang Schmidt engagierte sich früh politisch – zunächst in der Schülervertretung (Schulsprecher, Landesschülervertretung) und in der Jugendmedienarbeit (Schülerzeitung, Demokratische Jugendpresse Hamburg). Seit 1989 ist er <strong>Mitglied der SPD</strong>. Er war Mitglied im Bundesvorstand der Jusos, Vizepräsident der International Union of Socialist Youth (IUSY) unter dem damaligen Vorsitz von Antonio Guterres sowie Mitglied im Büro der ECOSY (heute Young European Socialists). Diese internationale Zusammenarbeit prägte früh sein Interesse an europäischer Integration und transatlantischen Beziehungen.</p>
 
 
-      <figure class="bio-img">
-        <img src="img/bio/bio-wahlkampf.jpg" alt="Wolfgang Schmidt im Wahlkampf 2025" />
-      </figure>
+      <div class="bio-img-duo">
+        <img src="img/bio/bio-wahlkampf2.jpg" alt="Wolfgang Schmidt im Wahlkampf 2025" />
+        <img src="img/bio/bio-wahlplakat.jpg" alt="Wahlplakat Wolfgang Schmidt 2025" />
+      </div>
 
       <p>Bei der <strong>Bundestagswahl am 23. Februar 2025</strong> kandidierte Wolfgang Schmidt als Direktkandidat der SPD im Wahlkreis Hamburg-Eimsbüttel und als Spitzenkandidat seiner Partei in Hamburg. In Zeiten, in denen es um viel geht, wollte er sich mit ganzer Kraft für die richtige Politik einsetzen und ein eigenes Mandat erreichen. Mit fast 43.000 Erststimmen wurde er Zweiter im Wahlkreis – und verpasste auch bei den Zweitstimmen den Einzug in den Deutschen Bundestag knapp.</p>
 
