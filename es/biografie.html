@@ -10,43 +10,24 @@
   <link rel="stylesheet" href="../css/style.css?v=20260402a" />
   <style>
     .bio-page { background: var(--white); min-height: 100vh; padding-top: var(--nav-h); }
-    .bio-inner { max-width: 720px; margin: 0 auto; padding: 72px 60px 100px; }
-    .bio-inner h1 {
-      font-family: var(--poppins); font-size: clamp(28px, 4vw, 46px);
-      font-weight: 700; color: var(--petrol); margin: 0 0 6px; line-height: 1.1;
-    }
-    .bio-subtitle {
-      font-family: var(--poppins); font-size: 17px; color: #7a8fa0;
-      margin: 0 0 52px; font-weight: 400;
-    }
-    .bio-inner p {
-      font-family: var(--poppins); font-size: 15.5px; line-height: 1.82;
-      color: #252525; margin: 0 0 22px;
-    }
+    .bio-inner { max-width: 860px; margin: 0 auto; padding: 72px 60px 100px; }
+    .bio-inner h1 { font-family: var(--poppins); font-size: clamp(28px, 4vw, 46px); font-weight: 700; color: var(--petrol); margin: 0 0 6px; line-height: 1.1; }
+    .bio-subtitle { font-family: var(--poppins); font-size: 17px; color: #7a8fa0; margin: 0 0 52px; }
+    .bio-inner p { font-family: var(--poppins); font-size: 15.5px; line-height: 1.82; color: #252525; margin: 0 0 22px; }
     .bio-inner p strong { color: var(--petrol); font-weight: 600; }
     .bio-img { width: 100%; margin: 36px 0; overflow: hidden; }
     .bio-img img { width: 100%; display: block; object-fit: cover; }
-    .bio-img.portrait.right { float: right; margin: 4px 0 28px 40px; width: 42%; }
-    .bio-img.portrait.left { float: left; margin: 4px 40px 28px 0; width: 42%; }
+    .bio-img.portrait.right { float: right; margin: 4px 0 28px 44px; width: 40%; }
+    .bio-img.portrait.left { float: left; margin: 4px 44px 28px 0; width: 40%; }
     .clearfix::after { content: ''; display: table; clear: both; }
-    .bio-back {
-      display: inline-block; font-family: var(--poppins); font-size: 11px;
-      font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--petrol); text-decoration: none; margin-bottom: 48px;
-      opacity: 0.5; transition: opacity 0.2s;
-    }
+    .bio-back { display: inline-block; font-family: var(--poppins); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--petrol); text-decoration: none; margin-bottom: 48px; opacity: 0.5; transition: opacity 0.2s; }
     .bio-back:hover { opacity: 1; }
-    @media (max-width: 600px) {
-      .bio-inner { padding: 48px 24px 80px; }
-      .bio-img.portrait.right, .bio-img.portrait.left { float: none; width: 100%; margin: 24px 0; }
-    }
+    @media (max-width: 640px) { .bio-inner { padding: 48px 24px 80px; } .bio-img.portrait.right, .bio-img.portrait.left { float: none; width: 100%; margin: 24px 0; } }
   </style>
 </head>
 <body>
   <nav>
-    <a class="nav-logo" href="/ws-office/es/">
-      <img src="../img/logo.svg" alt="Wolfgang Schmidt" />
-    </a>
+    <a class="nav-logo" href="/ws-office/es/"><img src="../img/logo.svg" alt="Wolfgang Schmidt" /></a>
     <div class="nav-right">
       <div class="lang-switcher">
         <a href="/ws-office/biografie.html">de</a>
@@ -59,15 +40,12 @@
         <li><a href="/ws-office/es/medien.html">Medios</a></li>
         <li><a href="/ws-office/es/#kontakt">Contacto</a></li>
       </ul>
-      <button class="menu-toggle" aria-label="Menú">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="menu-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
   <div class="bio-page">
     <div class="bio-inner">
-
       <a class="bio-back" href="/ws-office/es/">← Volver</a>
       <h1>Wolfgang Schmidt</h1>
       <p class="bio-subtitle">Biografía</p>
@@ -80,9 +58,9 @@
         <img src="../img/bio/bio-podium.jpg" alt="Wolfgang Schmidt en el podio" />
       </figure>
 
-      <p>De diciembre de 2021 al 6 de mayo de 2025, Wolfgang Schmidt ejerció como <strong>ministro federal para Asuntos Especiales y jefe de la Cancillería Federal</strong>, así como Coordinador de los Servicios de Inteligencia del Estado, en el gabinete del canciller federal Olaf Scholz. En este cargo —el centro neurálgico de la coordinación del gobierno alemán— gestionó el trabajo cotidiano del ejecutivo federal, mantuvo las relaciones con el Bundestag y con los dieciséis estados federados, e intervino en todas las decisiones políticas de calado. Como coordinador clave de la coalición tripartita formada por el SPD, los Verdes y el FDP, mantuvo la cohesión entre los socios de gobierno, coordinó la preparación de los consejos de ministros semanales y asesoró al canciller Scholz en todas las cuestiones estratégicamente relevantes.</p>
+      <p>De diciembre de 2021 al 6 de mayo de 2025, Wolfgang Schmidt ejerció como <strong>ministro federal para Asuntos Especiales y jefe de la Cancillería Federal</strong>, así como Coordinador de los Servicios de Inteligencia del Estado, en el gabinete del canciller Olaf Scholz. En este cargo —el centro neurálgico de la coordinación del gobierno alemán— gestionó el trabajo cotidiano del ejecutivo, mantuvo las relaciones con el Bundestag y con los dieciséis estados federados, e intervino en todas las decisiones políticas de calado. Como coordinador clave de la coalición tripartita del SPD, los Verdes y el FDP, mantuvo la cohesión entre los socios de gobierno, coordinó los consejos de ministros semanales y asesoró al canciller Scholz en todas las cuestiones estratégicamente relevantes.</p>
 
-      <p>Su mandato estuvo marcado por el apoyo alemán a Ucrania tras la invasión rusa, y por los cambios de fondo del <strong><em>Zeitenwende</em></strong> —el punto de inflexión histórico en la política exterior y de seguridad alemana proclamado por el canciller Scholz en febrero de 2022—, que incluyó un aumento sustancial del gasto en defensa, una salida acelerada de la dependencia energética de Rusia y una reorientación de la política industrial. Como <strong>Coordinador de los Servicios de Inteligencia del Estado</strong>, supervisó las cuestiones de seguridad nacional e internacional, la prospectiva estratégica y la cooperación con socios en Europa, el espacio transatlántico y Oriente Próximo. Presidía el briefing semanal de inteligencia al que asisten cada martes en la Cancillería Federal los directores de los servicios de seguridad y los secretarios de Estado de los ministerios del ramo.</p>
+      <p>Su mandato estuvo marcado por el apoyo alemán a Ucrania tras la invasión rusa, y por los cambios de fondo del <strong><em>Zeitenwende</em></strong> —el punto de inflexión histórico en la política exterior y de seguridad alemana proclamado por el canciller Scholz en febrero de 2022—, que incluyó un aumento sustancial del gasto en defensa, una salida acelerada de la dependencia energética de Rusia y una reorientación de la política industrial. Como <strong>Coordinador de los Servicios de Inteligencia</strong>, supervisó la seguridad nacional e internacional, la prospectiva estratégica y la cooperación con socios en Europa, el espacio transatlántico y Oriente Próximo.</p>
 
 
       <div class="clearfix">
@@ -90,34 +68,47 @@
           <img src="../img/bio/bio-kanzleramt.jpg" alt="Wolfgang Schmidt" />
         </figure>
 
-        <p>De 2018 a 2021, Wolfgang Schmidt ejerció como <strong>secretario de Estado en el Ministerio Federal de Finanzas</strong> en el último gabinete de la canciller Angela Merkel, responsable de las cuestiones de fondo en política económica y fiscal, de la coordinación de los ministerios dirigidos por el SPD y de la interlocución con la Cancillería Federal. Este período abarcó la respuesta económica alemana a la <strong>pandemia de Covid-19</strong>: Schmidt coordinó con los dieciséis estados federados las medidas de protección y contribuyó al diseño de programas de ayuda de emergencia para los sectores más afectados —entre ellos la cultura y la hostelería. En el plano internacional, participó en la Iniciativa de Suspensión del Servicio de la Deuda (DSSI) del G20 y el Marco Común, que ofrecieron alivio de deuda a países en desarrollo.</p>
+        <p>De 2018 a 2021, Wolfgang Schmidt ejerció como <strong>secretario de Estado en el Ministerio Federal de Finanzas</strong> en el último gabinete de la canciller Angela Merkel, responsable de las cuestiones de fondo en política económica y fiscal, de la coordinación de los ministerios dirigidos por el SPD y de la interlocución con la Cancillería. Este período abarcó la respuesta económica alemana a la <strong>pandemia de Covid-19</strong>: coordinó con los dieciséis estados las medidas de protección y contribuyó al diseño de programas de ayuda para los sectores más afectados —entre ellos la cultura y la hostelería—. En el plano internacional, participó en la Iniciativa de Suspensión del Servicio de la Deuda (DSSI) del G20 y el Marco Común.</p>
 
-        <p>Representó a Alemania como <strong>delegado en el G7 y el G20</strong> y como gobernador suplente en el Banco Mundial y el Banco Asiático de Inversión en Infraestructura (AIIB), y fue miembro de los consejos de supervisión de las principales agencias alemanas de desarrollo, GIZ y DEG.</p>
+        <p>Representó a Alemania como <strong>delegado en el G7 y el G20</strong> y como gobernador suplente en el Banco Mundial y el Banco Asiático de Inversión en Infraestructura (AIIB), y fue miembro de los consejos de supervisión de las agencias de desarrollo GIZ y DEG.</p>
       </div>
 
-      <p>De 2011 a 2018, Wolfgang Schmidt ejerció como <strong>consejero de Estado y plenipotenciario de la Ciudad Libre y Hanseática de Hamburgo</strong> ante el Gobierno Federal, la Unión Europea y para Asuntos Exteriores —el representante efectivo de Hamburgo en Berlín y Bruselas—. Coordinó la participación de Hamburgo en el Bundesrat (la cámara alta alemana), representó los intereses hamburgueses ante los ministerios federales y dirigió la Representación del Estado de Hamburgo en Berlín y la Oficina Hansa en Bruselas. Como informal «ministro de Exteriores» de su ciudad natal, atrajo a Hamburgo a destacadas personalidades internacionales, coordinó los fondos estructurales europeos y desarrolló la cooperación nórdica en el marco de la región STRING. Presidió en 2014/15 la Conferencia de Ministros de Asuntos Europeos (EMK) y desempeñó un papel central en la preparación de la cumbre del G20 celebrada en Hamburgo en 2017.</p>
+      <p>De 2011 a 2018, Wolfgang Schmidt ejerció como <strong>consejero de Estado y plenipotenciario de la Ciudad Libre y Hanseática de Hamburgo</strong> ante el Gobierno Federal, la UE y para Asuntos Exteriores — el representante efectivo de Hamburgo en Berlín y Bruselas—. Coordinó la participación hamburgesa en el Bundesrat (la cámara alta alemana a través de la cual los dieciséis estados participan en la legislación federal), representó los intereses de Hamburgo ante los ministerios federales y dirigió la Representación del Estado en Berlín y la Oficina Hansa en Bruselas. Como informal «ministro de Exteriores» de su ciudad natal, atrajo a personalidades internacionales de alto nivel, coordinó los fondos estructurales europeos y desarrolló la cooperación nórdica en el marco STRING. Presidió la Conferencia de Ministros de Asuntos Europeos (EMK) en 2014/15 y organizó la cumbre del G20 en Hamburgo en 2017.</p>
 
       <figure class="bio-img">
         <img src="../img/bio/bio-panel.jpg" alt="Wolfgang Schmidt en conversación" />
       </figure>
 
-      <p>La trayectoria política de Wolfgang Schmidt está estrechamente ligada a la de Olaf Scholz. Cuando Scholz asumió la Secretaría General del SPD en otoño de 2002, fue él quien llamó a Schmidt a Berlín. Trabajaron juntos durante <strong>más de veinte años</strong>: en la sede central del SPD, en el grupo parlamentario socialdemócrata en el Bundestag, en el Ministerio Federal de Trabajo y Asuntos Sociales, en Hamburgo, en el Ministerio Federal de Finanzas y, finalmente, en la Cancillería Federal. Durante todo ese tiempo, Schmidt fue figura clave en el diseño de la estrategia política y la dirección de las campañas electorales.</p>
+      <p>La trayectoria política de Wolfgang Schmidt está estrechamente ligada a la de Olaf Scholz. Cuando Scholz asumió la Secretaría General del SPD en otoño de 2002, fue él quien llamó a Schmidt a Berlín. Trabajaron juntos durante <strong>más de veinte años</strong>: en la sede central del SPD, en el grupo parlamentario en el Bundestag, en el Ministerio Federal de Trabajo, en Hamburgo, en el Ministerio Federal de Finanzas y, finalmente, en la Cancillería Federal. Durante todo ese tiempo, Schmidt fue figura clave en el diseño de la estrategia política y la dirección de las campañas electorales.</p>
 
-      <p>Wolfgang Schmidt es jurista con plena habilitación. Estudió Derecho en la Universidad de Hamburgo y en la Universidad de Deusto en Bilbao. Tras superar el Primer Examen de Estado trabajó como <strong>colaborador de investigación</strong> en la Facultad de Derecho de la Universidad de Hamburgo en la cátedra del Prof. Dr. Peter Behrens. Tras el Segundo Examen de Estado en noviembre de 2002 ocupó cargos de responsabilidad en la sede central del SPD, en el grupo parlamentario socialdemócrata y en el Ministerio Federal de Trabajo. También ejerció como director de la oficina de la Organización Internacional del Trabajo (OIT) en Berlín, y de 2004 a 2008 como director gerente honorario de la Fundación Willy Brandt Noruego-Alemana.</p>
+      <p>Wolfgang Schmidt es jurista con plena habilitación. Estudió Derecho en la Universidad de Hamburgo y en la Universidad de Deusto en Bilbao. Tras el Primer Examen de Estado trabajó como <strong>colaborador de investigación</strong> en la cátedra del Prof. Dr. Peter Behrens en la Universidad de Hamburgo, especializada en Derecho europeo, internacional y de la competencia. Tras el Segundo Examen de Estado en noviembre de 2002 ocupó cargos directivos en la sede del SPD, el grupo parlamentario y el Ministerio Federal de Trabajo, fue director de la oficina de la OIT en Berlín y de 2004 a 2008 director gerente honorario de la Fundación Willy Brandt Noruego-Alemana.</p>
 
       <div class="clearfix">
         <figure class="bio-img portrait left">
           <img src="../img/bio/bio-persoenlich.jpg" alt="Wolfgang Schmidt" />
         </figure>
 
-        <p>Wolfgang Schmidt cuenta con una larga trayectoria en los debates sobre política exterior, de seguridad y defensa. En 2010 completó el curso semestral de la <strong>Academia Federal de Política de Seguridad (BAKS)</strong> y desde su fundación en 2003 es miembro de los <em>Globalen Atlantiker</em> (Atlantistas Globales), una red apartidista de políticos, asesores y académicos alemanes y estadounidenses impulsada por la Fundación Friedrich Ebert. Participa regularmente en conferencias internacionales y pronuncia conferencias sobre política de seguridad europea, relaciones transatlánticas, política exterior alemana y política económica y financiera.</p>
+        <p>Wolfgang Schmidt cuenta con una larga trayectoria en los debates sobre política exterior, de seguridad y defensa. En 2010 completó el curso semestral de la <strong>Academia Federal de Política de Seguridad (BAKS)</strong> y desde 2003 es miembro de los <em>Globalen Atlantiker</em>, una red apartidista de políticos, asesores y académicos alemanes y estadounidenses de la Fundación Friedrich Ebert. Participa regularmente en conferencias internacionales sobre política de seguridad europea, relaciones transatlánticas, política exterior alemana y política económica.</p>
 
-        <p>Hasta septiembre de 2025 fue miembro del Patronato de la Conferencia de Seguridad de Múnich (MSC) y presidente de su Board of Trustees. Hasta finales de 2025 fue vicepresidente del Consejo de la Fundación de la Stiftung Wissenschaft und Politik (SWP), el principal centro de estudios alemán sobre política exterior y de seguridad. Es miembro del <strong>Willy-Brandt-Kreis e.V.</strong>, del Consejo del Consejo Europeo de Relaciones Exteriores (ECFR) y del patronato de los Coloquios Empresariales de Baden-Baden (BBUG). Gracias a décadas de trabajo en gobiernos, organizaciones internacionales y la administración pública, ha construido una amplia red de contactos en los ámbitos político, empresarial, académico y mediático en Alemania, Europa e internacionalmente.</p>
+        <p>Hasta septiembre de 2025 fue miembro del Patronato de la Conferencia de Seguridad de Múnich (MSC) y presidente de su Board of Trustees. Hasta finales de 2025 fue vicepresidente del Consejo de la Fundación de la SWP — el principal centro de estudios alemán sobre política exterior y de seguridad—. Es miembro del <strong>Willy-Brandt-Kreis e.V.</strong>, del Consejo del ECFR y del patronato de los Coloquios Empresariales de Baden-Baden (BBUG).</p>
       </div>
 
-      <p>Wolfgang Schmidt se implicó en política desde muy joven —como delegado estudiantil y en el periodismo juvenil (periódico escolar, Prensa Juvenil Democrática de Hamburgo)—. Desde 1989 es <strong>miembro del SPD</strong>. Formó parte de la ejecutiva federal de las Juventudes Socialistas (Jusos) y fue vicepresidente de la Unión Internacional de Jóvenes Socialistas (IUSY), entonces presidida por Antonio Guterres, y miembro del bureau de la ECOSY (hoy Young European Socialists). Este activismo internacional temprano forjó su compromiso de por vida con la integración europea y la cooperación transatlántica.</p>
+      <p>Wolfgang Schmidt se implicó en política desde muy joven —como delegado estudiantil y en el periodismo juvenil (periódico escolar, Prensa Juvenil Democrática de Hamburgo)—. Desde 1989 es <strong>miembro del SPD</strong>. Fue vicepresidente de la IUSY, entonces presidida por Antonio Guterres, y miembro del bureau de la ECOSY (hoy Young European Socialists). Este activismo internacional forjó su compromiso de por vida con la integración europea y la cooperación transatlántica.</p>
 
-      <p>Wolfgang Schmidt vive en Berlín y es padre de dos hijas adultas. Además de alemán, habla inglés y español con fluidez. Hamburgués de pura cepa, tiene abono de temporada en el <strong>FC St. Pauli</strong> —el club conocido tanto por la cultura de su afición y su identidad política como por su fútbol— y acude a los partidos siempre que puede. Practica el running con mayor o menor regularidad, juega al fútbol en un equipo de amateurs y navega a vela. Le apasiona la música en directo y disfruta de los conciertos.</p>
+
+      <figure class="bio-img">
+        <img src="../img/bio/bio-wahlkampf.jpg" alt="Wolfgang Schmidt en la campaña electoral de 2025" />
+      </figure>
+
+      <p>En las <strong>elecciones federales del 23 de febrero de 2025</strong>, Wolfgang Schmidt se presentó como candidato directo en la circunscripción de Eimsbüttel, en Hamburgo, y como cabeza de lista del SPD para Hamburgo. Fue una decisión personal: presentarse en el barrio donde ha vivido durante tantos años y al que se siente profundamente vinculado, en un momento en que las cosas realmente están en juego. Con casi 43.000 votos de candidatura, quedó segundo en la circunscripción y no logró entrar en el Bundestag. Agradece de corazón a todas las personas que le votaron y apoyaron.</p>
+
+      <div class="clearfix">
+        <figure class="bio-img portrait right">
+          <img src="../img/bio/bio-privat.jpg" alt="Wolfgang Schmidt" />
+        </figure>
+
+        <p>Wolfgang Schmidt vive en Berlín y es padre de dos hijas adultas. Además de alemán, habla inglés y español con fluidez. Hamburgués de pura cepa, tiene abono de temporada en el <strong>FC St. Pauli</strong> —el club conocido tanto por su identidad política y la cultura de su afición como por su fútbol— y acude a los partidos siempre que puede. Practica el running con mayor o menor regularidad, juega al fútbol en un equipo de amateurs y navega a vela. Le apasiona la música en directo y disfruta de los conciertos.</p>
+      </div>
 
     </div>
   </div>

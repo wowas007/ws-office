@@ -51,6 +51,7 @@ Aktuell: `style.css?v=20260402a`, `main.js?v=20260402a`
 - [ ] **Deployment auf echte Domains** (schmidt-sabugal.de etc.)
   - Basispfad von `/ws-office/` auf `/` ändern in allen HTML-Dateien
 - [ ] **Biografie-Fotos** ggf. austauschen/ergänzen aus `img/Vita-Auswahl/`
+  - Aktuell: bio-podium, bio-kanzleramt, bio-panel, bio-persoenlich, bio-wahlkampf, bio-privat
 - [ ] **Menüband-Anpassung** (wurde angekündigt, noch ausstehend)
 
 ---
