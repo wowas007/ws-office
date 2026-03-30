@@ -4,8 +4,23 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* --- Nav: scroll state + Back-to-top button --- */
+  /* --- Nav: scroll state + Back-to-top button + Hide-on-idle --- */
   const nav = document.querySelector('nav');
+  let lastScrollY = window.scrollY;
+  let idleTimer = null;
+
+  function showNav() {
+    nav.style.opacity = '1';
+    nav.style.transform = 'translateY(0)';
+  }
+  function hideNav() {
+    // Nicht verstecken wenn Menü offen ist
+    if (nav.classList.contains('menu-open')) return;
+    // Nicht verstecken wenn man ganz oben ist
+    if (window.scrollY < 80) return;
+    nav.style.opacity = '0';
+    nav.style.transform = 'translateY(-100%)';
+  }
 
   // Back-to-top Button erstellen
   const btt = document.createElement('button');
@@ -20,6 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const onScroll = () => {
     nav.classList.toggle('scrolled', window.scrollY > 40);
     btt.classList.toggle('visible', window.scrollY > 300);
+    // Nav anzeigen beim Scrollen
+    showNav();
+    // Timer zurücksetzen
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(hideNav, 2500);
+    lastScrollY = window.scrollY;
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
