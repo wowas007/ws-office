@@ -240,7 +240,7 @@ nav.scrolled {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--white);
-  margin-bottom: 56px;
+  margin-bottom: 12px;
 }
 .timeline {
   position: relative;
