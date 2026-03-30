@@ -294,6 +294,11 @@ nav.scrolled {
   padding: 40px 60px 80px;
   scroll-margin-top: 0;
 }
+#media, #medios {
+  background: var(--tags-bg);
+  padding: 40px 60px 80px;
+  scroll-margin-top: 0;
+}
 .medien-heading {
   font-family: var(--poppins);
   font-size: clamp(32px, 5vw, 70px);
@@ -346,6 +351,7 @@ nav.scrolled {
 #kontakt, #contact, #contacto {
   background: var(--vita-bg);
   padding: 40px 60px 80px;
+  scroll-margin-top: 0;
 }
 .kontakt-heading {
   font-family: var(--poppins);
