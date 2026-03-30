@@ -234,7 +234,7 @@
   <section id="kontakt">
     <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:44px;gap:24px;flex-wrap:wrap;">
       <div>
-        <h2 class="kontakt-heading" style="margin-bottom:12px;">Kontakt</h2>
+        <h2 class="kontakt-heading" style="margin-bottom:12px;">Kontakt / Pressefotos</h2>
         <p class="kontakt-sub" style="margin-bottom:0;">Wenn Sie Kontakt mit mir aufnehmen wollen, nutzen Sie gerne dieses Kontaktformular.</p>
       </div>
       <div style="display:flex;gap:24px;align-items:center;padding-top:8px;">
@@ -249,8 +249,25 @@
         </a>
       </div>
     </div>
+    <form class="contact-form" action="https://formspree.io/f/homepage@office-ws.de" method="POST" novalidate>
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-field">
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-field full">
+        <label for="message">Nachricht</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <input type="text" name="_gotcha" style="display:none" />
+      <button type="submit" class="btn-submit">Senden</button>
+    </form>
+
     <!-- PRESSEFOTOS -->
-    <div style="margin-bottom:48px;">
+    <div style="margin-top:64px;">
       <p style="font-family:var(--poppins);font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:20px;">Pressefotos</p>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:800px;">
         <div>
@@ -273,23 +290,6 @@
         </div>
       </div>
     </div>
-
-    <form class="contact-form" action="https://formspree.io/f/homepage@office-ws.de" method="POST" novalidate>
-      <div class="form-field">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required />
-      </div>
-      <div class="form-field">
-        <label for="email">E-Mail</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div class="form-field full">
-        <label for="message">Nachricht</label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-      <input type="text" name="_gotcha" style="display:none" />
-      <button type="submit" class="btn-submit">Senden</button>
-    </form>
   </section>
 
   <footer>
