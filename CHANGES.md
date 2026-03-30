@@ -1,99 +1,72 @@
-# CHANGES.md — ws-office
+# CHANGES.md — ws-office Website
+*Letzte Aktualisierung: 30. März 2026*
 
-Letzte Aktualisierung: 30. März 2026
+## Aktueller Stand
 
----
+### Dateien
+- `index.html` (DE), `en/index.html`, `es/index.html` — Hauptseiten
+- `medien.html`, `en/medien.html`, `es/medien.html` — Medien-Seiten
+- `biografie.html`, `en/biografie.html`, `es/biografie.html` — Biografie-Seiten (NEU)
+- `impressum.html`, `en/impressum.html`, `es/impressum.html`
+- `datenschutz.html`
+- `css/style.css` (+ `style2.css` als identische Kopie, Cache-Workaround)
+- `js/main.js`
+- `img/bio/` — 4 optimierte Fotos für Biografie-Seite
 
-## Aktueller Stand (Stand: Commit 30.03.2026 abends)
-
-### Dateistruktur
-- `index.html` — Hauptseite DE (CSS: style.css?v=20260331e)
-- `en/index.html` — Englisch
-- `es/index.html` — Spanisch
-- `medien.html` / `en/medien.html` / `es/medien.html` — Medienübersicht
-- `impressum.html` / `en/impressum.html` / `es/impressum.html` — Impressum
-- `datenschutz.html` — Datenschutz (nur DE)
-- `css/style.css` — Gemeinsames Stylesheet
-- `js/main.js` — Navigation, Scroll, Sprachumschalter, Back-to-top
-- `img/vita-portrait.jpg` — Portrait für Vita-Sektion (zugeschnitten)
-- `fonts/` — Lato 300/400/900 Normal + Poppins 400/700 (lokal)
+### CSS Cache-Buster
+Aktuell: `style.css?v=20260402a`, `main.js?v=20260402a`
 
 ---
 
-## Hero-Sektion
-- Wolfgang: Lato 300, Schmidt: Lato 900 — beide line-height: 0.85
-- Bundesminister / former Federal Minister / exministro federal: Lato 300, margin-top: -10px
-- Einheitlich für alle drei Sprachen — kein inline-style
-- Schriftdateien: Lato Normal (nicht Italic) direkt von schmidt-sabugal.de
+## Erledigte Aufgaben (30.03.2026)
 
----
+### Biografie-Seiten (DE/EN/ES)
+- `biografie.html` erstellt: Fließtext ohne Zwischenüberschriften, nur Fettungen
+- 4 Fotos eingebettet: Podium (vollbreite), Kanzleramt (rechts floatend), Panel (vollbreite), Persönlich (links floatend)
+- `en/biografie.html` + `es/biografie.html` erstellt — muttersprachlich, deutsche Begriffe erklärt
+- Fotos aus `img/Vita-Auswahl/` optimiert nach `img/bio/`
 
-## Über-Sektion
-- Tags-Text: Poppins, color: #576f84 (wie schmidt-sabugal.de)
-- „Netzwerker" / „Networker" entfernt → 3 Zeilen in DE/EN/ES
-- Biografie: Poppins 400, 20px
+### Medien
+- Startseite DE/EN/ES lädt automatisch erste 6 Einträge aus medien.html (JS fetch)
+- Karten auf Startseite klickbar (öffnen Artikel in neuem Tab)
+- Neueste Einträge: Agenda Pública 29.03.2026, IP Quarterly 26.03.2026
 
----
+### Navigation & Layout
+- Nav: versteckt sich nach 2.5s Idle, erscheint beim Scrollen
+- Footer: Logo entfernt, Impressum/Datenschutz links, Copyright rechts
+- Bild bei „Über" sticky (wie Vita)
+- Kontakt: padding-bottom reduziert
 
-## Vita-Sektion
-- Layout: grid 1fr 42%, kein Gap
-- Bild rechts: sticky (top: nav-h), height: calc(100vh - nav-h)
-- object-fit: cover, object-position: top left
-- Mobil (≤900px): Bild ausgeblendet
-- Timeline-Spalte: padding-right 60px, padding-bottom 80px
-
----
-
-## Medien-Seite
-- Padding-top: calc(nav-h + 40px), kein padding-top auf .medien-page
-- Sprachumschalter: zeigt direkt auf jeweilige medien.html
-- Nav-Links: alle auf #ueber/#vita/#medien/#kontakt (korrekte IDs)
-
----
-
-## Kontakt-Sektion
-- Social Icons zwischen Kontakttext und Pressefotos
-- Pressefotos: max-width 560px, gap 12px, 3 Spalten
-
----
-
-## Impressum / Datenschutz
-- DE/EN/ES Impressum: Sprachumschalter zeigt auf jeweilige Impressum-Version
-- Datenschutz: alle Sprachen zeigen auf /ws-office/datenschutz.html (nur DE)
-- Alle Footer-Links: absolute Pfade (/ws-office/...)
-- Nav-Links überall: #ueber / #vita / #medien / #kontakt
-
----
-
-## Sprachumschalter (main.js)
-- Auf Seiten ohne Hash (medien, impressum, datenschutz): direkt navigieren
-- Auf Seiten mit Hash: sessionStorage-Trick für Safari-Scroll
-
----
-
-## Back-to-top Button
-- Per main.js dynamisch eingefügt auf allen Seiten
-- Erscheint ab 300px Scroll, rund, transparent petrolblau ↑
-- Klick: scrollt zu top: 0
-
----
-
-## CSS Cache-Buster
-- Alle index.html: style.css?v=20260331e
-- Medien/Impressum/Datenschutz: style.css?v=20260330d (oder ohne Versionierung)
-
----
-
-## Letzte Korrekturen (30.03.2026 abends)
-- en/medien.html: Nav-Anker #about/#contact → #ueber/#kontakt
-- es/medien.html Footer: ../datenschutz.html → absoluter Pfad
-- en/index.html + es/index.html Footer: ../datenschutz.html → absoluter Pfad
-- style2.css mit aktuellem style.css überschrieben (Browser-Cache-Workaround)
-- Hero-Titel: einheitlich margin-top -10px, font-weight 300, kein inline-style
+### GitHub Pages
+- Submodule `wws-advisory-com` + `wws-advisory-de` entfernt (verursachten exit code 128)
+- Deployments laufen wieder zuverlässig
 
 ---
 
 ## Offene Aufgaben
-- [ ] biografie.html erstellen (Link im Über-Abschnitt vorhanden)
-- [ ] Deployment auf echte Domains (Basispfad von /ws-office/ auf /)
-- [ ] style2.css aus Repository entfernen (sobald Browser-Cache abgelaufen)
+
+- [ ] **Impressum-Adresse** auf GmbH-Adresse wechseln sobald eingetragen
+  - Dateien: `impressum.html`, `en/impressum.html`, `es/impressum.html`
+  - Aktuell: c/o SPD Eimsbüttel, Helene-Lange-Straße 1, 20144 Hamburg
+- [ ] **Deployment auf echte Domains** (schmidt-sabugal.de etc.)
+  - Basispfad von `/ws-office/` auf `/` ändern in allen HTML-Dateien
+- [ ] **Biografie-Fotos** ggf. austauschen/ergänzen aus `img/Vita-Auswahl/`
+- [ ] **Menüband-Anpassung** (wurde angekündigt, noch ausstehend)
+
+---
+
+## Technische Hinweise
+
+### Git-Workflow
+```bash
+cd /Users/wolfgangschmidt/Downloads/ws-office
+git add [dateien] && git commit -m "..." && git push
+```
+
+### Cache-Buster aktualisieren
+Python-Script `bust.py` im Root — aktualisiert alle style.css und main.js Referenzen
+
+### GitHub Pages Deploy prüfen
+```bash
+curl -s 'https://api.github.com/repos/wowas007/ws-office/actions/runs?per_page=2' | python3 -c "import json,sys; runs=json.load(sys.stdin)['workflow_runs']; [print(r['status'], r['conclusion'], r['head_sha'][:7]) for r in runs]"
+```
