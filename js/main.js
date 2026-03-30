@@ -48,19 +48,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const langLinks = document.querySelectorAll('.lang-switcher a');
   const anchorMap = {
     // DE anchors -> EN/ES equivalents
-    'ueber':   { en: 'about',   es: 'sobre'    },
-    'ueber-text': { en: 'about', es: 'sobre'   },
-    'vita':    { en: 'vita',    es: 'vita'     },
-    'medien':  { en: 'media',   es: 'medios'   },
-    'kontakt': { en: 'contact', es: 'contacto' },
+    'ueber':      { en: 'tags',    es: 'tags'     },
+    'ueber-text': { en: 'about',   es: 'sobre'    },
+    'vita':       { en: 'vita',    es: 'vita'     },
+    'medien':     { en: 'media',   es: 'medios'   },
+    'kontakt':    { en: 'contact', es: 'contacto' },
     // EN anchors -> DE/ES equivalents
-    'about':   { de: 'ueber',   es: 'sobre'    },
+    'tags':    { de: 'ueber',   es: 'tags'     },
+    'about':   { de: 'ueber-text', es: 'sobre'  },
     'media':   { de: 'medien',  es: 'medios'   },
     'contact': { de: 'kontakt', es: 'contacto' },
     // ES anchors -> DE/EN equivalents
-    'sobre':    { de: 'ueber',  en: 'about'    },
-    'medios':   { de: 'medien', en: 'media'    },
-    'contacto': { de: 'kontakt',en: 'contact'  },
+    'sobre':    { de: 'ueber-text', en: 'about'  },
+    'medios':   { de: 'medien',     en: 'media'  },
+    'contacto': { de: 'kontakt',    en: 'contact'},
   };
 
   function getCurrentLang() {

@@ -190,12 +190,12 @@ nav.scrolled {
 
 @media (max-width: 768px) { #tags { padding: 40px 24px; } }
 
-/* === ÜBER === */
-#ueber {
+/* === ÜBER / TAGS / ABOUT / SOBRE === */
+#ueber, #tags {
   background: var(--tags-bg);
   padding: 0 60px 0;
 }
-#ueber-text {
+#ueber-text, #about, #sobre {
   background: var(--tags-bg);
   padding: 0;
 }
@@ -220,8 +220,8 @@ nav.scrolled {
 .about-body p strong { font-weight: 700; }
 
 @media (max-width: 768px) {
-  #ueber { padding: 0 24px 0; }
-  #ueber-text { padding: 0; }
+  #ueber, #tags { padding: 0 24px 0; }
+  #ueber-text, #about, #sobre { padding: 0; }
   .about-body { padding: 24px 24px 60px 24px; }
   .about-grid { grid-template-columns: 1fr; gap: 0; }
 }
