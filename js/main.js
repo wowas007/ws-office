@@ -65,10 +65,16 @@ document.addEventListener('DOMContentLoaded', () => {
   langLinks.forEach(link => {
     link.addEventListener('click', function(e) {
       const hash = window.location.hash.replace('#', '');
-      if (!hash) return;
+      const target = this.getAttribute('href').split('#')[0];
       e.preventDefault();
-      try { sessionStorage.setItem('scrollToAnchor', hash); } catch(err) {}
-      window.location.href = this.getAttribute('href').split('#')[0] + '#' + hash;
+      if (hash) {
+        // Auf Seiten mit Anker: Zielseite + gleicher Anker
+        try { sessionStorage.setItem('scrollToAnchor', hash); } catch(err) {}
+        window.location.href = target + '#' + hash;
+      } else {
+        // Auf Seiten ohne Anker (z.B. medien.html): direkt navigieren
+        window.location.href = target;
+      }
     });
   });
 
