@@ -181,7 +181,7 @@ nav.scrolled {
 /* === ÜBER (Schlagworte-Sektion DE) === */
 #ueber {
   background: var(--tags-bg);
-  padding: 40px 60px 24px;
+  padding: 24px 60px 12px;
   scroll-margin-top: var(--nav-h);
 }
 .tags-text {
@@ -210,7 +210,7 @@ nav.scrolled {
 }
 .about-image img { width: 100%; height: auto; display: block; }
 .about-body {
-  padding: 24px 60px 40px 60px;
+  padding: 12px 60px 40px 60px;
 }
 .about-body p {
   font-family: var(--poppins);
@@ -236,7 +236,7 @@ nav.scrolled {
 }
 .vita-heading {
   font-family: var(--poppins);
-  font-size: clamp(32px, 5vw, 70px);
+  font-size: clamp(24px, 3.5vw, 50px);
   font-weight: 700;
   text-transform: uppercase;
   color: var(--white);
@@ -303,7 +303,7 @@ nav.scrolled {
 }
 .medien-heading {
   font-family: var(--poppins);
-  font-size: clamp(32px, 5vw, 70px);
+  font-size: clamp(24px, 3.5vw, 50px);
   font-weight: 700;
   text-transform: uppercase;
   color: var(--white);
@@ -357,7 +357,7 @@ nav.scrolled {
 }
 .kontakt-heading {
   font-family: var(--poppins);
-  font-size: clamp(32px, 5vw, 70px);
+  font-size: clamp(24px, 3.5vw, 50px);
   font-weight: 700; text-transform: uppercase;
   color: var(--white); margin-bottom: 12px;
 }
