@@ -28,6 +28,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* --- Home button: nur auf Unterseiten --- */
+  const isSubpage = !(
+    window.location.pathname.endsWith('/ws-office/') ||
+    window.location.pathname.endsWith('/ws-office/en/') ||
+    window.location.pathname.endsWith('/ws-office/es/') ||
+    window.location.pathname === '/ws-office'
+  );
+  if (isSubpage) {
+    const homeBtn = document.createElement('a');
+    homeBtn.href = window.location.pathname.includes('/en/') ? '/ws-office/en/'
+                 : window.location.pathname.includes('/es/') ? '/ws-office/es/'
+                 : '/ws-office/';
+    homeBtn.title = 'Zur Startseite';
+    homeBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>';
+    homeBtn.style.cssText = [
+      'position:fixed', 'bottom:32px', 'right:32px', 'z-index:200',
+      'width:44px', 'height:44px', 'border-radius:50%',
+      'background:rgba(45,74,94,0.55)', 'backdrop-filter:blur(6px)',
+      '-webkit-backdrop-filter:blur(6px)',
+      'color:rgba(255,255,255,0.85)',
+      'display:flex', 'align-items:center', 'justify-content:center',
+      'transition:background 0.2s,transform 0.2s',
+      'text-decoration:none',
+      'box-shadow:0 2px 12px rgba(0,0,0,0.15)'
+    ].join(';');
+    homeBtn.addEventListener('mouseenter', () => {
+      homeBtn.style.background = 'rgba(45,74,94,0.9)';
+      homeBtn.style.transform = 'scale(1.08)';
+    });
+    homeBtn.addEventListener('mouseleave', () => {
+      homeBtn.style.background = 'rgba(45,74,94,0.55)';
+      homeBtn.style.transform = 'scale(1)';
+    });
+    document.body.appendChild(homeBtn);
+  }
+
   /* --- Timeline scroll reveal --- */
   const items = document.querySelectorAll('.timeline-item');
   if (items.length && 'IntersectionObserver' in window) {
