@@ -172,10 +172,16 @@ nav.scrolled {
   .hero-text { right: 20px; bottom: 32px; left: 20px; }
 }
 
-/* === TAGS / ÜBER / ABOUT / SOBRE (Schlagworte-Sektion) === */
-#ueber, #tags {
+/* === TAGS (Schlagworte-Sektion EN/ES – nicht mehr genutzt, bleibt als Fallback) === */
+#tags {
   background: var(--tags-bg);
   padding: 60px;
+}
+
+/* === ÜBER (Schlagworte-Sektion DE) === */
+#ueber {
+  background: var(--tags-bg);
+  padding: 0 60px;
 }
 .tags-text {
   font-family: var(--poppins);
@@ -188,7 +194,7 @@ nav.scrolled {
 }
 .tags-text strong { font-weight: 700; }
 
-@media (max-width: 768px) { #ueber, #tags { padding: 40px 24px; } }
+@media (max-width: 768px) { #ueber, #tags { padding: 24px; } }
 
 /* === ÜBER TEXT / ABOUT / SOBRE (Biografie-Sektion) === */
 #ueber-text {
