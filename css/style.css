@@ -224,7 +224,7 @@ nav.scrolled {
 /* === VITA === */
 #vita {
   background: var(--vita-bg);
-  padding: 48px 60px 80px;
+  padding: 40px 60px 80px;
 }
 .vita-heading {
   font-family: var(--poppins);
@@ -290,7 +290,7 @@ nav.scrolled {
 /* === MEDIEN === */
 #medien {
   background: var(--tags-bg);
-  padding: 48px 60px 80px;
+  padding: 40px 60px 80px;
 }
 .medien-heading {
   font-family: var(--poppins);
@@ -343,7 +343,7 @@ nav.scrolled {
 /* === KONTAKT === */
 #kontakt, #contact, #contacto {
   background: var(--vita-bg);
-  padding: 48px 60px 80px;
+  padding: 40px 60px 80px;
 }
 .kontakt-heading {
   font-family: var(--poppins);
