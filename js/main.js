@@ -114,6 +114,11 @@ document.addEventListener('DOMContentLoaded', () => {
             a.target = '_blank';
             a.textContent = link.textContent.replace('→','').trim();
             item.appendChild(a);
+            // Ganze Karte klickbar machen
+            item.style.cursor = 'pointer';
+            item.addEventListener('click', function(e) {
+              if (e.target.tagName !== 'A') window.open(link.href, '_blank');
+            });
           }
           mediaGrid.appendChild(item);
         });
