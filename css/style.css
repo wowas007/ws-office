@@ -474,16 +474,18 @@ nav.scrolled {
   max-width: 560px;
   align-items: start;
 }
-#kontakt .press-grid img {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  object-position: top;
-  display: block;
+.press-photo {
+  width: 100% !important;
+  aspect-ratio: 3/4 !important;
+  object-fit: cover !important;
+  object-position: top !important;
+  display: block !important;
+  height: auto !important;
   filter: brightness(0.9);
   transition: filter 0.2s;
 }
-#kontakt .press-grid img:hover { filter: brightness(1); }
+.press-photo:hover { filter: brightness(1); }
+.press-grid > div { overflow: hidden; }
 @media (max-width: 768px) {
   #kontakt .press-grid { max-width: 100%; gap: 8px; }
 }
