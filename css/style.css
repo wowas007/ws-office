@@ -1,5 +1,5 @@
 /* ============================================================
-   SCHMIDT-SABUGAL.DE — Custom Build
+   OFFICE-WS.DE — Custom Build
    Fonts:   Lato (Hero), Poppins (Body/Tags)
    Colors:  Hero bg #2d4a5e (petrol), Tags bg #a7afbc,
             Vita bg #576f84, white text, black body text
@@ -177,6 +177,8 @@ nav.scrolled {
   animation: fadeInRight 0.8s 0.25s forwards;
 }
 
+@media (max-width: 480px) {  }
+
 @media (max-width: 768px) {
   .hero-text { right: 20px; bottom: 32px; left: 20px; }
   .hero-title { margin-top: 8px; font-size: 20px; }
@@ -204,6 +206,8 @@ nav.scrolled {
   max-width: 1200px;
 }
 .tags-text strong { font-weight: 700; }
+
+@media (max-width: 480px) {  }
 
 @media (max-width: 768px) { #ueber, #tags { padding: 24px; } }
 
@@ -236,6 +240,8 @@ nav.scrolled {
   margin-bottom: 20px;
 }
 .about-body p strong { font-weight: 700; }
+
+@media (max-width: 480px) {  }
 
 @media (max-width: 768px) {
   #ueber-text { padding: 0; }
@@ -337,6 +343,8 @@ nav.scrolled {
   .vita-layout { grid-template-columns: 1fr; }
   .vita-image-col { display: none; }
 }
+@media (max-width: 480px) {  }
+
 @media (max-width: 768px) { #vita { padding: 0 24px 60px 24px; } .vita-heading { padding-top: 40px; } }
 
 /* === MEDIEN === */
@@ -391,7 +399,9 @@ nav.scrolled {
   color: rgba(255,255,255,0.45); font-style: italic; font-size: 16px;
 }
 
-@media (max-width: 768px) { #medien { padding: 40px 24px; } }
+@media (max-width: 480px) {  }
+
+@media (max-width: 768px) { #medien { padding: 40px 24px; } .media-grid { grid-template-columns: 1fr; } }
 
 /* === KONTAKT === */
 #kontakt {
@@ -449,9 +459,24 @@ nav.scrolled {
 }
 .btn-submit:hover { background: var(--white); color: var(--vita-bg); }
 
+@media (max-width: 480px) {  }
+
 @media (max-width: 768px) {
   #kontakt { padding: 40px 24px; }
   .contact-form { grid-template-columns: 1fr; }
+}
+
+/* === PRESSEFOTOS GRID === */
+#kontakt .press-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 560px;
+  margin: 0 auto;
+  align-items: start;
+}
+@media (max-width: 480px) {
+  #kontakt .press-grid { grid-template-columns: 1fr 1fr; max-width: 360px; }
 }
 
 /* === FOOTER === */
@@ -470,6 +495,8 @@ footer {
 }
 .footer-legal a:hover { color: var(--white); }
 .footer-copy { font-size: 13px; color: rgba(255,255,255,0.35); }
+
+@media (max-width: 480px) {  }
 
 @media (max-width: 768px) {
   footer { padding: 40px 24px; flex-direction: column; align-items: flex-start; }
@@ -510,6 +537,8 @@ footer {
 #back-to-top:hover {
   background: rgba(45, 74, 94, 0.85);
 }
+@media (max-width: 480px) {  }
+
 @media (max-width: 768px) {
   #back-to-top { bottom: 20px; right: 20px; }
 }
