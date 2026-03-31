@@ -1,5 +1,5 @@
 # CHANGES.md — ws-office Website
-*Letzte Aktualisierung: 30. März 2026*
+*Letzte Aktualisierung: 31. März 2026*
 
 ## Aktueller Stand
 
@@ -15,6 +15,14 @@
 
 ### CSS Cache-Buster
 Aktuell: `style.css?v=20260402a`, `main.js?v=20260402a`
+
+---
+
+## Erledigte Aufgaben (31.03.2026)
+
+### Biografie (biografie.html)
+- ILO-Titel korrigiert: „Direktor für die Internationale Arbeitsorganisation" → „**Direktor der Internationalen Arbeitsorganisation**" (fett)
+- „Büro" → „Buero" an zwei Stellen (Jugendorganisation der SPE + ECOSY)
 
 ---
 
