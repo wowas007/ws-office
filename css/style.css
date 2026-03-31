@@ -91,11 +91,19 @@ nav {
   .menu-toggle { display: flex; }
   nav.menu-open .nav-links {
     display: flex; flex-direction: column;
-    position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: 0;
-    background: var(--petrol-dark);
-    align-items: center; justify-content: center; gap: 40px;
+    position: absolute; top: var(--nav-h); right: 24px;
+    background: rgba(45, 74, 94, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 8px;
+    padding: 16px 28px;
+    align-items: flex-end;
+    gap: 16px;
+    min-width: 140px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
   }
-  nav.menu-open .nav-links a { font-size: 1.2rem; }
+  nav.menu-open .nav-links li { list-style: none; }
+  nav.menu-open .nav-links a { font-size: 15px; white-space: nowrap; }
   nav { padding: 0 24px; }
 }
 
