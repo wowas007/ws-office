@@ -3,6 +3,7 @@ matomo-zugangsdaten.md
 wws-advisory-de/
 wws-advisory-com/
 temp/
+thumbnails/
 img/Vita-Auswahl/
 img/IMG_4369.JPG
 img/IMG_3752.jpeg
@@ -13,3 +14,10 @@ img/thumbs.html
 img/bio/bio-persoenlich-msc to del.jpg
 img/bio/bio-kanzleramt2.jpg
 img/bio/bio-kanzleramt.jpeg
+img/vt*.jpg
+aktuelles_archiv.json
+aktuelles_uebersicht.html
+style.css
+download_bilder.py
+.deploy-trigger
+text_über_30_03_2026.md
