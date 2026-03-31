@@ -1,4 +1,13 @@
-# CHANGES.md — ws-office Website
+# CHANGES
+
+## 2026-03-31 — Biografie Formatierungen und Ergänzungen (DE/EN/ES)
+- Bundessicherheitsrat fett
+- G7/G20-Deputy-Satz an vorherigen Absatz angefügt (keine Leerzeile)
+- Olaf Scholz fett
+- Volljurist fett
+- Willy-Brandt-Kreis nicht mehr fett; ECFR und Baden-Badener Unternehmergespräche neu fett
+- weitreichendes Netzwerk fett
+- Neuer vorletzter Absatz: „Er ist Vater zweier erwachsener Töchter und spricht neben Deutsch fließend Englisch und Spanisch.".md — ws-office Website
 *Letzte Aktualisierung: 31. März 2026*
 
 ## Aktueller Stand
