@@ -66,16 +66,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* --- Home button: nur auf Unterseiten --- */
   const isSubpage = !(
-    window.location.pathname.endsWith('/ws-office/') ||
-    window.location.pathname.endsWith('/ws-office/en/') ||
-    window.location.pathname.endsWith('/ws-office/es/') ||
+    window.location.pathname.endsWith('/') ||
+    window.location.pathname.endsWith('/en/') ||
+    window.location.pathname.endsWith('/es/') ||
     window.location.pathname === '/ws-office'
   );
   if (isSubpage) {
     const homeBtn = document.createElement('a');
-    homeBtn.href = window.location.pathname.includes('/en/') ? '/ws-office/en/'
-                 : window.location.pathname.includes('/es/') ? '/ws-office/es/'
-                 : '/ws-office/';
+    homeBtn.href = window.location.pathname.includes('/en/') ? '/en/'
+                 : window.location.pathname.includes('/es/') ? '/es/'
+                 : '/';
     homeBtn.title = 'Zur Startseite';
     homeBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>';
     homeBtn.style.cssText = [
@@ -105,9 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mediaGrid) {
     // Ermittle die richtige medien.html je nach Sprache
     const path = window.location.pathname;
-    const medienUrl = path.includes('/en/') ? '/ws-office/en/medien.html'
-                    : path.includes('/es/') ? '/ws-office/es/medien.html'
-                    : '/ws-office/medien.html';
+    const medienUrl = path.includes('/en/') ? '/en/medien.html'
+                    : path.includes('/es/') ? '/es/medien.html'
+                    : '/medien.html';
 
     fetch(medienUrl)
       .then(r => r.text())

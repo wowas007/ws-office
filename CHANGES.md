@@ -5,7 +5,7 @@
 ## Projektstruktur
 
 ```
-~/Documents/Homepage/
+~/OneDrive/2 Dokumente/Homepage/
 ├── office-ws/              ← Hauptseite (dieses Repo: github.com/wowas007/ws-office)
 ├── wws-advisory-com/       ← (geplant, aktuell noch Unterordner von office-ws)
 └── wws-advisory-de/        ← (geplant, aktuell noch Unterordner von office-ws)
@@ -14,7 +14,7 @@
 ### Git-Workflow
 
 ```bash
-cd /Users/wolfgangschmidt/Documents/Homepage/office-ws
+cd /Users/wolfgangschmidt/Library/CloudStorage/OneDrive-Persönlich/2 Dokumente/Homepage/office-ws
 git add [dateien] && git commit -m "..." && git push
 ```
 
@@ -67,7 +67,7 @@ Aktuell: `style.css?v=20260402a`, `main.js?v=20260402a`
 
 ### 2026-03-31 — Projektordner verschoben
 
-- Umzug von `~/Downloads/ws-office/` nach `~/Documents/Homepage/office-ws/`
+- Umzug von `~/Downloads/ws-office/` nach `~/OneDrive/2 Dokumente/Homepage/office-ws/`
 - Git remote + History bleibt erhalten
 - wws-advisory-com/ und wws-advisory-de/ wandern als Unterordner mit
 
