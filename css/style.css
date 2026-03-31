@@ -171,6 +171,7 @@ nav.scrolled {
 
 @media (max-width: 768px) {
   .hero-text { right: 20px; bottom: 32px; left: 20px; }
+  .hero-title { margin-top: 8px; font-size: 16px; }
 }
 
 /* === TAGS (Schlagworte-Sektion EN/ES – nicht mehr genutzt, bleibt als Fallback) === */
@@ -232,6 +233,7 @@ nav.scrolled {
   #ueber-text { padding: 0; }
   .about-body { padding: 24px 24px 60px 24px; }
   .about-grid { grid-template-columns: 1fr; gap: 0; }
+  .about-image { position: static; height: 60vw; }
 }
 
 /* === VITA === */
