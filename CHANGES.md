@@ -65,6 +65,23 @@ Aktuell: `style.css?v=20260402a`, `main.js?v=20260402a`
 
 ## Änderungshistorie
 
+### 2026-03-31 — Matomo Analytics installiert
+
+- Matomo 5.8.0 auf STRATO installiert (PHP + MariaDB)
+- Tracking-Code in alle 13 HTML-Seiten eingefügt (Site-ID 1)
+- Tracking-Code in wws-advisory-de (Site-ID 2) und wws-advisory-com (Site-ID 3) eingefügt
+- Dashboard: http://5136804.swh.strato-hosting.eu/matomo/
+
+### 2026-03-31 — Custom Domain office-ws.de auf GitHub Pages
+
+- CNAME-Datei erstellt (office-ws.de)
+- Basispfad /ws-office/ auf / geändert (158 Ersetzungen in 14 Dateien)
+- DNS A-Record bei STRATO auf GitHub-Pages-IP umgestellt (185.199.108.153)
+- DNS CNAME www auf wowas007.github.io
+- Canonical URLs auf https://office-ws.de/ aktualisiert
+- SSL via GitHub Pages (Enforce HTTPS pending)
+
+
 ### 2026-03-31 — Projektordner verschoben
 
 - Umzug von `~/Downloads/ws-office/` nach `~/OneDrive/2 Dokumente/Homepage/office-ws/`
