@@ -474,6 +474,13 @@ nav.scrolled {
   max-width: 560px;
   align-items: start;
 }
+#kontakt .press-grid img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
 @media (max-width: 768px) {
   #kontakt .press-grid { max-width: 100%; gap: 8px; }
 }
