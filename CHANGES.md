@@ -1,6 +1,6 @@
 # CHANGES — ws-office Website
 
-*Letzte Aktualisierung: 1. April 2026, 01:30 Uhr*
+*Letzte Aktualisierung: 1. April 2026, 14:30 Uhr*
 
 ## Projektstruktur
 
@@ -102,9 +102,9 @@ Aktuell: `style.css?v=20260402a`, `main.js?v=20260402a`
 ## Offene Aufgaben
 
 ### Morgen früh (1. April 2026)
-- [ ] **wolfgang-schmidt.eu als Hauptdomain aktivieren** — CNAME-Datei im ws-office Repo von `office-ws.de` auf `wolfgang-schmidt.eu` ändern, GitHub Pages Custom Domain updaten
-- [ ] **office-ws.de Weiterleitung** — auf wolfgang-schmidt.eu weiterleiten (Porkbun URL-Forwarding oder eigenes Repo)
-- [ ] **HTTPS prüfen** — Let's Encrypt Zertifikat für wolfgang-schmidt.eu abwarten
+- [x] **wolfgang-schmidt.eu als Hauptdomain aktivieren** — CNAME-Datei im ws-office Repo von `office-ws.de` auf `wolfgang-schmidt.eu` ändern, GitHub Pages Custom Domain updaten
+- [x] **office-ws.de Weiterleitung** — auf wolfgang-schmidt.eu weiterleiten (Porkbun URL-Forwarding oder eigenes Repo)
+- [x] **HTTPS prüfen** — Let's Encrypt Zertifikat für wolfgang-schmidt.eu abwarten
 
 ### WWS Advisory GmbH (ab 8. April 2026)
 - [ ] **GmbH-Gründung abwarten** (Notar 8. April)
@@ -125,6 +125,28 @@ Aktuell: `style.css?v=20260402a`, `main.js?v=20260402a`
 ---
 
 ## Änderungshistorie
+
+### 2026-04-01 (Vormittag) — wolfgang-schmidt.eu live, Domain-Umzug komplett
+
+**Hauptdomain-Umzug:**
+- CNAME-Datei im ws-office Repo von `office-ws.de` auf `wolfgang-schmidt.eu` geändert
+- GitHub Pages Custom Domain auf wolfgang-schmidt.eu gesetzt (via gh API)
+- SSL-Zertifikat automatisch genehmigt (gültig bis 30.06.2026)
+- HTTPS Enforcing aktiviert
+- Alle canonical/hreflang-URLs in 6 HTML-Dateien von office-ws.de auf wolfgang-schmidt.eu umgestellt
+- E-Mail-Adressen (info@office-ws.de) bewusst beibehalten
+
+**office-ws.de Redirect:**
+- Neues Repo `wowas007/office-ws-redirect` erstellt
+- index.html + 404.html mit JS-Redirect auf wolfgang-schmidt.eu (inkl. Pfad-Weiterleitung)
+- GitHub Pages aktiviert mit Custom Domain office-ws.de
+- SSL-Zertifikat vorhanden und aktiv
+
+**Bug-Fix (gestern Nacht committed):**
+- More/Más-Link in en/index.html und es/index.html zeigte auf deutsche Biografie (../biografie.html → biografie.html)
+
+**Biografie-Text:**
+- Passage zum Beauftragten für die Nachrichtendienste geprüft — enthält bereits Fach-/Rechtsaufsicht BND, Bundessicherheitsrat, Zusammenarbeit mit befreundeten Diensten → Text ist vollständig
 
 ### 2026-04-01 (Nacht) — Advisory-Redesign, Domain-Transfer, Matomo-Fix
 
