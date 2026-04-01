@@ -1,14 +1,15 @@
 # CHANGES — ws-office Website
 
-*Letzte Aktualisierung: 31. März 2026*
+*Letzte Aktualisierung: 1. April 2026, 01:30 Uhr*
 
 ## Projektstruktur
 
 ```
 ~/OneDrive/2 Dokumente/Homepage/
 ├── office-ws/              ← Hauptseite (Repo: github.com/wowas007/ws-office)
-├── wws-advisory-com/       ← (aktuell noch Unterordner von office-ws, eigenes Repo)
-└── wws-advisory-de/        ← (aktuell noch Unterordner von office-ws, eigenes Repo)
+├── wws-advisory-com/       ← (Unterordner von office-ws, eigenes Repo)
+├── wws-advisory-de/        ← (Unterordner von office-ws, eigenes Repo)
+└── wws-advisory-preview/   ← Preview neues GmbH-Layout (Repo: github.com/wowas007/wws-advisory-preview)
 ```
 
 ### Git-Workflow
@@ -31,16 +32,39 @@ curl -s 'https://api.github.com/repos/wowas007/ws-office/actions/runs?per_page=2
 | URL | Funktion |
 |-----|----------|
 | https://office-ws.de | Hauptseite (GitHub Pages) |
-| https://wws-advisory.de | Beratung DE (GitHub Pages) |
-| https://wwsadvisory.com | Beratung EN (GitHub Pages) |
-| https://schmidt-sabugal.de/ | Leitet weiter auf office-ws.de |
+| https://wolfgang-schmidt.eu | → office-ws.de (wird neue Hauptdomain, DNS bei Porkbun auf GitHub Pages) |
+| https://wws-advisory.de | Beratung DE — zeigt aktuell "Bundesminister a.D." (GitHub Pages) |
+| https://wwsadvisory.com | Beratung EN — zeigt aktuell "Bundesminister a.D." (GitHub Pages) |
+| https://wowas007.github.io/wws-advisory-preview/ | Preview neues GmbH-Layout |
+| https://wowas007.github.io/wws-advisory-preview/variante-a.html | Variante A: WWS Advisory in einer Zeile |
+| https://wowas007.github.io/wws-advisory-preview/variante-b.html | Variante B: WWS über Advisory gestapelt |
+| https://schmidt-sabugal.de/ | Leitet weiter auf office-ws.de (STRATO) |
 | https://schmidt-sabugal.de/matomo/ | Matomo Dashboard (Login) |
+
+---
+
+## Domain-Architektur
+
+| Domain | Registrar | DNS/Hosting | Funktion |
+|--------|-----------|-------------|----------|
+| office-ws.de | STRATO | GitHub Pages (Custom Domain) | Aktuelle Hauptseite |
+| wolfgang-schmidt.eu | **Porkbun** (frisch transferiert) | **Porkbun DNS → GitHub Pages IPs** | Wird neue Hauptdomain |
+| wws-advisory.de | Porkbun | GitHub Pages | Advisory DE |
+| wwsadvisory.com | Porkbun | GitHub Pages | Advisory EN |
+| schmidt-sabugal.de | STRATO | STRATO (Weiterleitung + Matomo) | Private Seite / Matomo |
+| schmidt-hamburg.de | STRATO | STRATO | (noch bei Warenform) |
+| sabugal.de | STRATO | STRATO | Wird Adrianas private Seite |
+
+### DNS wolfgang-schmidt.eu (bei Porkbun gesetzt)
+- 4x A-Record: 185.199.108/109/110/111.153 (GitHub Pages)
+- CNAME www → wowas007.github.io
+- Nameserver: curitiba/fortaleza/maceio/salvador.ns.porkbun.com ✅ propagiert
 
 ---
 
 ## Aktueller Stand
 
-### Dateien
+### Dateien (office-ws)
 
 - `index.html` (DE), `en/index.html`, `es/index.html` — Hauptseiten
 - `medien.html`, `en/medien.html`, `es/medien.html` — Medien-Seiten
@@ -49,7 +73,18 @@ curl -s 'https://api.github.com/repos/wowas007/ws-office/actions/runs?per_page=2
 - `datenschutz.html` — inkl. Matomo-Abschnitt mit Opt-Out
 - `css/style.css`, `js/main.js`
 - `img/bio/` — Fotos für Biografie-Seite
-- `CNAME` — Custom Domain office-ws.de
+- `CNAME` — Custom Domain office-ws.de (muss auf wolfgang-schmidt.eu geändert werden!)
+
+### WWS Advisory Preview (wws-advisory-preview)
+
+- `index.html` — Aktuelles Layout (WWS Advisory in einer Zeile, vorherige Version)
+- `variante-a.html` — WWS Advisory in einer Zeile, kleinere Schrift, GmbH winzig rechts
+- `variante-b.html` — WWS über ADVISORY gestapelt, GmbH klein, Wolfgang Schmidt groß
+- `img/hero.webp` — Hero-Foto (gleich wie auf wws-advisory.de)
+- Design: WWS fett (900), Advisory leicht (300), Logo oben links mit Trennstrich
+- Text: "Deutsche, europäische und internationale Politik. / Sicherheit, Technologie und Verteidigung. / Wirtschaft und Finanzen."
+- Sprachumschalter DE|EN oben rechts
+- Links: wolfgang-schmidt.eu + info@wws-advisory.de unten rechts, Impressum|Datenschutz unten links
 
 ### Matomo Tracking
 
@@ -66,20 +101,67 @@ Aktuell: `style.css?v=20260402a`, `main.js?v=20260402a`
 
 ## Offene Aufgaben
 
-- [ ] **wolfgang-schmidt.eu als Hauptdomain** — Transfer zu Porkbun, GitHub Pages einrichten
+### Morgen früh (1. April 2026)
+- [ ] **wolfgang-schmidt.eu als Hauptdomain aktivieren** — CNAME-Datei im ws-office Repo von `office-ws.de` auf `wolfgang-schmidt.eu` ändern, GitHub Pages Custom Domain updaten
+- [ ] **office-ws.de Weiterleitung** — auf wolfgang-schmidt.eu weiterleiten (Porkbun URL-Forwarding oder eigenes Repo)
+- [ ] **HTTPS prüfen** — Let's Encrypt Zertifikat für wolfgang-schmidt.eu abwarten
+
+### WWS Advisory GmbH (ab 8. April 2026)
+- [ ] **GmbH-Gründung abwarten** (Notar 8. April)
+- [ ] **Variante A oder B finalisieren** — Wolfgang entscheidet
+- [ ] **Englische Version** der Advisory-Seite erstellen
+- [ ] **Impressum + Datenschutz** für Advisory-Seite erstellen (GmbH-Pflichtangaben: Adresse, HRB, Geschäftsführer)
+- [ ] **Live-Schaltung** — Preview-Inhalt in wws-advisory-de und wws-advisory-com Repos übernehmen
+- [ ] **GmbH-Daten eintragen**: Adresse (voraussichtlich Adalbertstraße 14, München), HRB Berlin-Charlottenburg, E-Mail
+
+### Sonstige
+- [ ] **sabugal.de** — Adrianas private Seite gestalten (Split-Screen Mexiko/Berlin war Idee, aber sie sind nicht mehr zusammen → wird ihre Seite)
 - [ ] **E-Mail-Konsolidierung** — Openprovider → iCloud+ prüfen (5 Domains im €9,99-Paket)
-- [ ] **Impressum-Adresse** auf GmbH-Adresse wechseln sobald eingetragen
-- [ ] **wws-advisory-Seiten** im Hero anpassen (WWS Advisory GmbH)
 - [ ] **schmidt-hamburg.de** von Warenform übernehmen
-- [ ] **sabugal.de** klären (Seite für Frau)
-- [ ] **STRATO Speicherplatz** klären (~32 GB angezeigt, nur ~6 GB belegt → Support kontaktieren)
-- [ ] **STRATO Datenbanken** aufräumen (alte WordPress-DBs: schmidt-hamburg.de 11 MB, schmidt-sabugal.de 91 MB → löschbar)
-- [ ] **Biografie-Fotos** ggf. austauschen/ergänzen aus `img/Vita-Auswahl/`
-- [ ] **Menüband-Anpassung** (wurde angekündigt, noch ausstehend)
+- [ ] **STRATO SSL für wolfgang-schmidt.eu** — prüfen ob HTTPS über STRATO noch nötig (Domain ist jetzt bei Porkbun)
+- [ ] **STRATO Speicherplatz** klären (~32 GB angezeigt, nur ~6 GB belegt)
+- [ ] **STRATO Datenbanken** aufräumen (alte WordPress-DBs)
 
 ---
 
 ## Änderungshistorie
+
+### 2026-04-01 (Nacht) — Advisory-Redesign, Domain-Transfer, Matomo-Fix
+
+**Matomo-Fix:**
+- schmidt-sabugal.de/matomo/ war nicht erreichbar (301-Redirect auf office-ws.de)
+- .htaccess auf STRATO war bereits korrekt konfiguriert (Matomo-Ausnahme vorhanden)
+- Problem war Browser-Cache des alten 301-Redirects → Cmd+Shift+R löst es
+
+**wolfgang-schmidt.eu:**
+- Weiterleitung von schmidt-hamburg.de → office-ws.de im STRATO-Panel geändert
+  - A-Record auf STRATO Standard-IP zurückgesetzt → Umleitung-Menüpunkt wurde aktiv
+  - Header-Redirect 301 auf office-ws.de eingerichtet
+  - SSL-Zertifikat fehlt noch bei STRATO (HTTPS schlägt fehl, HTTP funktioniert)
+- **Domain-Transfer zu Porkbun durchgeführt** (AuthInfo-Code von STRATO)
+- DNS bei Porkbun eingerichtet: 4x A-Record GitHub Pages + CNAME www
+- Nameserver auf Porkbun umgestellt → DNS propagiert ✅
+
+**WWS Advisory Redesign:**
+- Neues Repo `wws-advisory-preview` auf GitHub erstellt (wowas007/wws-advisory-preview)
+- GitHub Pages aktiviert → Preview unter wowas007.github.io/wws-advisory-preview/
+- Drei Layout-Iterationen durchgearbeitet:
+  - Erste Version: WWS/ADVISORY gestapelt (wie WOLFGANG/SCHMIDT auf Hauptseite)
+  - Variante A: WWS Advisory in einer Zeile, kleinere Schrift, GmbH winzig rechts daneben
+  - Variante B: WWS über ADVISORY gestapelt, gleiche Größe, GmbH klein, Wolfgang Schmidt groß
+- Design-Entscheidungen:
+  - WWS = font-weight 900 (fett), Advisory = font-weight 300 (leicht)
+  - Logo oben links: "WWS" fett + Trennstrich + "Advisory" dünn (wie Logo-Vorschläge)
+  - Sprachumschalter DE|EN oben rechts
+  - Kein LinkedIn/X → stattdessen Verweis auf wolfgang-schmidt.eu
+  - Beschreibungstext: drei Zeilen (Politik / Sicherheit / Wirtschaft)
+- Live-Seiten (wws-advisory.de + wwsadvisory.com) auf altes Layout zurückgesetzt (Revert)
+- Branch `advisory-gmbh-vorbereitung` im wws-advisory-de Repo gesichert
+
+**sabugal.de:**
+- Idee: Split-Screen Mexiko-Stadt / Berlin (Unsplash-Bilder)
+- Wird Adrianas private Seite (nicht mehr gemeinsam)
+- Vertagt auf später
 
 ### 2026-03-31 — Matomo Analytics + HTTPS + Custom Domain
 
