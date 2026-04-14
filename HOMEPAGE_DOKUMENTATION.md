@@ -16,7 +16,7 @@ Die Website **wolfgang-schmidt.eu** ist die persönliche Web-Präsenz von Wolfga
 | `wws-advisory.de` | Porkbun | GitHub Pages | Advisory-Seite (DE) |
 | `wwsadvisory.com` | Porkbun | GitHub Pages | Advisory-Seite (EN) |
 | `schmidt-sabugal.de` | STRATO | STRATO Apache | Weiterleitung + Matomo |
-| `schmidt-hamburg.de` | STRATO | STRATO | (noch bei Warenform) |
+| `schmidt-hamburg.de` | STRATO | STRATO DNS → GitHub Pages (eigenes Redirect-Repo) | Leitet auf wolfgang-schmidt.eu (mit Matomo-Tracking) |
 | `sabugal.de` | STRATO | STRATO | Reserviert |
 
 ### DNS-Einträge wolfgang-schmidt.eu (Porkbun)
@@ -39,6 +39,7 @@ CNAME www wowas007.github.io
 | `wws-advisory-com` | github.com/wowas007/wws-advisory-com | wwsadvisory.com |
 | `wws-advisory-preview` | github.com/wowas007/wws-advisory-preview | Preview GmbH-Layout |
 | `office-ws-redirect` | github.com/wowas007/office-ws-redirect | Redirect office-ws.de → wolfgang-schmidt.eu |
+| `schmidt-hamburg-redirect` | github.com/wowas007/schmidt-hamburg-redirect | Redirect schmidt-hamburg.de → wolfgang-schmidt.eu (mit Matomo-Kampagnen-Tracking) |
 
 ### Git-Workflow
 ```bash
@@ -360,10 +361,11 @@ office-ws/
                                                                                                     ---
                                                                                                     
                                                                                                     ## 16. Bekannte Eigenheiten
-                                                                                                    - **GitHub Pages cached Bilder aggressiv** — bei Bildänderungen den .deploy-trigger nutzen
-                                                                                                    - - **301-Redirects werden vom Browser gecacht** — bei Domain-Änderungen Cmd+Shift+R oder Inkognito nutzen
-                                                                                                      - - **Safari scroll-margin-top** hat Probleme — daher JS-basierter Scroll mit Nav-Offset
-                                                                                                        - - **E-Mail-Adresse bleibt info@office-ws.de** — unabhängig von der Domain-Umstellung
+- **GitHub Pages cached Bilder aggressiv** — bei Bildänderungen den .deploy-trigger nutzen
+- **301-Redirects werden vom Browser gecacht** — bei Domain-Änderungen Cmd+Shift+R oder Inkognito nutzen
+- **Safari scroll-margin-top** hat Probleme — daher JS-basierter Scroll mit Nav-Offset
+- **E-Mail-Adresse bleibt info@office-ws.de** — unabhängig von der Domain-Umstellung
+- **GitHub Pages SSL-Zertifikate: Reihenfolge beachten!** — Bei Domain-Umstellungen auf GitHub Pages IMMER erst alle DNS-Einträge (A-Records UND CNAME für www) auf GitHub Pages umstellen und die Propagation abwarten, BEVOR GitHub Pages aktiviert wird. Wenn das Zertifikat ausgestellt wird, während der www-CNAME noch auf den alten Server zeigt, deckt es nur die Apex-Domain ab, nicht www. GitHub cached Zertifikate aggressiv; ein Workaround ist, die Custom Domain auf `www.domain.de` (statt die Apex-Domain) zu setzen, um eine Neuausstellung für beide Varianten zu erzwingen. (Erfahrung aus Umstellung schmidt-hamburg.de, 14.04.2026)
                                                                                                          
                                                                                                           - ---
                                                                                                           
