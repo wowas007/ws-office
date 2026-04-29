@@ -1,13 +1,13 @@
 # Homepage Wolfgang Schmidt — Vollständige Dokumentation
-*Stand: 29. April 2026*
+*Stand: 29. April 2026 (abends)*
 
 ---
 
 ## 1. Projektübersicht
 Wolfgang Schmidt (Bundesminister a.D., ehemaliger Chef des Bundeskanzleramts) betreibt zwei eigenständige Web-Auftritte:
 
-- **wolfgang-schmidt.eu** als persönliche Hauptseite (Privatperson, politische/biografische Inhalte). Drei Hilfs-/Redirect-Domains zeigen darauf: `office-ws.de`, `schmidt-hamburg.de`, `schmidt-sabugal.de`.
-- **wwsadvisory.com** als Hauptseite der **WWS Advisory GmbH** (geschäftlich, eingetragen im Handelsregister AG Charlottenburg HRB 286558 B). Die Schwesterdomain `wws-advisory.de` leitet als Redirect dorthin.
+- **wolfgang-schmidt.eu** als persönliche Hauptseite (Privatperson, politische/biografische Inhalte). Zwei Hilfs-/Redirect-Domains zeigen darauf: `schmidt-hamburg.de` und `schmidt-sabugal.de`.
+- **wwsadvisory.com** als Hauptseite der **WWS Advisory GmbH** (geschäftlich, eingetragen im Handelsregister AG Charlottenburg HRB 286558 B). Zwei Schwesterdomains leiten dorthin weiter: `wws-advisory.de` und `office-ws.de`.
 
 Alle Hauptseiten sind statische Sites auf GitHub Pages mit DE/EN/ES Sprachumschalter. Tracking erfolgt über einen selbst gehosteten Matomo-Server (auf `schmidt-sabugal.de`, Strato-Hosting).
 
@@ -18,12 +18,13 @@ Alle Hauptseiten sind statische Sites auf GitHub Pages mit DE/EN/ES Sprachumscha
 | Domain | Registrar | DNS | Hosting | Funktion |
 |--------|-----------|-----|---------|----------|
 | `wolfgang-schmidt.eu` | Porkbun | Porkbun → GitHub Pages | GitHub Pages | **Hauptdomain Privatperson** (DE/EN/ES) |
-| `office-ws.de` | STRATO | STRATO → GitHub Pages | GitHub Pages | Redirect → wolfgang-schmidt.eu (Matomo-Source-Tracking) |
+
 | `schmidt-hamburg.de` | STRATO | STRATO → GitHub Pages | GitHub Pages | Redirect → wolfgang-schmidt.eu (Matomo-Source-Tracking) |
 | `schmidt-sabugal.de` | STRATO | STRATO | **STRATO Apache** | Matomo-Server + Weiterleitung |
 | `sabugal.de` | STRATO | STRATO | STRATO | Reserviert |
 | `wwsadvisory.com` | Porkbun | Porkbun → GitHub Pages | GitHub Pages | **Hauptdomain WWS Advisory GmbH** (EN-Default, DE/EN/ES) |
 | `wws-advisory.de` | Porkbun | Porkbun → GitHub Pages | GitHub Pages | Redirect → wwsadvisory.com/?lang=de |
+| `office-ws.de` | STRATO | STRATO → GitHub Pages | GitHub Pages | Redirect → wwsadvisory.com/?lang=de (Matomo-Source-Tracking) |
 
 **Wichtig:** Strato hostet aktiv den Matomo-Server unter `schmidt-sabugal.de`. Bei jedem Aufruf einer der Hauptseiten werden anonymisierte Tracking-Daten an diesen Strato-Server gesendet. Hosting der Hauptseiten selbst erfolgt ausschließlich auf GitHub Pages.
 
@@ -82,13 +83,13 @@ gh auth status   # Logged in als wowas007 via keyring
 | 1 | wolfgang-schmidt.eu | Aktiv |
 | 2 | wws-advisory.de | Wird kaum noch genutzt (jetzt Redirect) |
 | 3 | wwsadvisory.com | Aktiv (seit 2026-04-29) |
-| 4 | office-ws.de | **Im Matomo-Backend noch anzulegen** — derzeit kein eigenes Tracking, da die Domain reiner Redirect ist; Matomo-Source-Tracking erfolgt über URL-Parameter (`?mtm_source=office-ws.de`) gegen Site ID 1. |
+| 4 | office-ws.de | Reserviert; derzeit nicht angelegt. Matomo-Source-Tracking erfolgt über URL-Parameter (`?mtm_source=office-ws.de`) gegen Site ID 3 (wwsadvisory.com), da office-ws.de auf die GmbH-Hauptseite weiterleitet. |
 
 **Tracker-URL:** `//schmidt-sabugal.de/matomo/`
 
 **Matomo-Backend:** Login-Daten in `office-ws/matomo-zugangsdaten.md`.
 
-**Source-Tracking statt eigener Site IDs:** Bei Redirect-Domains (`office-ws.de`, `schmidt-hamburg.de`) wird der Traffic mit `?mtm_source=<domain>&mtm_medium=redirect` an die Zieldomain weitergegeben. Im Matomo-Backend erscheint der Traffic dann unter Acquisition → Campaigns, ohne dass eine separate Site ID benötigt wird.
+**Source-Tracking statt eigener Site IDs:** Bei Redirect-Domains wird der Traffic mit `?mtm_source=<domain>&mtm_medium=redirect` an die Zieldomain weitergegeben. Im Matomo-Backend erscheint der Traffic dann unter Acquisition → Campaigns, ohne dass eine separate Site ID benötigt wird. Konkret: `schmidt-hamburg.de` → wolfgang-schmidt.eu (Site ID 1); `office-ws.de` und `wws-advisory.de` → wwsadvisory.com (Site ID 3).
 
 ---
 
@@ -170,13 +171,14 @@ Pattern (analog zu schmidt-hamburg-redirect, office-ws):
 
 ## 8. Bekannte offene Punkte
 
-- **Matomo Site ID 4** für office-ws.de noch nicht im Backend angelegt. Aktuell läuft das Tracking über Source-Parameter gegen Site ID 1 (wolfgang-schmidt.eu); das funktioniert sauber. Eine eigene Site ID 4 wäre nur nötig, wenn office-ws.de eines Tages wieder eine eigenständige Seite mit eigenem Inhalt würde.
+- **Matomo Site ID 4** ist reserviert für office-ws.de, aber nicht angelegt. Aktuell läuft das Tracking über Source-Parameter gegen Site ID 3 (wwsadvisory.com); das funktioniert sauber. Eine eigene Site ID 4 wäre nur nötig, wenn office-ws.de eines Tages wieder eine eigenständige Seite mit eigenem Inhalt würde.
 - **Repo `wws-advisory-de`** liegt verwaist auf GitHub. Pages ist dort deaktiviert, die Domain wurde am 29.04.2026 ans Repo `wws-advisory` umgezogen. Repo könnte archiviert werden.
 
 ---
 
 ## 9. Änderungsprotokoll (Auszug)
 
+- **2026-04-29 (abends)** — Korrektur: office-ws.de gehört zur **GmbH-Sphäre**, nicht zur Privatsphäre. Redirect-Ziel auf wwsadvisory.com/?lang=de geändert.
 - **2026-04-29** — WWS Advisory live: helle Landing auf wwsadvisory.com (EN-Default) als Master, wws-advisory.de als Redirect dorthin. Matomo + Opt-out auf allen GmbH-Seiten aktiviert. Aufsichtsbehörde auf BlnBDI Berlin korrigiert (vorher Hamburg). Impressum/Datenschutz mit c/o-Adresse umgestellt. office-ws.de zurück als Redirect (Repo umbenannt `office-ws-redirect` → `office-ws`).
 - **2026-04-29** — GmbH eingetragen (HRB 286558 B AG Charlottenburg).
 - **2026-04** — wolfgang-schmidt.eu Datenschutz/Impressum DE/EN/ES auf c/o-Adresse umgestellt.
