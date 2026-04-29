@@ -1,13 +1,13 @@
 # Homepage Wolfgang Schmidt — Vollständige Dokumentation
-*Stand: 29. April 2026 (abends)*
+*Stand: 30. April 2026*
 
 ---
 
 ## 1. Projektübersicht
 Wolfgang Schmidt (Bundesminister a.D., ehemaliger Chef des Bundeskanzleramts) betreibt zwei eigenständige Web-Auftritte:
 
-- **wolfgang-schmidt.eu** als persönliche Hauptseite (Privatperson, politische/biografische Inhalte). Zwei Hilfs-/Redirect-Domains zeigen darauf: `schmidt-hamburg.de` und `schmidt-sabugal.de`.
-- **wwsadvisory.com** als Hauptseite der **WWS Advisory GmbH** (geschäftlich, eingetragen im Handelsregister AG Charlottenburg HRB 286558 B). Zwei Schwesterdomains leiten dorthin weiter: `wws-advisory.de` und `office-ws.de`.
+- **Privat-Sphäre:** **wolfgang-schmidt.eu** als persönliche Hauptseite (politische/biografische Inhalte). Drei weitere Privat-Domains leiten dorthin oder gehören zur Privatsphäre: `schmidt-hamburg.de` (Redirect), `schmidt-sabugal.de` (STRATO Apache, beherbergt zusätzlich den Matomo-Server unter `/matomo/`, leitet im Übrigen auf wolfgang-schmidt.eu weiter), `sabugal.de` (reserviert).
+- **GmbH-Sphäre:** **wwsadvisory.com** als Hauptseite der **WWS Advisory GmbH** (geschäftlich, eingetragen im Handelsregister AG Charlottenburg HRB 286558 B, Sitz Berlin). Zwei Schwesterdomains leiten dorthin weiter: `wws-advisory.de` und `office-ws.de`.
 
 Alle Hauptseiten sind statische Sites auf GitHub Pages mit DE/EN/ES Sprachumschalter. Tracking erfolgt über einen selbst gehosteten Matomo-Server (auf `schmidt-sabugal.de`, Strato-Hosting).
 
