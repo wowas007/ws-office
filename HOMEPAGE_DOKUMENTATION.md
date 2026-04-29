@@ -6,7 +6,8 @@
 ## 1. Projektübersicht
 Wolfgang Schmidt (Bundesminister a.D., ehemaliger Chef des Bundeskanzleramts) betreibt zwei eigenständige Web-Auftritte:
 
-- **Privat-Sphäre:** **wolfgang-schmidt.eu** als persönliche Hauptseite (politische/biografische Inhalte). Drei weitere Privat-Domains leiten dorthin oder gehören zur Privatsphäre: `schmidt-hamburg.de` (Redirect), `schmidt-sabugal.de` (STRATO Apache, beherbergt zusätzlich den Matomo-Server unter `/matomo/`, leitet im Übrigen auf wolfgang-schmidt.eu weiter), `sabugal.de` (reserviert).
+- **Privat-Sphäre:** **wolfgang-schmidt.eu** als persönliche Hauptseite (politische/biografische Inhalte). Zwei weitere Privat-Domains gehören dazu: `schmidt-hamburg.de` (Redirect) und `schmidt-sabugal.de` (STRATO Apache, beherbergt zusätzlich den Matomo-Server unter `/matomo/`, leitet im Übrigen auf wolfgang-schmidt.eu weiter).
+- **Familie:** **sabugal.de** ist die E-Mail-Domain von Wolfgangs Frau und hat eine eigene minimale Hinweisseite (DE/ES, kein Tracking, kein Impressum, kein Datenschutz).
 - **GmbH-Sphäre:** **wwsadvisory.com** als Hauptseite der **WWS Advisory GmbH** (geschäftlich, eingetragen im Handelsregister AG Charlottenburg HRB 286558 B, Sitz Berlin). Zwei Schwesterdomains leiten dorthin weiter: `wws-advisory.de` und `office-ws.de`.
 
 Alle Hauptseiten sind statische Sites auf GitHub Pages mit DE/EN/ES Sprachumschalter. Tracking erfolgt über einen selbst gehosteten Matomo-Server (auf `schmidt-sabugal.de`, Strato-Hosting).
@@ -21,7 +22,7 @@ Alle Hauptseiten sind statische Sites auf GitHub Pages mit DE/EN/ES Sprachumscha
 
 | `schmidt-hamburg.de` | STRATO | STRATO → GitHub Pages | GitHub Pages | Redirect → wolfgang-schmidt.eu (Matomo-Source-Tracking) |
 | `schmidt-sabugal.de` | STRATO | STRATO | **STRATO Apache** | Matomo-Server + Weiterleitung |
-| `sabugal.de` | STRATO | STRATO | STRATO | Reserviert |
+| `sabugal.de` | STRATO | STRATO → GitHub Pages | GitHub Pages | E-Mail-Domain Wolfgangs Frau, eigene Hinweisseite (Repo `sabugal`) |
 | `wwsadvisory.com` | Porkbun | Porkbun → GitHub Pages | GitHub Pages | **Hauptdomain WWS Advisory GmbH** (EN-Default, DE/EN/ES) |
 | `wws-advisory.de` | Porkbun | Porkbun → GitHub Pages | GitHub Pages | Redirect → wwsadvisory.com/?lang=de |
 | `office-ws.de` | STRATO | STRATO → GitHub Pages | GitHub Pages | Redirect → wwsadvisory.com/?lang=de (Matomo-Source-Tracking) |
@@ -50,6 +51,7 @@ CNAME www wowas007.github.io
 | `wws-advisory` | github.com/wowas007/wws-advisory | wws-advisory.de (Redirect auf wwsadvisory.com) |
 | `wws-advisory-de` | github.com/wowas007/wws-advisory-de | *Legacy, Pages deaktiviert; Domain wurde am 2026-04-29 ans Repo `wws-advisory` gegeben* |
 | `wws-advisory-preview` | github.com/wowas007/wws-advisory-preview | Preview/Sandbox |
+| `sabugal` | github.com/wowas007/sabugal | sabugal.de (Hinweisseite Familie) |
 
 ### Lokale Verzeichnisse (OneDrive)
 ```
@@ -178,6 +180,7 @@ Pattern (analog zu schmidt-hamburg-redirect, office-ws):
 
 ## 9. Änderungsprotokoll (Auszug)
 
+- **2026-04-30** — sabugal.de eigenständig: neues Repo `sabugal`, GitHub Pages, minimale DE/ES-Hinweisseite (E-Mail-Domain Wolfgangs Frau). Aus der Privat-Sphäre herausgelöst. DNS-Umstellung bei STRATO erforderlich (manuell durch Wolfgang).
 - **2026-04-29 (abends)** — Korrektur: office-ws.de gehört zur **GmbH-Sphäre**, nicht zur Privatsphäre. Redirect-Ziel auf wwsadvisory.com/?lang=de geändert.
 - **2026-04-29** — WWS Advisory live: helle Landing auf wwsadvisory.com (EN-Default) als Master, wws-advisory.de als Redirect dorthin. Matomo + Opt-out auf allen GmbH-Seiten aktiviert. Aufsichtsbehörde auf BlnBDI Berlin korrigiert (vorher Hamburg). Impressum/Datenschutz mit c/o-Adresse umgestellt. office-ws.de zurück als Redirect (Repo umbenannt `office-ws-redirect` → `office-ws`).
 - **2026-04-29** — GmbH eingetragen (HRB 286558 B AG Charlottenburg).
